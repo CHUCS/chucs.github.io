@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+<script data-ad-client="ca-pub-8906140811059676" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="3grsEVPDeg5_ktwC4lbJ6p3Ts2vmlUyUSQwPtFp0jQs">
+  <meta name="msvalidate.01" content="DCF11F2014E9D53E3226C978BCE45EEC">
+  <meta name="yandex-verification" content="4227a483ac83a3da">
+  <meta name="baidu-site-verification" content="acBHhdI7H6">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"chucs.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.json"};
+  </script>
+
+  <meta name="description" content="Text 用法顯示簡單文字ContentView已在中生成的範例代碼向你展示瞭如何顯示一行文字。 1Text(&quot;Hello, World!&quot;)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SwiftUI Text">
+<meta property="og:url" content="https://chucs.github.io/swiftui-text/index.html">
+<meta property="og:site_name" content="CHUCSIE">
+<meta property="og:description" content="Text 用法顯示簡單文字ContentView已在中生成的範例代碼向你展示瞭如何顯示一行文字。 1Text(&quot;Hello, World!&quot;)">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2020-07-13T07:47:34.000Z">
+<meta property="article:modified_time" content="2020-07-18T02:35:47.386Z">
+<meta property="article:author" content="CHUCSIE">
+<meta property="article:tag" content="swiftui text">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://chucs.github.io/swiftui-text/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-TW'
+  };
+</script>
+
+  <title>SwiftUI Text | CHUCSIE</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134507655-1"></script>
+    <script>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-134507655-1');
+      }
+    </script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">CHUCSIE</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">解題報告</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜尋..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://chucs.github.io/swiftui-text/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/header.jpg">
+      <meta itemprop="name" content="CHUCSIE">
+      <meta itemprop="description" content="解題報告">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CHUCSIE">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          SwiftUI Text
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2020-07-13 15:47:34" itemprop="dateCreated datePublished" datetime="2020-07-13T15:47:34+08:00">2020-07-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2020-07-18 10:35:47" itemprop="dateModified" datetime="2020-07-18T10:35:47+08:00">2020-07-18</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/SwiftUI-tutorials/" itemprop="url" rel="index"><span itemprop="name">SwiftUI tutorials</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="閱讀次數">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-users"></i>
+              </span>
+              <span class="post-meta-item-text">閱讀次數：</span>
+              <span class="firestore-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/swiftui-text/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="swiftui-text/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+    
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="Text-用法"><a href="#Text-用法" class="headerlink" title="Text 用法"></a>Text 用法</h2><h3 id="顯示簡單文字"><a href="#顯示簡單文字" class="headerlink" title="顯示簡單文字"></a>顯示簡單文字</h3><p>ContentView已在中生成的範例代碼向你展示瞭如何顯示一行文字。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Text(&quot;Hello, World!&quot;)</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="更改字體類型"><a href="#更改字體類型" class="headerlink" title="更改字體類型"></a>更改字體類型</h3><h4 id="fontWeight-文字類型"><a href="#fontWeight-文字類型" class="headerlink" title="fontWeight 文字類型"></a>fontWeight 文字類型</h4><p>你可以使用fontWeight來更改字體的類型，例如下面所使用的粗體字，當然字體類型有很多種像是heavy, light, medium等等等…</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Text(&quot;Hello, World!&quot;)</span><br><span class="line">    .fontWeight(.bold)</span><br></pre></td></tr></table></figure>
+
+<h4 id="font-字體樣式"><a href="#font-字體樣式" class="headerlink" title="font 字體樣式"></a>font 字體樣式</h4><p>字體樣式中你可以修改字體的大小, 字形和大小。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Text(&quot;Hello, World!&quot;)</span><br><span class="line">    .font(.title)</span><br></pre></td></tr></table></figure>
+<p>如果想要進一步修改字體的設計你可以像這樣寫：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.font(.system(.largeTitle, design: .rounded))</span><br></pre></td></tr></table></figure>
+<p>這樣寫字體就會被修成largeTitle的樣式而且是圓弧的。</p>
+<p>該font修改器可以更改字體屬性。在上面的代碼中，我們指定使用標題字體類型以放大文本。</p>
+<p>如果要使用固定大小的字體你只要在system裡面設定size就可以了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.font(.system(size: 20))</span><br></pre></td></tr></table></figure>
+
+<p>如果想更改字體的字型的話可以使用custom來更改字型。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.font(.custom(&quot;Helvetica Neue&quot;, size: 25))</span><br></pre></td></tr></table></figure>
+<p>字體名稱可以在“字體書”中找到。您可以打開Finder應用程序，然後單擊字體簿以啟動該應用程序。</p>
+<h4 id="shadow-陰影"><a href="#shadow-陰影" class="headerlink" title="shadow 陰影"></a>shadow 陰影</h4><p>為文本增加陰影效果可以使字體更有感覺，而radius可以設定陰影的風格。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.shadow(color: .black, radius: 2, x: 0, y: 15)</span><br></pre></td></tr></table></figure>
+<h3 id="更改字體顏色"><a href="#更改字體顏色" class="headerlink" title="更改字體顏色"></a>更改字體顏色</h3><h4 id="foregroundColor-修改顏色"><a href="#foregroundColor-修改顏色" class="headerlink" title="foregroundColor 修改顏色"></a>foregroundColor 修改顏色</h4><p>您可以使用其他內置值喜歡.red，.purple等等。如果你想知道如何使用hex色碼的話可以參考<a href="https://chucs.github.io/swiftui-text/">SwiftUI Color</a>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Text(&quot;Hello, World!&quot;)</span><br><span class="line">    .foregroundColor(.red)</span><br></pre></td></tr></table></figure>
+
+<h3 id="多個修處理多行文字飾"><a href="#多個修處理多行文字飾" class="headerlink" title="多個修處理多行文字飾"></a>多個修處理多行文字飾</h3><p>在SwiftUI裡支持多個修飾，你可以使用foregroundColor修改顏色fontWeight修改字體類型等等等…</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Text(&quot;Hello, World!&quot;)</span><br><span class="line">    .fontWeight(.bold)</span><br><span class="line">    .font(.title)</span><br></pre></td></tr></table></figure>
+<h3 id="處理多行文字"><a href="#處理多行文字" class="headerlink" title="處理多行文字"></a>處理多行文字</h3><p>Text默認情況下支持多行，因此它可以顯示文本段落，而無需使用任何其他修飾符。但你可以使用一些函式來修改文本。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Text(&quot;Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!&quot;)</span><br><span class="line">    .fontWeight(.bold)</span><br><span class="line">    .font(.title)</span><br></pre></td></tr></table></figure>
+
+<h4 id="multilineTextAlignment-修改文字位置"><a href="#multilineTextAlignment-修改文字位置" class="headerlink" title="multilineTextAlignment 修改文字位置"></a>multilineTextAlignment 修改文字位置</h4><p>要使文本置中對齊，請插入multilineTextAlignment修飾符並將值設置為.center如下所示，當然你也可以靠左對齊靠右對齊。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.multilineTextAlignment(.center)</span><br></pre></td></tr></table></figure>
+
+<h4 id="lineLimit-行數行數限制"><a href="#lineLimit-行數行數限制" class="headerlink" title="lineLimit 行數行數限制"></a>lineLimit 行數行數限制</h4><p>你可能希望將行數限制為一定數量。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.lineLimit(3)</span><br></pre></td></tr></table></figure>
+<h3 id="設置填充和行距"><a href="#設置填充和行距" class="headerlink" title="設置填充和行距"></a>設置填充和行距</h3><h4 id="lineSpacing-行距調整"><a href="#lineSpacing-行距調整" class="headerlink" title="lineSpacing 行距調整"></a>lineSpacing 行距調整</h4><p>默認行間距足以應付大多數情況。如果要更改默認設置，可以使用lineSpacing修飾符來調整行距。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.lineSpacing(10)</span><br></pre></td></tr></table></figure>
+<h4 id="padding-填充空間"><a href="#padding-填充空間" class="headerlink" title="padding 填充空間"></a>padding 填充空間</h4><p>如您所見，文本太靠近邊緣的左側和右側。要給它更多的空間，可以使用padding修飾符，該修飾符為文本的每一側增加一些額外的空間。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.padding()</span><br></pre></td></tr></table></figure>
+<p>如果沒有在裡面設定數字的話就會是默認的長度。如果想要設定固定長度的話可以直接帶入數字。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.padding(10)</span><br></pre></td></tr></table></figure>
+<p>在padding修飾符中也可以設定你想要哪幾個邊做增加。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.padding([.top, .leading, .trailing])</span><br></pre></td></tr></table></figure>
+
+<h3 id="旋轉文字"><a href="#旋轉文字" class="headerlink" title="旋轉文字"></a>旋轉文字</h3><h4 id="rotationEffect-旋轉"><a href="#rotationEffect-旋轉" class="headerlink" title="rotationEffect 旋轉"></a>rotationEffect 旋轉</h4><p>SwiftUI框架提供了API，無論是2D還是3D都可以讓您輕鬆旋轉文本。</p>
+<p>2D旋轉</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.rotationEffect(.degrees(20), anchor: UnitPoint(x: 0, y: 0))</span><br></pre></td></tr></table></figure>
+<p>3D旋轉</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.rotation3DEffect(.degrees(60), axis: (x: 1, y: 0, z: 0))</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/swiftui/" rel="tag"># swiftui</a>
+          </div>
+        
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/ALDS1-3-C-Doubly-Linked-List/" rel="prev" title="AOJ ALDS1_3_C">
+      <i class="fa fa-chevron-left"></i> AOJ ALDS1_3_C
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/swiftui-color/" rel="next" title="SwiftUI Color">
+      SwiftUI Color <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 橫幅廣告 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8906140811059676"
+     data-ad-slot="2513800005"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Text-用法"><span class="nav-number">1.</span> <span class="nav-text">Text 用法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#顯示簡單文字"><span class="nav-number">1.1.</span> <span class="nav-text">顯示簡單文字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更改字體類型"><span class="nav-number">1.2.</span> <span class="nav-text">更改字體類型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#fontWeight-文字類型"><span class="nav-number">1.2.1.</span> <span class="nav-text">fontWeight 文字類型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#font-字體樣式"><span class="nav-number">1.2.2.</span> <span class="nav-text">font 字體樣式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#shadow-陰影"><span class="nav-number">1.2.3.</span> <span class="nav-text">shadow 陰影</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更改字體顏色"><span class="nav-number">1.3.</span> <span class="nav-text">更改字體顏色</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#foregroundColor-修改顏色"><span class="nav-number">1.3.1.</span> <span class="nav-text">foregroundColor 修改顏色</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多個修處理多行文字飾"><span class="nav-number">1.4.</span> <span class="nav-text">多個修處理多行文字飾</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#處理多行文字"><span class="nav-number">1.5.</span> <span class="nav-text">處理多行文字</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#multilineTextAlignment-修改文字位置"><span class="nav-number">1.5.1.</span> <span class="nav-text">multilineTextAlignment 修改文字位置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#lineLimit-行數行數限制"><span class="nav-number">1.5.2.</span> <span class="nav-text">lineLimit 行數行數限制</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#設置填充和行距"><span class="nav-number">1.6.</span> <span class="nav-text">設置填充和行距</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#lineSpacing-行距調整"><span class="nav-number">1.6.1.</span> <span class="nav-text">lineSpacing 行距調整</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#padding-填充空間"><span class="nav-number">1.6.2.</span> <span class="nav-text">padding 填充空間</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#旋轉文字"><span class="nav-number">1.7.</span> <span class="nav-text">旋轉文字</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#rotationEffect-旋轉"><span class="nav-number">1.7.1.</span> <span class="nav-text">rotationEffect 旋轉</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="CHUCSIE"
+      src="/images/header.jpg">
+  <p class="site-author-name" itemprop="name">CHUCSIE</p>
+  <div class="site-description" itemprop="description">解題報告</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">288</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">47</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/CHUCS" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;CHUCS" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://github.com/Daviswww" title="https:&#x2F;&#x2F;github.com&#x2F;Daviswww" rel="noopener" target="_blank">Daviswww</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://chucs.github.io/site/" title="https:&#x2F;&#x2F;chucs.github.io&#x2F;site&#x2F;">About</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://chucs.github.io/game/" title="https:&#x2F;&#x2F;chucs.github.io&#x2F;game&#x2F;">Games</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- sidebar -->
+      <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-8906140811059676"
+          data-ad-slot="4892142210"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CHUCSIE</span>
+</div>
+
+        
+
+
+
+
+  <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-firestore.js"></script>
+  <script>
+    firebase.initializeApp({
+      apiKey   : 'AIzaSyAdZ6z1YrmCbZGesidOkFhO4FtQMUfqEss',
+      projectId: 'web-site-count'
+    });
+
+    function getCount(doc, increaseCount) {
+      // IncreaseCount will be false when not in article page
+      return doc.get().then(d => {
+        var count = 0;
+        if (!d.exists) { // Has no data, initialize count
+          if (increaseCount) {
+            doc.set({
+              count: 1
+            });
+            count = 1;
+          }
+        } else { // Has data
+          count = d.data().count;
+          if (increaseCount) {
+            // If first view this article
+            doc.set({ // Increase count
+              count: count + 1
+            });
+            count++;
+          }
+        }
+
+        return count;
+      });
+    }
+
+    function appendCountTo(el) {
+      return count => {
+        el.innerText = count;
+      }
+    }
+  </script>
+  <script>
+    (function() {
+      var db = firebase.firestore();
+      var articles = db.collection('articles');
+
+      if (CONFIG.page.isPost) { // Is article page
+        var title = document.querySelector('.post-title').innerText.trim();
+        var doc = articles.doc(title);
+        var increaseCount = CONFIG.hostname === location.hostname;
+        if (localStorage.getItem(title)) {
+          increaseCount = false;
+        } else {
+          // Mark as visited
+          localStorage.setItem(title, true);
+        }
+        getCount(doc, increaseCount).then(appendCountTo(document.querySelector('.firestore-visitors-count')));
+      } else if (CONFIG.page.isHome) { // Is index page
+        var promises = [...document.querySelectorAll('.post-title')].map(element => {
+          var title = element.innerText.trim();
+          var doc = articles.doc(title);
+          return getCount(doc);
+        });
+        Promise.all(promises).then(counts => {
+          var metas = document.querySelectorAll('.firestore-visitors-count');
+          counts.forEach((val, idx) => {
+            appendCountTo(metas[idx])(val);
+          });
+        });
+      }
+    })();
+  </script>
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var canonicalURL, curProtocol;
+      //Get the <link> tag
+      var x=document.getElementsByTagName("link");
+		//Find the last canonical URL
+		if(x.length > 0){
+			for (i=0;i<x.length;i++){
+				if(x[i].rel.toLowerCase() == 'canonical' && x[i].href){
+					canonicalURL=x[i].href;
+				}
+			}
+		}
+    //Get protocol
+	    if (!canonicalURL){
+	    	curProtocol = window.location.protocol.split(':')[0];
+	    }
+	    else{
+	    	curProtocol = canonicalURL.split(':')[0];
+	    }
+      //Get current URL if the canonical URL does not exist
+	    if (!canonicalURL) canonicalURL = window.location.href;
+	    //Assign script content. Replace current URL with the canonical URL
+      !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=canonicalURL,t=document.referrer;if(!e.test(r)){var n=(String(curProtocol).toLowerCase() === 'https')?"https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif":"//api.share.baidu.com/s.gif";t?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var i=new Image;i.src=n}}(window);})();
+  </script>
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<script>
+  function loadCount() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://https-chucs-github-io.disqus.com/count.js';
+    s.id = 'dsq-count-scr';
+    (d.head || d.body).appendChild(s);
+  }
+  // defer loading until the whole page loading is completed
+  window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  var disqus_config = function() {
+    this.page.url = "https://chucs.github.io/swiftui-text/";
+    this.page.identifier = "swiftui-text/";
+    this.page.title = "SwiftUI Text";
+    };
+  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: disqus_config
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://https-chucs-github-io.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  });
+</script>
+
+</body>
+</html>
