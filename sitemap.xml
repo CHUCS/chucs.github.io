@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://chucs.github.io/ALDS1-3-B-Queue/</loc>
+    
+    <lastmod>2020-08-09T05:59:32.504Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://chucs.github.io/ALDS1-7-B-Binary-Tree/</loc>
     
     <lastmod>2020-07-26T11:58:03.942Z</lastmod>
@@ -1909,13 +1916,6 @@
     <loc>https://chucs.github.io/Alyona-and-Mex/</loc>
     
     <lastmod>2020-07-18T02:35:47.329Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://chucs.github.io/ALDS1-3-B-Queue/</loc>
-    
-    <lastmod>2020-07-18T02:35:47.328Z</lastmod>
     
   </url>
   
