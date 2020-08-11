@@ -25,15 +25,15 @@
     var CONFIG = {"hostname":"chucs.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.json"};
   </script>
 
-  <meta name="description" content="AOJ ALDS1_7_A - Rooted Trees題目網址 題意:Rooted Trees是連接的，無環的，無向的圖。Rooted Trees是一種自由樹，其中一個頂點與另一個頂點是不同的。Rooted Trees的頂點稱為“節點”。你的任務是編寫一個程序，為給定的根樹T的每個節點u報告以下信息：node ID of u (節點編號)parent of u (節點父親)depth of u">
+  <meta name="description" content="根數題目網址 題意:Rooted Trees是連接的，無環的，無向的圖。Rooted Trees是一種自由樹，其中一個頂點與另一個頂點是不同的。Rooted Trees的頂點稱為“節點”。你的任務是編寫一個程序，為給定的根樹T的每個節點u報告以下信息：node ID of u (節點編號)parent of u (節點父親)depth of u (節點深度)node type (root, int">
 <meta property="og:type" content="article">
-<meta property="og:title" content="AOJ ALDS1_7_A">
+<meta property="og:title" content="AOJ ALDS1_7_A - Rooted Trees">
 <meta property="og:url" content="https://chucs.github.io/ALDS1-7-A-Rooted-Trees/index.html">
 <meta property="og:site_name" content="CHUCSIE">
-<meta property="og:description" content="AOJ ALDS1_7_A - Rooted Trees題目網址 題意:Rooted Trees是連接的，無環的，無向的圖。Rooted Trees是一種自由樹，其中一個頂點與另一個頂點是不同的。Rooted Trees的頂點稱為“節點”。你的任務是編寫一個程序，為給定的根樹T的每個節點u報告以下信息：node ID of u (節點編號)parent of u (節點父親)depth of u">
+<meta property="og:description" content="根數題目網址 題意:Rooted Trees是連接的，無環的，無向的圖。Rooted Trees是一種自由樹，其中一個頂點與另一個頂點是不同的。Rooted Trees的頂點稱為“節點”。你的任務是編寫一個程序，為給定的根樹T的每個節點u報告以下信息：node ID of u (節點編號)parent of u (節點父親)depth of u (節點深度)node type (root, int">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2020-07-15T08:05:42.000Z">
-<meta property="article:modified_time" content="2020-07-18T02:35:47.329Z">
+<meta property="article:modified_time" content="2020-08-11T06:22:19.565Z">
 <meta property="article:author" content="CHUCSIE">
 <meta property="article:tag" content="AOJ ALDS1_7_A Rooted Trees">
 <meta name="twitter:card" content="summary">
@@ -51,7 +51,7 @@
   };
 </script>
 
-  <title>AOJ ALDS1_7_A | CHUCSIE</title>
+  <title>AOJ ALDS1_7_A - Rooted Trees | CHUCSIE</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134507655-1"></script>
     <script>
@@ -227,7 +227,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          AOJ ALDS1_7_A
+          AOJ ALDS1_7_A - Rooted Trees
         </h1>
 
         <div class="post-meta">
@@ -244,7 +244,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2020-07-18 10:35:47" itemprop="dateModified" datetime="2020-07-18T10:35:47+08:00">2020-07-18</time>
+                <time title="修改時間：2020-08-11 14:22:19" itemprop="dateModified" datetime="2020-08-11T14:22:19+08:00">2020-08-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -288,7 +288,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="AOJ-ALDS1-7-A-Rooted-Trees"><a href="#AOJ-ALDS1-7-A-Rooted-Trees" class="headerlink" title="AOJ ALDS1_7_A - Rooted Trees"></a>AOJ ALDS1_7_A - Rooted Trees</h1><p><a href="https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_7_A" target="_blank" rel="noopener">題目網址</a></p>
+        <h1 id="根數"><a href="#根數" class="headerlink" title="根數"></a>根數</h1><p><a href="https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_7_A" target="_blank" rel="noopener">題目網址</a></p>
 <h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>Rooted Trees是連接的，無環的，無向的圖。Rooted Trees是一種自由樹，其中一個頂點與另一個頂點是不同的。Rooted Trees的頂點稱為“節點”。<br>你的任務是編寫一個程序，為給定的根樹T的每個節點u報告以下信息：<br>node ID of u (節點編號)<br>parent of u (節點父親)<br>depth of u (節點深度)<br>node type (root, internal node or leaf)<br>a list of chidlren of u (列出節點小孩)</p>
 <a id="more"></a>
 <h4 id="思路"><a href="#思路" class="headerlink" title="思路:"></a>思路:</h4><p>先創立一個結構parent、depth、type和internalNode方便紀錄我們的資料，接下來我們輸入每筆資料的時候就把自己節點的父親深度加一，就可以得到自己節點的深度，然後在子節點裡面，我們也做一樣的事情然後順便紀錄子節點的父親。</p>
@@ -310,12 +310,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/ALDS1-6-C-Quick-Sort/" rel="prev" title="AOJ ALDS1_6_C">
-      <i class="fa fa-chevron-left"></i> AOJ ALDS1_6_C
+    <a href="/ALDS1-6-C-Quick-Sort/" rel="prev" title="AOJ ALDS1_6_C - Quick Sort">
+      <i class="fa fa-chevron-left"></i> AOJ ALDS1_6_C - Quick Sort
     </a></div>
       <div class="post-nav-item">
-    <a href="/ALDS1-7-B-Binary-Tree/" rel="next" title="AOJ ALDS1_7_B">
-      AOJ ALDS1_7_B <i class="fa fa-chevron-right"></i>
+    <a href="/ALDS1-7-B-Binary-Tree/" rel="next" title="AOJ ALDS1_7_B - Binary Tree">
+      AOJ ALDS1_7_B - Binary Tree <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -393,7 +393,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#AOJ-ALDS1-7-A-Rooted-Trees"><span class="nav-number">1.</span> <span class="nav-text">AOJ ALDS1_7_A - Rooted Trees</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#題意"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">題意:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#思路"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">思路:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#程式碼"><span class="nav-number">1.0.0.3.</span> <span class="nav-text">程式碼:</span></a></li></ol></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#根數"><span class="nav-number">1.</span> <span class="nav-text">根數</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#題意"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">題意:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#思路"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">思路:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#程式碼"><span class="nav-number">1.0.0.3.</span> <span class="nav-text">程式碼:</span></a></li></ol></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -409,7 +409,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">288</span>
+          <span class="site-state-item-count">289</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -601,7 +601,7 @@
   var disqus_config = function() {
     this.page.url = "https://chucs.github.io/ALDS1-7-A-Rooted-Trees/";
     this.page.identifier = "ALDS1-7-A-Rooted-Trees/";
-    this.page.title = "AOJ ALDS1_7_A";
+    this.page.title = "AOJ ALDS1_7_A - Rooted Trees";
     };
   NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
     if (window.DISQUS) {

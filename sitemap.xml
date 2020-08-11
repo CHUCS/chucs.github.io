@@ -2,16 +2,170 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://chucs.github.io/ALDS1-3-B-Queue/</loc>
+    <loc>https://chucs.github.io/ALDS1-1-A-Insertion-Sort/</loc>
     
-    <lastmod>2020-08-09T05:59:53.874Z</lastmod>
+    <lastmod>2020-08-11T06:26:21.099Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/ALDS1-1-B-Greatest-Common-Divisor/</loc>
+    
+    <lastmod>2020-08-11T06:26:04.301Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/ALDS1-1-C-Prime-Numbers/</loc>
+    
+    <lastmod>2020-08-11T06:25:41.310Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/ALDS1-1-D-Maximum-Profit/</loc>
+    
+    <lastmod>2020-08-11T06:25:09.931Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/ALDS1-7-C-Tree-Walk/</loc>
+    
+    <lastmod>2020-08-11T06:24:47.740Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://chucs.github.io/ALDS1-7-B-Binary-Tree/</loc>
     
-    <lastmod>2020-07-26T11:58:03.942Z</lastmod>
+    <lastmod>2020-08-11T06:22:55.298Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/ALDS1-7-A-Rooted-Trees/</loc>
+    
+    <lastmod>2020-08-11T06:22:19.565Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/ALDS1-6-C-Quick-Sort/</loc>
+    
+    <lastmod>2020-08-11T06:21:55.140Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/ALDS1-4-A-Linear-Search/</loc>
+    
+    <lastmod>2020-08-11T06:18:59.336Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/ALDS1-3-C-Doubly-Linked-List/</loc>
+    
+    <lastmod>2020-08-11T06:18:47.702Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/ALDS1-3-B-Queue/</loc>
+    
+    <lastmod>2020-08-11T06:18:04.780Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/ALDS1-3-A-Stack/</loc>
+    
+    <lastmod>2020-08-11T06:17:39.248Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/ALDS1-2-C-Stable-Sort/</loc>
+    
+    <lastmod>2020-08-11T06:17:31.716Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/ALDS1-2-A-Bubble-Sort/</loc>
+    
+    <lastmod>2020-08-11T06:16:53.439Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/ALDS1-2-B-Selection-Sort/</loc>
+    
+    <lastmod>2020-08-11T06:16:31.575Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/ALDS1-4-B-Binary-Search/</loc>
+    
+    <lastmod>2020-08-11T06:15:45.361Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/ALDS1-4-C-Dictionary/</loc>
+    
+    <lastmod>2020-08-11T06:15:37.982Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/ALDS1-5-A-Exhaustive-Search/</loc>
+    
+    <lastmod>2020-08-11T06:15:30.619Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/ALDS1-5-B-Merge-Sort/</loc>
+    
+    <lastmod>2020-08-11T06:15:22.602Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/ALDS1-6-A-Counting-Sort/</loc>
+    
+    <lastmod>2020-08-11T06:15:14.482Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/ALDS1-6-B-Partition/</loc>
+    
+    <lastmod>2020-08-11T06:15:06.085Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/swiftui-text/</loc>
+    
+    <lastmod>2020-08-09T12:43:37.111Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/swiftui-color/</loc>
+    
+    <lastmod>2020-08-09T12:43:05.388Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/swiftui-stack/</loc>
+    
+    <lastmod>2020-08-09T12:42:15.860Z</lastmod>
     
   </url>
   
@@ -38,27 +192,6 @@
   
   <url>
     <loc>https://chucs.github.io/k-String/</loc>
-    
-    <lastmod>2020-07-18T02:35:47.386Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://chucs.github.io/swiftui-color/</loc>
-    
-    <lastmod>2020-07-18T02:35:47.386Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://chucs.github.io/swiftui-stack/</loc>
-    
-    <lastmod>2020-07-18T02:35:47.386Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://chucs.github.io/swiftui-text/</loc>
     
     <lastmod>2020-07-18T02:35:47.386Z</lastmod>
     
@@ -1878,27 +2011,6 @@
   </url>
   
   <url>
-    <loc>https://chucs.github.io/ALDS1-6-B-Partition/</loc>
-    
-    <lastmod>2020-07-18T02:35:47.329Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://chucs.github.io/ALDS1-6-C-Quick-Sort/</loc>
-    
-    <lastmod>2020-07-18T02:35:47.329Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://chucs.github.io/ALDS1-7-A-Rooted-Trees/</loc>
-    
-    <lastmod>2020-07-18T02:35:47.329Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://chucs.github.io/Add-Odd-or-Subtract-Even/</loc>
     
     <lastmod>2020-07-18T02:35:47.329Z</lastmod>
@@ -1920,112 +2032,7 @@
   </url>
   
   <url>
-    <loc>https://chucs.github.io/ALDS1-4-A-Linear-Search/</loc>
-    
-    <lastmod>2020-07-18T02:35:47.328Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://chucs.github.io/ALDS1-3-C-Doubly-Linked-List/</loc>
-    
-    <lastmod>2020-07-18T02:35:47.328Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://chucs.github.io/ALDS1-4-B-Binary-Search/</loc>
-    
-    <lastmod>2020-07-18T02:35:47.328Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://chucs.github.io/ALDS1-4-C-Dictionary/</loc>
-    
-    <lastmod>2020-07-18T02:35:47.328Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://chucs.github.io/ALDS1-5-A-Exhaustive-Search/</loc>
-    
-    <lastmod>2020-07-18T02:35:47.328Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://chucs.github.io/ALDS1-6-A-Counting-Sort/</loc>
-    
-    <lastmod>2020-07-18T02:35:47.328Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://chucs.github.io/ALDS1-5-B-Merge-Sort/</loc>
-    
-    <lastmod>2020-07-18T02:35:47.328Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://chucs.github.io/ALDS1-1-B-Greatest-Common-Divisor/</loc>
-    
-    <lastmod>2020-07-18T02:35:47.327Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://chucs.github.io/ALDS1-1-C-Prime-Numbers/</loc>
-    
-    <lastmod>2020-07-18T02:35:47.327Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://chucs.github.io/ALDS1-1-D-Maximum-Profit/</loc>
-    
-    <lastmod>2020-07-18T02:35:47.327Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://chucs.github.io/ALDS1-2-A-Bubble-Sort/</loc>
-    
-    <lastmod>2020-07-18T02:35:47.327Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://chucs.github.io/ALDS1-2-B-Selection-Sort/</loc>
-    
-    <lastmod>2020-07-18T02:35:47.327Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://chucs.github.io/ALDS1-3-A-Stack/</loc>
-    
-    <lastmod>2020-07-18T02:35:47.327Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://chucs.github.io/ALDS1-2-C-Stable-Sort/</loc>
-    
-    <lastmod>2020-07-18T02:35:47.327Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://chucs.github.io/A-Twisty-Movement/</loc>
-    
-    <lastmod>2020-07-18T02:35:47.326Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://chucs.github.io/ALDS1-1-A-Insertion-Sort/</loc>
     
     <lastmod>2020-07-18T02:35:47.326Z</lastmod>
     
