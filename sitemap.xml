@@ -2,6 +2,97 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://chucs.github.io/ALDS1-8-C-Binary-Search-Tree-III/</loc>
+    
+    <lastmod>2020-08-24T06:11:11.948Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/ALDS1-8-B-Binary-Search-Tree-II/</loc>
+    
+    <lastmod>2020-08-24T06:09:05.042Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/ALDS1-8-A-Binary-Search-Tree-I/</loc>
+    
+    <lastmod>2020-08-24T06:09:01.727Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/ALDS1-7-C-Tree-Walk/</loc>
+    
+    <lastmod>2020-08-24T05:54:23.369Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/ALDS1-3-C-Doubly-Linked-List/</loc>
+    
+    <lastmod>2020-08-11T06:32:51.616Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/ALDS1-2-B-Selection-Sort/</loc>
+    
+    <lastmod>2020-08-11T06:29:28.425Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/ALDS1-4-B-Binary-Search/</loc>
+    
+    <lastmod>2020-08-11T06:29:28.401Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/ALDS1-4-C-Dictionary/</loc>
+    
+    <lastmod>2020-08-11T06:29:28.401Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/ALDS1-5-A-Exhaustive-Search/</loc>
+    
+    <lastmod>2020-08-11T06:29:28.401Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/ALDS1-6-A-Counting-Sort/</loc>
+    
+    <lastmod>2020-08-11T06:29:28.401Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/ALDS1-5-B-Merge-Sort/</loc>
+    
+    <lastmod>2020-08-11T06:29:28.401Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/ALDS1-6-B-Partition/</loc>
+    
+    <lastmod>2020-08-11T06:29:28.401Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/ALDS1-7-A-Rooted-Trees/</loc>
+    
+    <lastmod>2020-08-11T06:29:28.401Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://chucs.github.io/ALDS1-1-A-Insertion-Sort/</loc>
     
     <lastmod>2020-08-11T06:26:21.099Z</lastmod>
@@ -30,23 +121,9 @@
   </url>
   
   <url>
-    <loc>https://chucs.github.io/ALDS1-7-C-Tree-Walk/</loc>
-    
-    <lastmod>2020-08-11T06:24:47.740Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://chucs.github.io/ALDS1-7-B-Binary-Tree/</loc>
     
     <lastmod>2020-08-11T06:22:55.298Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://chucs.github.io/ALDS1-7-A-Rooted-Trees/</loc>
-    
-    <lastmod>2020-08-11T06:22:19.565Z</lastmod>
     
   </url>
   
@@ -61,13 +138,6 @@
     <loc>https://chucs.github.io/ALDS1-4-A-Linear-Search/</loc>
     
     <lastmod>2020-08-11T06:18:59.336Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://chucs.github.io/ALDS1-3-C-Doubly-Linked-List/</loc>
-    
-    <lastmod>2020-08-11T06:18:47.702Z</lastmod>
     
   </url>
   
@@ -96,55 +166,6 @@
     <loc>https://chucs.github.io/ALDS1-2-A-Bubble-Sort/</loc>
     
     <lastmod>2020-08-11T06:16:53.439Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://chucs.github.io/ALDS1-2-B-Selection-Sort/</loc>
-    
-    <lastmod>2020-08-11T06:16:31.575Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://chucs.github.io/ALDS1-4-B-Binary-Search/</loc>
-    
-    <lastmod>2020-08-11T06:15:45.361Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://chucs.github.io/ALDS1-4-C-Dictionary/</loc>
-    
-    <lastmod>2020-08-11T06:15:37.982Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://chucs.github.io/ALDS1-5-A-Exhaustive-Search/</loc>
-    
-    <lastmod>2020-08-11T06:15:30.619Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://chucs.github.io/ALDS1-5-B-Merge-Sort/</loc>
-    
-    <lastmod>2020-08-11T06:15:22.602Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://chucs.github.io/ALDS1-6-A-Counting-Sort/</loc>
-    
-    <lastmod>2020-08-11T06:15:14.482Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://chucs.github.io/ALDS1-6-B-Partition/</loc>
-    
-    <lastmod>2020-08-11T06:15:06.085Z</lastmod>
     
   </url>
   

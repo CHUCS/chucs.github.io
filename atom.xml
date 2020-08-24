@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://chucs.github.io/"/>
-  <updated>2020-08-11T06:24:47.740Z</updated>
+  <updated>2020-08-24T06:11:11.948Z</updated>
   <id>https://chucs.github.io/</id>
   
   <author>
@@ -17,13 +17,85 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>AOJ ALDS1_8_C Binary Search Tree III</title>
+    <link href="https://chucs.github.io/ALDS1-8-C-Binary-Search-Tree-III/"/>
+    <id>https://chucs.github.io/ALDS1-8-C-Binary-Search-Tree-III/</id>
+    <published>2020-08-24T05:45:44.000Z</published>
+    <updated>2020-08-24T06:11:11.948Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="二元樹搜索-刪除"><a href="#二元樹搜索-刪除" class="headerlink" title="二元樹搜索 - 刪除"></a>二元樹搜索 - 刪除</h1><p><a href="https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_8_C" target="_blank" rel="noopener">題目網址</a></p><h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>編程一個擁有新增、查詢、刪除功能的二元樹，在每次新增點時，如果key大於node-&gt;key，就新增在node-&gt;right，否則新增在node-&gt;left。最後輸出Preorder與Inorder。</p><a id="more"></a><h4 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼:"></a>程式碼:</h4><script src="https://gist.github.com/Daviswww/e5a835cfa1a3f511e096388e9697423c.js"></script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;二元樹搜索-刪除&quot;&gt;&lt;a href=&quot;#二元樹搜索-刪除&quot; class=&quot;headerlink&quot; title=&quot;二元樹搜索 - 刪除&quot;&gt;&lt;/a&gt;二元樹搜索 - 刪除&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_8_C&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;題目網址&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&quot;題意&quot;&gt;&lt;a href=&quot;#題意&quot; class=&quot;headerlink&quot; title=&quot;題意:&quot;&gt;&lt;/a&gt;題意:&lt;/h4&gt;&lt;p&gt;編程一個擁有新增、查詢、刪除功能的二元樹，在每次新增點時，如果key大於node-&amp;gt;key，就新增在node-&amp;gt;right，否則新增在node-&amp;gt;left。最後輸出Preorder與Inorder。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="AOJ" scheme="https://chucs.github.io/categories/AOJ/"/>
+    
+    
+      <category term="implementation" scheme="https://chucs.github.io/tags/implementation/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AOJ ALDS1_8_B Binary Search Tree II</title>
+    <link href="https://chucs.github.io/ALDS1-8-B-Binary-Search-Tree-II/"/>
+    <id>https://chucs.github.io/ALDS1-8-B-Binary-Search-Tree-II/</id>
+    <published>2020-08-24T05:45:33.000Z</published>
+    <updated>2020-08-24T06:09:05.042Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="二元樹搜索-查詢"><a href="#二元樹搜索-查詢" class="headerlink" title="二元樹搜索 - 查詢"></a>二元樹搜索 - 查詢</h1><p><a href="https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_8_B" target="_blank" rel="noopener">題目網址</a></p><h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>編程一個擁有新增功能的二元樹，在每次新增點時，如果key大於node-&gt;key，就新增在node-&gt;right，否則新增在node-&gt;left。最後輸出Preorder與Inorder。</p><a id="more"></a><h4 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼:"></a>程式碼:</h4><script src="https://gist.github.com/Daviswww/64cf5d826826134e302151c569adb7d8.js"></script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;二元樹搜索-查詢&quot;&gt;&lt;a href=&quot;#二元樹搜索-查詢&quot; class=&quot;headerlink&quot; title=&quot;二元樹搜索 - 查詢&quot;&gt;&lt;/a&gt;二元樹搜索 - 查詢&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_8_B&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;題目網址&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&quot;題意&quot;&gt;&lt;a href=&quot;#題意&quot; class=&quot;headerlink&quot; title=&quot;題意:&quot;&gt;&lt;/a&gt;題意:&lt;/h4&gt;&lt;p&gt;編程一個擁有新增功能的二元樹，在每次新增點時，如果key大於node-&amp;gt;key，就新增在node-&amp;gt;right，否則新增在node-&amp;gt;left。最後輸出Preorder與Inorder。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="AOJ" scheme="https://chucs.github.io/categories/AOJ/"/>
+    
+    
+      <category term="implementation" scheme="https://chucs.github.io/tags/implementation/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AOJ ALDS1_8_A Binary Search Tree I</title>
+    <link href="https://chucs.github.io/ALDS1-8-A-Binary-Search-Tree-I/"/>
+    <id>https://chucs.github.io/ALDS1-8-A-Binary-Search-Tree-I/</id>
+    <published>2020-08-24T05:45:19.000Z</published>
+    <updated>2020-08-24T06:09:01.727Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="二元樹搜索-新增"><a href="#二元樹搜索-新增" class="headerlink" title="二元樹搜索 - 新增"></a>二元樹搜索 - 新增</h1><p><a href="https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_8_A" target="_blank" rel="noopener">題目網址</a></p><h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>編程一個擁有新增功能的二元樹，在每次新增點時，如果key大於node-&gt;key，就新增在node-&gt;right，否則新增在node-&gt;left。最後輸出Preorder與Inorder。</p><a id="more"></a><h4 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼:"></a>程式碼:</h4><script src="https://gist.github.com/Daviswww/f392df5b2c8130b6eeff6a0b8c1b82bb.js"></script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;二元樹搜索-新增&quot;&gt;&lt;a href=&quot;#二元樹搜索-新增&quot; class=&quot;headerlink&quot; title=&quot;二元樹搜索 - 新增&quot;&gt;&lt;/a&gt;二元樹搜索 - 新增&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_8_A&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;題目網址&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&quot;題意&quot;&gt;&lt;a href=&quot;#題意&quot; class=&quot;headerlink&quot; title=&quot;題意:&quot;&gt;&lt;/a&gt;題意:&lt;/h4&gt;&lt;p&gt;編程一個擁有新增功能的二元樹，在每次新增點時，如果key大於node-&amp;gt;key，就新增在node-&amp;gt;right，否則新增在node-&amp;gt;left。最後輸出Preorder與Inorder。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="AOJ" scheme="https://chucs.github.io/categories/AOJ/"/>
+    
+    
+      <category term="implementation" scheme="https://chucs.github.io/tags/implementation/"/>
+    
+  </entry>
+  
+  <entry>
     <title>AOJ ALDS1_7_C - Tree Walk</title>
     <link href="https://chucs.github.io/ALDS1-7-C-Tree-Walk/"/>
     <id>https://chucs.github.io/ALDS1-7-C-Tree-Walk/</id>
     <published>2020-08-11T04:55:23.000Z</published>
-    <updated>2020-08-11T06:24:47.740Z</updated>
+    <updated>2020-08-24T05:54:23.369Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="樹遍歷"><a href="#樹遍歷" class="headerlink" title="樹遍歷"></a>樹遍歷</h1><p><a href="https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_7_C" target="_blank" rel="noopener">題目網址</a></p><h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>您的任務是編寫一個程序，該程序根據以下算法執行樹遍歷（系統遍歷樹中的所有例程）：</p><ol><li>根、左子樹和右子樹(preorder)。</li><li>左子樹、根子樹和右子樹(inorder)。</li><li>左子樹、右子樹和根(postorder)。<a id="more"></a><h4 id="思路"><a href="#思路" class="headerlink" title="思路:"></a>思路:</h4>創建一個結構left代表左子樹，right代表右子樹，pr代表父節點用於檢查是否為跟節點。</li></ol><p>創建一個帶有結構的陣列依序填入所有值。</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)&#123;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; key &gt;&gt; left &gt;&gt; right;</span><br><span class="line">    </span><br><span class="line">    tree[key].left = left;</span><br><span class="line">    tree[key].right = right;</span><br><span class="line">    tree[left].pr = key;</span><br><span class="line">    tree[right].pr = key;</span><br><span class="line">    node[i] = key;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>接著尋找父節點，輸入的所有節點檢查pr為-1就是父節點。</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">getRoot</span><span class="params">(Node* tree, <span class="keyword">int</span> *node, <span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> root = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(tree[node[i]].pr == <span class="number">-1</span>)&#123;</span><br><span class="line">            root = node[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> root;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>最後利用題目上敘的規則遞迴輸出。</p><h4 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼:"></a>程式碼:</h4><script src="https://gist.github.com/Daviswww/b95063f99f1a85b8b827f35fe13c2c35.js"></script>]]></content>
+    <content type="html"><![CDATA[<h1 id="樹遍歷"><a href="#樹遍歷" class="headerlink" title="樹遍歷"></a>樹遍歷</h1><p><a href="https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_7_C" target="_blank" rel="noopener">題目網址</a></p><h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>您的任務是編寫一個程序，該程序根據以下算法執行樹遍歷（系統遍歷樹中的所有例程）：</p><ol><li>根、左子樹和右子樹(preorder)。</li><li>左子樹、根子樹和右子樹(inorder)。</li><li>左子樹、右子樹和根(postorder)。</li></ol><a id="more"></a><h4 id="思路"><a href="#思路" class="headerlink" title="思路:"></a>思路:</h4><p>創建一個結構left代表左子樹，right代表右子樹，pr代表父節點用於檢查是否為跟節點。</p><p>創建一個帶有結構的陣列依序填入所有值。</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)&#123;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; key &gt;&gt; left &gt;&gt; right;</span><br><span class="line">    </span><br><span class="line">    tree[key].left = left;</span><br><span class="line">    tree[key].right = right;</span><br><span class="line">    tree[left].pr = key;</span><br><span class="line">    tree[right].pr = key;</span><br><span class="line">    node[i] = key;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>接著尋找父節點，輸入的所有節點檢查pr為-1就是父節點。</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">getRoot</span><span class="params">(Node* tree, <span class="keyword">int</span> *node, <span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> root = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(tree[node[i]].pr == <span class="number">-1</span>)&#123;</span><br><span class="line">            root = node[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> root;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>最後利用題目上敘的規則遞迴輸出。</p><h4 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼:"></a>程式碼:</h4><script src="https://gist.github.com/Daviswww/b95063f99f1a85b8b827f35fe13c2c35.js"></script>]]></content>
     
     <summary type="html">
     
@@ -32,7 +104,8 @@
 &lt;ol&gt;
 &lt;li&gt;根、左子樹和右子樹(preorder)。&lt;/li&gt;
 &lt;li&gt;左子樹、根子樹和右子樹(inorder)。&lt;/li&gt;
-&lt;li&gt;左子樹、右子樹和根(postorder)。
+&lt;li&gt;左子樹、右子樹和根(postorder)。&lt;/li&gt;
+&lt;/ol&gt;
     
     </summary>
     
@@ -74,13 +147,13 @@
     <link href="https://chucs.github.io/ALDS1-7-A-Rooted-Trees/"/>
     <id>https://chucs.github.io/ALDS1-7-A-Rooted-Trees/</id>
     <published>2020-07-15T08:05:42.000Z</published>
-    <updated>2020-08-11T06:22:19.565Z</updated>
+    <updated>2020-08-11T06:29:28.401Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="根數"><a href="#根數" class="headerlink" title="根數"></a>根數</h1><p><a href="https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_7_A" target="_blank" rel="noopener">題目網址</a></p><h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>Rooted Trees是連接的，無環的，無向的圖。Rooted Trees是一種自由樹，其中一個頂點與另一個頂點是不同的。Rooted Trees的頂點稱為“節點”。<br>你的任務是編寫一個程序，為給定的根樹T的每個節點u報告以下信息：<br>node ID of u (節點編號)<br>parent of u (節點父親)<br>depth of u (節點深度)<br>node type (root, internal node or leaf)<br>a list of chidlren of u (列出節點小孩)</p><a id="more"></a><h4 id="思路"><a href="#思路" class="headerlink" title="思路:"></a>思路:</h4><p>先創立一個結構parent、depth、type和internalNode方便紀錄我們的資料，接下來我們輸入每筆資料的時候就把自己節點的父親深度加一，就可以得到自己節點的深度，然後在子節點裡面，我們也做一樣的事情然後順便紀錄子節點的父親。</p><h4 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼:"></a>程式碼:</h4><script src="https://gist.github.com/Daviswww/c3dfdc3026767577257e91a5902bae1d.js"></script>]]></content>
+    <content type="html"><![CDATA[<h1 id="根樹"><a href="#根樹" class="headerlink" title="根樹"></a>根樹</h1><p><a href="https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_7_A" target="_blank" rel="noopener">題目網址</a></p><h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>Rooted Trees是連接的，無環的，無向的圖。Rooted Trees是一種自由樹，其中一個頂點與另一個頂點是不同的。Rooted Trees的頂點稱為“節點”。<br>你的任務是編寫一個程序，為給定的根樹T的每個節點u報告以下信息：<br>node ID of u (節點編號)<br>parent of u (節點父親)<br>depth of u (節點深度)<br>node type (root, internal node or leaf)<br>a list of chidlren of u (列出節點小孩)</p><a id="more"></a><h4 id="思路"><a href="#思路" class="headerlink" title="思路:"></a>思路:</h4><p>先創立一個結構parent、depth、type和internalNode方便紀錄我們的資料，接下來我們輸入每筆資料的時候就把自己節點的父親深度加一，就可以得到自己節點的深度，然後在子節點裡面，我們也做一樣的事情然後順便紀錄子節點的父親。</p><h4 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼:"></a>程式碼:</h4><script src="https://gist.github.com/Daviswww/c3dfdc3026767577257e91a5902bae1d.js"></script>]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;根數&quot;&gt;&lt;a href=&quot;#根數&quot; class=&quot;headerlink&quot; title=&quot;根數&quot;&gt;&lt;/a&gt;根數&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_7_A&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;題目網址&lt;/a&gt;&lt;/p&gt;
+      &lt;h1 id=&quot;根樹&quot;&gt;&lt;a href=&quot;#根樹&quot; class=&quot;headerlink&quot; title=&quot;根樹&quot;&gt;&lt;/a&gt;根樹&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_7_A&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;題目網址&lt;/a&gt;&lt;/p&gt;
 &lt;h4 id=&quot;題意&quot;&gt;&lt;a href=&quot;#題意&quot; class=&quot;headerlink&quot; title=&quot;題意:&quot;&gt;&lt;/a&gt;題意:&lt;/h4&gt;&lt;p&gt;Rooted Trees是連接的，無環的，無向的圖。Rooted Trees是一種自由樹，其中一個頂點與另一個頂點是不同的。Rooted Trees的頂點稱為“節點”。&lt;br&gt;你的任務是編寫一個程序，為給定的根樹T的每個節點u報告以下信息：&lt;br&gt;node ID of u (節點編號)&lt;br&gt;parent of u (節點父親)&lt;br&gt;depth of u (節點深度)&lt;br&gt;node type (root, internal node or leaf)&lt;br&gt;a list of chidlren of u (列出節點小孩)&lt;/p&gt;
     
     </summary>
@@ -125,13 +198,13 @@
     <link href="https://chucs.github.io/ALDS1-6-B-Partition/"/>
     <id>https://chucs.github.io/ALDS1-6-B-Partition/</id>
     <published>2020-07-15T06:26:38.000Z</published>
-    <updated>2020-08-11T06:15:06.085Z</updated>
+    <updated>2020-08-11T06:29:28.401Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_6_B" target="_blank" rel="noopener">題目網址</a></p><h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>快速排序有三個步驟：<br>1.挑選基準值：從數列中挑出一個元素，稱為「基準」（pivot）。</p><p>2.分割：重新排序數列，所有比基準值小的元素擺放在基準前面，所有比基準值大的元素擺在基準後面（與基準值相等的數可以到任何一邊）。在這個分割結束之後，對基準值的排序就已經完成。</p><p>3.遞迴排序子序列：遞迴地將小於基準值元素的子序列和大於基準值元素的子序列排序。</p><p>而這題要做的就是分割這個動作。</p><a id="more"></a><h4 id="思路"><a href="#思路" class="headerlink" title="思路:"></a>思路:</h4><p>如果(a[j] &lt;= x)我們就交換，最後我們將最後一個切割點輸出。</p><h4 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼:"></a>程式碼:</h4><script src="https://gist.github.com/Daviswww/2b61bf149936044aab2d398c8496b1b3.js"></script>    ]]></content>
+    <content type="html"><![CDATA[<h1 id="快速排序劃分"><a href="#快速排序劃分" class="headerlink" title="快速排序劃分"></a>快速排序劃分</h1><p><a href="https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_6_B" target="_blank" rel="noopener">題目網址</a></p><h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>快速排序有三個步驟：<br>1.挑選基準值：從數列中挑出一個元素，稱為「基準」（pivot）。</p><p>2.分割：重新排序數列，所有比基準值小的元素擺放在基準前面，所有比基準值大的元素擺在基準後面（與基準值相等的數可以到任何一邊）。在這個分割結束之後，對基準值的排序就已經完成。</p><p>3.遞迴排序子序列：遞迴地將小於基準值元素的子序列和大於基準值元素的子序列排序。</p><p>而這題要做的就是分割這個動作。</p><a id="more"></a><h4 id="思路"><a href="#思路" class="headerlink" title="思路:"></a>思路:</h4><p>如果(a[j] &lt;= x)我們就交換，最後我們將最後一個切割點輸出。</p><h4 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼:"></a>程式碼:</h4><script src="https://gist.github.com/Daviswww/2b61bf149936044aab2d398c8496b1b3.js"></script>    ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;a href=&quot;https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_6_B&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;題目網址&lt;/a&gt;&lt;/p&gt;
+      &lt;h1 id=&quot;快速排序劃分&quot;&gt;&lt;a href=&quot;#快速排序劃分&quot; class=&quot;headerlink&quot; title=&quot;快速排序劃分&quot;&gt;&lt;/a&gt;快速排序劃分&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_6_B&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;題目網址&lt;/a&gt;&lt;/p&gt;
 &lt;h4 id=&quot;題意&quot;&gt;&lt;a href=&quot;#題意&quot; class=&quot;headerlink&quot; title=&quot;題意:&quot;&gt;&lt;/a&gt;題意:&lt;/h4&gt;&lt;p&gt;快速排序有三個步驟：&lt;br&gt;1.挑選基準值：從數列中挑出一個元素，稱為「基準」（pivot）。&lt;/p&gt;
 &lt;p&gt;2.分割：重新排序數列，所有比基準值小的元素擺放在基準前面，所有比基準值大的元素擺在基準後面（與基準值相等的數可以到任何一邊）。在這個分割結束之後，對基準值的排序就已經完成。&lt;/p&gt;
 &lt;p&gt;3.遞迴排序子序列：遞迴地將小於基準值元素的子序列和大於基準值元素的子序列排序。&lt;/p&gt;
@@ -152,13 +225,13 @@
     <link href="https://chucs.github.io/ALDS1-6-A-Counting-Sort/"/>
     <id>https://chucs.github.io/ALDS1-6-A-Counting-Sort/</id>
     <published>2020-07-15T05:33:29.000Z</published>
-    <updated>2020-08-11T06:15:14.482Z</updated>
+    <updated>2020-08-11T06:29:28.401Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_6_A" target="_blank" rel="noopener">題目網址</a></p><h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>計數排序可用於對數組中的元素進行排序，用一個陣列來計算元素有幾個，而他的index就是原本的數字裡面存的是出現次數。請利用計數排序排序下列數列。</p><a id="more"></a><h4 id="思路"><a href="#思路" class="headerlink" title="思路:"></a>思路:</h4><p>將每個數字都放進Ｃ陣列內計數(c[a[i]]++)，處理完後從0跑到K並根據C陣列內的計數，將所有的數字輸出一遍。</p><h4 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼:"></a>程式碼:</h4><script src="https://gist.github.com/Daviswww/245397223969f64944326fb98f0b1e80.js"></script>]]></content>
+    <content type="html"><![CDATA[<h1 id="索引排序"><a href="#索引排序" class="headerlink" title="索引排序"></a>索引排序</h1><p><a href="https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_6_A" target="_blank" rel="noopener">題目網址</a></p><h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>計數排序可用於對數組中的元素進行排序，用一個陣列來計算元素有幾個，而他的index就是原本的數字裡面存的是出現次數。請利用計數排序排序下列數列。</p><a id="more"></a><h4 id="思路"><a href="#思路" class="headerlink" title="思路:"></a>思路:</h4><p>將每個數字都放進Ｃ陣列內計數(c[a[i]]++)，處理完後從0跑到K並根據C陣列內的計數，將所有的數字輸出一遍。</p><h4 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼:"></a>程式碼:</h4><script src="https://gist.github.com/Daviswww/245397223969f64944326fb98f0b1e80.js"></script>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;a href=&quot;https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_6_A&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;題目網址&lt;/a&gt;&lt;/p&gt;
+      &lt;h1 id=&quot;索引排序&quot;&gt;&lt;a href=&quot;#索引排序&quot; class=&quot;headerlink&quot; title=&quot;索引排序&quot;&gt;&lt;/a&gt;索引排序&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_6_A&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;題目網址&lt;/a&gt;&lt;/p&gt;
 &lt;h4 id=&quot;題意&quot;&gt;&lt;a href=&quot;#題意&quot; class=&quot;headerlink&quot; title=&quot;題意:&quot;&gt;&lt;/a&gt;題意:&lt;/h4&gt;&lt;p&gt;計數排序可用於對數組中的元素進行排序，用一個陣列來計算元素有幾個，而他的index就是原本的數字裡面存的是出現次數。請利用計數排序排序下列數列。&lt;/p&gt;
     
     </summary>
@@ -176,13 +249,13 @@
     <link href="https://chucs.github.io/ALDS1-5-B-Merge-Sort/"/>
     <id>https://chucs.github.io/ALDS1-5-B-Merge-Sort/</id>
     <published>2020-07-15T04:39:23.000Z</published>
-    <updated>2020-08-11T06:15:22.602Z</updated>
+    <updated>2020-08-11T06:29:28.401Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_5_B" target="_blank" rel="noopener">題目網址</a></p><h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>給你N個整數序列S創建一個程序，根據上面的虛擬碼通過合併排序由小到大進行排序。另外，請報告合併中的比較總數。</p><a id="more"></a><h4 id="思路"><a href="#思路" class="headerlink" title="思路:"></a>思路:</h4><p>先拆開然後檢查左邊和右邊誰大誰小，小的放左邊大的放右邊合併，重複這個動作到結束。</p><h4 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼:"></a>程式碼:</h4><script src="https://gist.github.com/Daviswww/86ace3aedb574bee48d1a7869cca847c.js"></script>]]></content>
+    <content type="html"><![CDATA[<h1 id="合併排序"><a href="#合併排序" class="headerlink" title="合併排序"></a>合併排序</h1><p><a href="https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_5_B" target="_blank" rel="noopener">題目網址</a></p><h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>給你N個整數序列S創建一個程序，根據上面的虛擬碼通過合併排序由小到大進行排序。另外，請報告合併中的比較總數。</p><a id="more"></a><h4 id="思路"><a href="#思路" class="headerlink" title="思路:"></a>思路:</h4><p>先拆開然後檢查左邊和右邊誰大誰小，小的放左邊大的放右邊合併，重複這個動作到結束。</p><h4 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼:"></a>程式碼:</h4><script src="https://gist.github.com/Daviswww/86ace3aedb574bee48d1a7869cca847c.js"></script>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;a href=&quot;https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_5_B&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;題目網址&lt;/a&gt;&lt;/p&gt;
+      &lt;h1 id=&quot;合併排序&quot;&gt;&lt;a href=&quot;#合併排序&quot; class=&quot;headerlink&quot; title=&quot;合併排序&quot;&gt;&lt;/a&gt;合併排序&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_5_B&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;題目網址&lt;/a&gt;&lt;/p&gt;
 &lt;h4 id=&quot;題意&quot;&gt;&lt;a href=&quot;#題意&quot; class=&quot;headerlink&quot; title=&quot;題意:&quot;&gt;&lt;/a&gt;題意:&lt;/h4&gt;&lt;p&gt;給你N個整數序列S創建一個程序，根據上面的虛擬碼通過合併排序由小到大進行排序。另外，請報告合併中的比較總數。&lt;/p&gt;
     
     </summary>
@@ -200,13 +273,13 @@
     <link href="https://chucs.github.io/ALDS1-5-A-Exhaustive-Search/"/>
     <id>https://chucs.github.io/ALDS1-5-A-Exhaustive-Search/</id>
     <published>2020-07-14T08:13:31.000Z</published>
-    <updated>2020-08-11T06:15:30.619Z</updated>
+    <updated>2020-08-11T06:29:28.401Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_5_A" target="_blank" rel="noopener">題目網址</a></p><h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>給N個整數數列A，Q個整數數列M，判斷A任意數字加起來是否等於Mi，如果有輸出”yes”，否則輸出”no”。</p><a id="more"></a><h4 id="思路"><a href="#思路" class="headerlink" title="思路:"></a>思路:</h4><p>直接建一張查詢表把所有的可能加一遍並修改，之後直接查表。<br>累加後遞迴然後把位子移動到下一個數字。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">build(sum+a[index], index+1, n);</span><br></pre></td></tr></table></figure><p>把自己也改變。<br>build(sum, index+1, n);</p><h4 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼:"></a>程式碼:</h4><script src="https://gist.github.com/Daviswww/ca85b1798c3535457231e0d3a4c645e9.js"></script>]]></content>
+    <content type="html"><![CDATA[<h1 id="全面搜索"><a href="#全面搜索" class="headerlink" title="全面搜索"></a>全面搜索</h1><p><a href="https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_5_A" target="_blank" rel="noopener">題目網址</a></p><h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>給N個整數數列A，Q個整數數列M，判斷A任意數字加起來是否等於Mi，如果有輸出”yes”，否則輸出”no”。</p><a id="more"></a><h4 id="思路"><a href="#思路" class="headerlink" title="思路:"></a>思路:</h4><p>直接建一張查詢表把所有的可能加一遍並修改，之後直接查表。<br>累加後遞迴然後把位子移動到下一個數字。</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">build(sum+a[index], index+<span class="number">1</span>, n);</span><br></pre></td></tr></table></figure><p>把自己也改變。<br>build(sum, index+1, n);</p><h4 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼:"></a>程式碼:</h4><script src="https://gist.github.com/Daviswww/ca85b1798c3535457231e0d3a4c645e9.js"></script>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;a href=&quot;https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_5_A&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;題目網址&lt;/a&gt;&lt;/p&gt;
+      &lt;h1 id=&quot;全面搜索&quot;&gt;&lt;a href=&quot;#全面搜索&quot; class=&quot;headerlink&quot; title=&quot;全面搜索&quot;&gt;&lt;/a&gt;全面搜索&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_5_A&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;題目網址&lt;/a&gt;&lt;/p&gt;
 &lt;h4 id=&quot;題意&quot;&gt;&lt;a href=&quot;#題意&quot; class=&quot;headerlink&quot; title=&quot;題意:&quot;&gt;&lt;/a&gt;題意:&lt;/h4&gt;&lt;p&gt;給N個整數數列A，Q個整數數列M，判斷A任意數字加起來是否等於Mi，如果有輸出”yes”，否則輸出”no”。&lt;/p&gt;
     
     </summary>
@@ -224,13 +297,13 @@
     <link href="https://chucs.github.io/ALDS1-4-C-Dictionary/"/>
     <id>https://chucs.github.io/ALDS1-4-C-Dictionary/</id>
     <published>2020-07-14T06:51:04.000Z</published>
-    <updated>2020-08-11T06:15:37.982Z</updated>
+    <updated>2020-08-11T06:29:28.401Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_4_C" target="_blank" rel="noopener">題目網址</a></p><h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>寫一個具備以下功能的字典程式:<br>insert str: 插入一個字串到字典裡。<br>find str: 找尋字串如果找到輸出”yes”，否則”no”。</p><a id="more"></a><h4 id="思路"><a href="#思路" class="headerlink" title="思路:"></a>思路:</h4><p>利用C++的map函式來加入，使用find的功能來查詢，如果沒找會輸出0，所以我們就可以放在判斷式裡面做判斷。</p><h4 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼:"></a>程式碼:</h4><script src="https://gist.github.com/Daviswww/0e68ebaec599b3a3b31c9e84fbac8840.js"></script>]]></content>
+    <content type="html"><![CDATA[<h1 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h1><p><a href="https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_4_C" target="_blank" rel="noopener">題目網址</a></p><h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>寫一個具備以下功能的字典程式:<br>insert str: 插入一個字串到字典裡。<br>find str: 找尋字串如果找到輸出”yes”，否則”no”。</p><a id="more"></a><h4 id="思路"><a href="#思路" class="headerlink" title="思路:"></a>思路:</h4><p>利用C++的map函式來加入，使用find的功能來查詢，如果沒找會輸出0，所以我們就可以放在判斷式裡面做判斷。</p><h4 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼:"></a>程式碼:</h4><script src="https://gist.github.com/Daviswww/0e68ebaec599b3a3b31c9e84fbac8840.js"></script>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;a href=&quot;https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_4_C&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;題目網址&lt;/a&gt;&lt;/p&gt;
+      &lt;h1 id=&quot;字典&quot;&gt;&lt;a href=&quot;#字典&quot; class=&quot;headerlink&quot; title=&quot;字典&quot;&gt;&lt;/a&gt;字典&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_4_C&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;題目網址&lt;/a&gt;&lt;/p&gt;
 &lt;h4 id=&quot;題意&quot;&gt;&lt;a href=&quot;#題意&quot; class=&quot;headerlink&quot; title=&quot;題意:&quot;&gt;&lt;/a&gt;題意:&lt;/h4&gt;&lt;p&gt;寫一個具備以下功能的字典程式:&lt;br&gt;insert str: 插入一個字串到字典裡。&lt;br&gt;find str: 找尋字串如果找到輸出”yes”，否則”no”。&lt;/p&gt;
     
     </summary>
@@ -248,13 +321,13 @@
     <link href="https://chucs.github.io/ALDS1-4-B-Binary-Search/"/>
     <id>https://chucs.github.io/ALDS1-4-B-Binary-Search/</id>
     <published>2020-07-14T05:24:03.000Z</published>
-    <updated>2020-08-11T06:15:45.361Z</updated>
+    <updated>2020-08-11T06:29:28.401Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_4_B" target="_blank" rel="noopener">題目網址</a></p><h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>給N個整數數列S，還有q個整數數列T，請輸出T在S裡面有找到幾個。利用二分搜索來尋找。</p><a id="more"></a><h4 id="思路"><a href="#思路" class="headerlink" title="思路:"></a>思路:</h4><p>宣告三個變數分別紀錄左邊、右邊和中間位置，每次判斷中間那個數字是否等於要找的數字，如果沒有則判斷大於小於以利切割，如果大於的話就把r換成中間的位置，小於則把l換成中間的位置。</p><h4 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼:"></a>程式碼:</h4><script src="https://gist.github.com/Daviswww/b7e47a957066b3bb5888030be0aac43f.js"></script>]]></content>
+    <content type="html"><![CDATA[<h1 id="二分搜索"><a href="#二分搜索" class="headerlink" title="二分搜索"></a>二分搜索</h1><p><a href="https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_4_B" target="_blank" rel="noopener">題目網址</a></p><h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>給N個整數數列S，還有q個整數數列T，請輸出T在S裡面有找到幾個。利用二分搜索來尋找。</p><a id="more"></a><h4 id="思路"><a href="#思路" class="headerlink" title="思路:"></a>思路:</h4><p>宣告三個變數分別紀錄左邊、右邊和中間位置，每次判斷中間那個數字是否等於要找的數字，如果沒有則判斷大於小於以利切割，如果大於的話就把r換成中間的位置，小於則把l換成中間的位置。</p><h4 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼:"></a>程式碼:</h4><script src="https://gist.github.com/Daviswww/b7e47a957066b3bb5888030be0aac43f.js"></script>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;a href=&quot;https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_4_B&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;題目網址&lt;/a&gt;&lt;/p&gt;
+      &lt;h1 id=&quot;二分搜索&quot;&gt;&lt;a href=&quot;#二分搜索&quot; class=&quot;headerlink&quot; title=&quot;二分搜索&quot;&gt;&lt;/a&gt;二分搜索&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_4_B&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;題目網址&lt;/a&gt;&lt;/p&gt;
 &lt;h4 id=&quot;題意&quot;&gt;&lt;a href=&quot;#題意&quot; class=&quot;headerlink&quot; title=&quot;題意:&quot;&gt;&lt;/a&gt;題意:&lt;/h4&gt;&lt;p&gt;給N個整數數列S，還有q個整數數列T，請輸出T在S裡面有找到幾個。利用二分搜索來尋找。&lt;/p&gt;
     
     </summary>
@@ -366,9 +439,9 @@
     <link href="https://chucs.github.io/ALDS1-3-C-Doubly-Linked-List/"/>
     <id>https://chucs.github.io/ALDS1-3-C-Doubly-Linked-List/</id>
     <published>2020-07-13T05:06:41.000Z</published>
-    <updated>2020-08-11T06:18:47.702Z</updated>
+    <updated>2020-08-11T06:32:51.616Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="雙向鏈結串列"><a href="#雙向鏈結串列" class="headerlink" title="雙向鏈結串列"></a>雙向鏈結串列</h1><p><a href="https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_3_C" target="_blank" rel="noopener">題目網址</a></p><h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>寫一個具備以下功能的Doubly Linked List:<br>insert x: 加入一個元素x在list的最前面.<br>delete x: 刪除一個元素x. 如果沒有找到，不必做任何動作.<br>deleteFirst: 刪除list第一個元素.<br>deleteLast: 刪除list最後一個元素.</p><a id="more"></a><h4 id="思路"><a href="#思路" class="headerlink" title="思路:"></a>思路:</h4><h5 id="節點"><a href="#節點" class="headerlink" title="節點"></a>節點</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">struct Node&#123;</span><br><span class="line">int data;</span><br><span class="line">    &#x2F;&#x2F; 上一個節點</span><br><span class="line">Node* prev;</span><br><span class="line">    &#x2F;&#x2F; 下一個節點</span><br><span class="line">Node* next;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p>首先我們要先宣告一個結構分別為資料,上個節點和下一個節點。</p><h5 id="新增數字"><a href="#新增數字" class="headerlink" title="新增數字"></a>新增數字</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">void insertNode(int x)&#123;</span><br><span class="line">    Node* tmpNode &#x3D; motherNode-&gt;next;</span><br><span class="line">    motherNode-&gt;next &#x3D; new Node();</span><br><span class="line">    motherNode-&gt;next-&gt;data &#x3D; x;</span><br><span class="line">    motherNode-&gt;next-&gt;next &#x3D; tmpNode;</span><br><span class="line">    motherNode-&gt;next-&gt;prev &#x3D; motherNode;</span><br><span class="line">    tmpNode-&gt;prev &#x3D; motherNode-&gt;next;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p>先新增一個新節點然後將資料放入後，與主節點做連接。</p><h5 id="刪除數字"><a href="#刪除數字" class="headerlink" title="刪除數字"></a>刪除數字</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">void deleteNode(int x)&#123;</span><br><span class="line">    Node* tmpNode &#x3D; motherNode-&gt;next;</span><br><span class="line">    while(tmpNode !&#x3D; motherNode &amp;&amp; tmpNode-&gt;data !&#x3D; x)&#123;</span><br><span class="line">        tmpNode &#x3D; tmpNode-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">    if(tmpNode !&#x3D; motherNode)&#123;</span><br><span class="line">        tmpNode-&gt;prev-&gt;next &#x3D; tmpNode-&gt;next;</span><br><span class="line">        tmpNode-&gt;next-&gt;prev &#x3D; tmpNode-&gt;prev;</span><br><span class="line">        delete tmpNode;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p>逐一檢查節點資料是否為x，如果找到了就將next與prev的節點換成下一個位置的，然後刪除節點。</p><h5 id="刪除最前面的"><a href="#刪除最前面的" class="headerlink" title="刪除最前面的"></a>刪除最前面的</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">void deleteFirst()&#123;</span><br><span class="line">    Node* tmpNode &#x3D; motherNode-&gt;next;</span><br><span class="line">    motherNode-&gt;next &#x3D; motherNode-&gt;next-&gt;next;</span><br><span class="line">    motherNode-&gt;next-&gt;prev &#x3D; motherNode;</span><br><span class="line">    delete tmpNode;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p>將最前面的節點交換後與主節點連接，然後再將他刪除。</p><h5 id="刪除最後面的"><a href="#刪除最後面的" class="headerlink" title="刪除最後面的"></a>刪除最後面的</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">void deleteLast()&#123;</span><br><span class="line">    Node* tmpNode &#x3D; motherNode-&gt;prev;</span><br><span class="line">    motherNode-&gt;prev &#x3D; motherNode-&gt;prev-&gt;prev;</span><br><span class="line">    motherNode-&gt;prev-&gt;next &#x3D; motherNode;</span><br><span class="line">    delete tmpNode; </span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p>將最後面的節點交換後與主節點連接，然後再將他刪除。</p><h4 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼:"></a>程式碼:</h4><script src="https://gist.github.com/Daviswww/b9f0ee48e8f8965c9b8b30ecaeee9afe.js"></script>]]></content>
+    <content type="html"><![CDATA[<h1 id="雙向鏈結串列"><a href="#雙向鏈結串列" class="headerlink" title="雙向鏈結串列"></a>雙向鏈結串列</h1><p><a href="https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_3_C" target="_blank" rel="noopener">題目網址</a></p><h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>寫一個具備以下功能的Doubly Linked List:<br>insert x: 加入一個元素x在list的最前面.<br>delete x: 刪除一個元素x. 如果沒有找到，不必做任何動作.<br>deleteFirst: 刪除list第一個元素.<br>deleteLast: 刪除list最後一個元素.</p><a id="more"></a><h4 id="思路"><a href="#思路" class="headerlink" title="思路:"></a>思路:</h4><h5 id="節點"><a href="#節點" class="headerlink" title="節點"></a>節點</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Node</span>&#123;</span></span><br><span class="line"><span class="keyword">int</span> data;</span><br><span class="line">    <span class="comment">// 上一個節點</span></span><br><span class="line">Node* prev;</span><br><span class="line">    <span class="comment">// 下一個節點</span></span><br><span class="line">Node* next;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p>首先我們要先宣告一個結構分別為資料,上個節點和下一個節點。</p><h5 id="新增數字"><a href="#新增數字" class="headerlink" title="新增數字"></a>新增數字</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">insertNode</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">    Node* tmpNode = motherNode-&gt;next;</span><br><span class="line">    motherNode-&gt;next = <span class="keyword">new</span> Node();</span><br><span class="line">    motherNode-&gt;next-&gt;data = x;</span><br><span class="line">    motherNode-&gt;next-&gt;next = tmpNode;</span><br><span class="line">    motherNode-&gt;next-&gt;prev = motherNode;</span><br><span class="line">    tmpNode-&gt;prev = motherNode-&gt;next;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p>先新增一個新節點然後將資料放入後，與主節點做連接。</p><h5 id="刪除數字"><a href="#刪除數字" class="headerlink" title="刪除數字"></a>刪除數字</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">deleteNode</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">    Node* tmpNode = motherNode-&gt;next;</span><br><span class="line">    <span class="keyword">while</span>(tmpNode != motherNode &amp;&amp; tmpNode-&gt;data != x)&#123;</span><br><span class="line">        tmpNode = tmpNode-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(tmpNode != motherNode)&#123;</span><br><span class="line">        tmpNode-&gt;prev-&gt;next = tmpNode-&gt;next;</span><br><span class="line">        tmpNode-&gt;next-&gt;prev = tmpNode-&gt;prev;</span><br><span class="line">        <span class="keyword">delete</span> tmpNode;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p>逐一檢查節點資料是否為x，如果找到了就將next與prev的節點換成下一個位置的，然後刪除節點。</p><h5 id="刪除最前面的"><a href="#刪除最前面的" class="headerlink" title="刪除最前面的"></a>刪除最前面的</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">deleteFirst</span><span class="params">()</span></span>&#123;</span><br><span class="line">    Node* tmpNode = motherNode-&gt;next;</span><br><span class="line">    motherNode-&gt;next = motherNode-&gt;next-&gt;next;</span><br><span class="line">    motherNode-&gt;next-&gt;prev = motherNode;</span><br><span class="line">    <span class="keyword">delete</span> tmpNode;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p>將最前面的節點交換後與主節點連接，然後再將他刪除。</p><h5 id="刪除最後面的"><a href="#刪除最後面的" class="headerlink" title="刪除最後面的"></a>刪除最後面的</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">deleteLast</span><span class="params">()</span></span>&#123;</span><br><span class="line">    Node* tmpNode = motherNode-&gt;prev;</span><br><span class="line">    motherNode-&gt;prev = motherNode-&gt;prev-&gt;prev;</span><br><span class="line">    motherNode-&gt;prev-&gt;next = motherNode;</span><br><span class="line">    <span class="keyword">delete</span> tmpNode; </span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p>將最後面的節點交換後與主節點連接，然後再將他刪除。</p><h4 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼:"></a>程式碼:</h4><script src="https://gist.github.com/Daviswww/b9f0ee48e8f8965c9b8b30ecaeee9afe.js"></script>]]></content>
     
     <summary type="html">
     
@@ -429,78 +502,6 @@
     
     
       <category term="implementation" scheme="https://chucs.github.io/tags/implementation/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>AOJ ALDS1_2_C - Stable Sort</title>
-    <link href="https://chucs.github.io/ALDS1-2-C-Stable-Sort/"/>
-    <id>https://chucs.github.io/ALDS1-2-C-Stable-Sort/</id>
-    <published>2020-07-12T05:24:05.000Z</published>
-    <updated>2020-08-11T06:17:31.716Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="穩定排序"><a href="#穩定排序" class="headerlink" title="穩定排序"></a>穩定排序</h1><p><a href="https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_2_C" target="_blank" rel="noopener">題目網址</a></p><h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>讓我們安排一副紙牌。總共有36張卡，四個狀態（S，H，C，D）和9個值（1、2，… 9）。<br>請將他們由小到大排序，並檢查排序結果是否有按照出現順序排序。例如：輸入 “D1 S2 H2”，排序結果為”D1 H2 S2”，而在輸入時S2比H2前面因此輸出”Not stable”，若排序結果為”D1 S2 H2”，那麼輸出”Stable”。</p><a id="more"></a><h4 id="思路"><a href="#思路" class="headerlink" title="思路:"></a>思路:</h4><p>先宣告一個結構儲存三個狀態分別為，狀態、數字和輸入順序，利用此結構進行選擇排序與泡沫排序，排序完後檢查陣列，如果數字一樣而且前面順序大於後面那就代表不穩定。</p><h4 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼:"></a>程式碼:</h4><script src="https://gist.github.com/Daviswww/78500fcd44526355e664551e4333f5aa.js"></script>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;穩定排序&quot;&gt;&lt;a href=&quot;#穩定排序&quot; class=&quot;headerlink&quot; title=&quot;穩定排序&quot;&gt;&lt;/a&gt;穩定排序&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_2_C&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;題目網址&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&quot;題意&quot;&gt;&lt;a href=&quot;#題意&quot; class=&quot;headerlink&quot; title=&quot;題意:&quot;&gt;&lt;/a&gt;題意:&lt;/h4&gt;&lt;p&gt;讓我們安排一副紙牌。總共有36張卡，四個狀態（S，H，C，D）和9個值（1、2，… 9）。&lt;br&gt;請將他們由小到大排序，並檢查排序結果是否有按照出現順序排序。例如：輸入 “D1 S2 H2”，排序結果為”D1 H2 S2”，而在輸入時S2比H2前面因此輸出”Not stable”，若排序結果為”D1 S2 H2”，那麼輸出”Stable”。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="AOJ" scheme="https://chucs.github.io/categories/AOJ/"/>
-    
-    
-      <category term="sortings" scheme="https://chucs.github.io/tags/sortings/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>AOJ ALDS1_2_B - Selection Sort</title>
-    <link href="https://chucs.github.io/ALDS1-2-B-Selection-Sort/"/>
-    <id>https://chucs.github.io/ALDS1-2-B-Selection-Sort/</id>
-    <published>2020-07-10T07:13:36.000Z</published>
-    <updated>2020-08-11T06:16:31.575Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_2_B" target="_blank" rel="noopener">題目網址</a></p><h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>利用選擇排序排序，當i不等於mini時才交換，請把結果與交換次數輸出。</p><a id="more"></a><h4 id="思路"><a href="#思路" class="headerlink" title="思路:"></a>思路:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">SelectionSort(A)</span><br><span class="line">    for i &#x3D; 0 to A.length-1</span><br><span class="line">        mini &#x3D; i</span><br><span class="line">        for j &#x3D; i to A.length-1</span><br><span class="line">            if A[j] &lt; A[mini]</span><br><span class="line">                mini &#x3D; j</span><br><span class="line">        swap A[i] and A[mini]</span><br></pre></td></tr></table></figure><p>先將一個數字的位置記住後逐一比較，如果比他大就將mini取代新的index，全部比較完後在進行交換。</p><h4 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼:"></a>程式碼:</h4><script src="https://gist.github.com/Daviswww/687c3ee75d3561997469a9830b92b038.js"></script>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_2_B&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;題目網址&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&quot;題意&quot;&gt;&lt;a href=&quot;#題意&quot; class=&quot;headerlink&quot; title=&quot;題意:&quot;&gt;&lt;/a&gt;題意:&lt;/h4&gt;&lt;p&gt;利用選擇排序排序，當i不等於mini時才交換，請把結果與交換次數輸出。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="AOJ" scheme="https://chucs.github.io/categories/AOJ/"/>
-    
-    
-      <category term="sortings" scheme="https://chucs.github.io/tags/sortings/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>AOJ ALDS1_2_A - Bubble Sort</title>
-    <link href="https://chucs.github.io/ALDS1-2-A-Bubble-Sort/"/>
-    <id>https://chucs.github.io/ALDS1-2-A-Bubble-Sort/</id>
-    <published>2020-07-10T06:38:45.000Z</published>
-    <updated>2020-08-11T06:16:53.439Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="泡沫排序"><a href="#泡沫排序" class="headerlink" title="泡沫排序"></a>泡沫排序</h1><p><a href="https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_2_A" target="_blank" rel="noopener">題目網址</a></p><h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>利用泡沫排序排序，將結果與交換次數輸出。</p><a id="more"></a><h4 id="思路"><a href="#思路" class="headerlink" title="思路:"></a>思路:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">BubbleSort(A)</span><br><span class="line">    for i &#x3D; 0 to A.length-1</span><br><span class="line">        for j &#x3D; A.length-1 downto i+1</span><br><span class="line">            if A[j] &lt; A[j-1]</span><br><span class="line">                swap A[j] and A[j-1]</span><br></pre></td></tr></table></figure><p>一邊比較一邊交換。</p><h4 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼:"></a>程式碼:</h4><script src="https://gist.github.com/Daviswww/d75e8bdad871d3b66348390c03f6f3d5.js"></script>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;泡沫排序&quot;&gt;&lt;a href=&quot;#泡沫排序&quot; class=&quot;headerlink&quot; title=&quot;泡沫排序&quot;&gt;&lt;/a&gt;泡沫排序&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_2_A&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;題目網址&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&quot;題意&quot;&gt;&lt;a href=&quot;#題意&quot; class=&quot;headerlink&quot; title=&quot;題意:&quot;&gt;&lt;/a&gt;題意:&lt;/h4&gt;&lt;p&gt;利用泡沫排序排序，將結果與交換次數輸出。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="AOJ" scheme="https://chucs.github.io/categories/AOJ/"/>
-    
-    
-      <category term="sortings" scheme="https://chucs.github.io/tags/sortings/"/>
     
   </entry>
   

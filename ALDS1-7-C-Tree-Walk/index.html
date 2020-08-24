@@ -33,7 +33,7 @@
 <meta property="og:description" content="樹遍歷題目網址 題意:您的任務是編寫一個程序，該程序根據以下算法執行樹遍歷（系統遍歷樹中的所有例程）：  根、左子樹和右子樹(preorder)。 左子樹、根子樹和右子樹(inorder)。 左子樹、右子樹和根(postorder)。">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2020-08-11T04:55:23.000Z">
-<meta property="article:modified_time" content="2020-08-11T06:24:47.740Z">
+<meta property="article:modified_time" content="2020-08-24T05:54:23.369Z">
 <meta property="article:author" content="CHUCSIE">
 <meta property="article:tag" content="AOJ ALDS1_7_C Tree Walk">
 <meta name="twitter:card" content="summary">
@@ -236,10 +236,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">發表於</span>
-              
 
-              <time title="創建時間：2020-08-11 12:55:23 / 修改時間：14:24:47" itemprop="dateCreated datePublished" datetime="2020-08-11T12:55:23+08:00">2020-08-11</time>
+              <time title="創建時間：2020-08-11 12:55:23" itemprop="dateCreated datePublished" datetime="2020-08-11T12:55:23+08:00">2020-08-11</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2020-08-24 13:54:23" itemprop="dateModified" datetime="2020-08-24T13:54:23+08:00">2020-08-24</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -287,9 +293,10 @@
 <ol>
 <li>根、左子樹和右子樹(preorder)。</li>
 <li>左子樹、根子樹和右子樹(inorder)。</li>
-<li>左子樹、右子樹和根(postorder)。<a id="more"></a>
-<h4 id="思路"><a href="#思路" class="headerlink" title="思路:"></a>思路:</h4>創建一個結構left代表左子樹，right代表右子樹，pr代表父節點用於檢查是否為跟節點。</li>
+<li>左子樹、右子樹和根(postorder)。</li>
 </ol>
+<a id="more"></a>
+<h4 id="思路"><a href="#思路" class="headerlink" title="思路:"></a>思路:</h4><p>創建一個結構left代表左子樹，right代表右子樹，pr代表父節點用於檢查是否為跟節點。</p>
 <p>創建一個帶有結構的陣列依序填入所有值。</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)&#123;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; key &gt;&gt; left &gt;&gt; right;</span><br><span class="line">    </span><br><span class="line">    tree[key].left = left;</span><br><span class="line">    tree[key].right = right;</span><br><span class="line">    tree[left].pr = key;</span><br><span class="line">    tree[right].pr = key;</span><br><span class="line">    node[i] = key;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -317,7 +324,10 @@
     <a href="/ALDS1-7-B-Binary-Tree/" rel="prev" title="AOJ ALDS1_7_B - Binary Tree">
       <i class="fa fa-chevron-left"></i> AOJ ALDS1_7_B - Binary Tree
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/ALDS1-8-A-Binary-Search-Tree-I/" rel="next" title="AOJ ALDS1_8_A Binary Search Tree I">
+      AOJ ALDS1_8_A Binary Search Tree I <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -410,7 +420,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">289</span>
+          <span class="site-state-item-count">292</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
