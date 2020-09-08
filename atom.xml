@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://chucs.github.io/"/>
-  <updated>2020-08-24T06:11:11.948Z</updated>
+  <updated>2020-09-08T02:12:37.700Z</updated>
   <id>https://chucs.github.io/</id>
   
   <author>
@@ -21,14 +21,14 @@
     <link href="https://chucs.github.io/ALDS1-8-C-Binary-Search-Tree-III/"/>
     <id>https://chucs.github.io/ALDS1-8-C-Binary-Search-Tree-III/</id>
     <published>2020-08-24T05:45:44.000Z</published>
-    <updated>2020-08-24T06:11:11.948Z</updated>
+    <updated>2020-09-08T02:12:37.700Z</updated>
     
     <content type="html"><![CDATA[<h1 id="二元樹搜索-刪除"><a href="#二元樹搜索-刪除" class="headerlink" title="二元樹搜索 - 刪除"></a>二元樹搜索 - 刪除</h1><p><a href="https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_8_C" target="_blank" rel="noopener">題目網址</a></p><h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>編程一個擁有新增、查詢、刪除功能的二元樹，在每次新增點時，如果key大於node-&gt;key，就新增在node-&gt;right，否則新增在node-&gt;left。最後輸出Preorder與Inorder。</p><a id="more"></a><h4 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼:"></a>程式碼:</h4><script src="https://gist.github.com/Daviswww/e5a835cfa1a3f511e096388e9697423c.js"></script>]]></content>
     
     <summary type="html">
     
       &lt;h1 id=&quot;二元樹搜索-刪除&quot;&gt;&lt;a href=&quot;#二元樹搜索-刪除&quot; class=&quot;headerlink&quot; title=&quot;二元樹搜索 - 刪除&quot;&gt;&lt;/a&gt;二元樹搜索 - 刪除&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_8_C&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;題目網址&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&quot;題意&quot;&gt;&lt;a href=&quot;#題意&quot; class=&quot;headerlink&quot; title=&quot;題意:&quot;&gt;&lt;/a&gt;題意:&lt;/h4&gt;&lt;p&gt;編程一個擁有新增、查詢、刪除功能的二元樹，在每次新增點時，如果key大於node-&amp;gt;key，就新增在node-&amp;gt;right，否則新增在node-&amp;gt;left。最後輸出Preorder與Inorder。&lt;/p&gt;
+&lt;h4 id=&quot;題意&quot;&gt;&lt;a href=&quot;#題意&quot; class=&quot;headerlink&quot; title=&quot;題意:&quot;&gt;&lt;/a&gt;題意:&lt;/h4&gt;&lt;p&gt;編程一個擁有新增、查詢、刪除功能的二元樹，在每次新增點時，如果key大於node-&amp;gt;key，就新增在node-&amp;gt;right，否則新增在node-&amp;gt;left。最後輸出Preorder與Inorder。&lt;/p&gt;
     
     </summary>
     
@@ -45,14 +45,14 @@
     <link href="https://chucs.github.io/ALDS1-8-B-Binary-Search-Tree-II/"/>
     <id>https://chucs.github.io/ALDS1-8-B-Binary-Search-Tree-II/</id>
     <published>2020-08-24T05:45:33.000Z</published>
-    <updated>2020-08-24T06:09:05.042Z</updated>
+    <updated>2020-09-08T02:12:31.299Z</updated>
     
     <content type="html"><![CDATA[<h1 id="二元樹搜索-查詢"><a href="#二元樹搜索-查詢" class="headerlink" title="二元樹搜索 - 查詢"></a>二元樹搜索 - 查詢</h1><p><a href="https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_8_B" target="_blank" rel="noopener">題目網址</a></p><h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>編程一個擁有新增功能的二元樹，在每次新增點時，如果key大於node-&gt;key，就新增在node-&gt;right，否則新增在node-&gt;left。最後輸出Preorder與Inorder。</p><a id="more"></a><h4 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼:"></a>程式碼:</h4><script src="https://gist.github.com/Daviswww/64cf5d826826134e302151c569adb7d8.js"></script>]]></content>
     
     <summary type="html">
     
       &lt;h1 id=&quot;二元樹搜索-查詢&quot;&gt;&lt;a href=&quot;#二元樹搜索-查詢&quot; class=&quot;headerlink&quot; title=&quot;二元樹搜索 - 查詢&quot;&gt;&lt;/a&gt;二元樹搜索 - 查詢&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_8_B&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;題目網址&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&quot;題意&quot;&gt;&lt;a href=&quot;#題意&quot; class=&quot;headerlink&quot; title=&quot;題意:&quot;&gt;&lt;/a&gt;題意:&lt;/h4&gt;&lt;p&gt;編程一個擁有新增功能的二元樹，在每次新增點時，如果key大於node-&amp;gt;key，就新增在node-&amp;gt;right，否則新增在node-&amp;gt;left。最後輸出Preorder與Inorder。&lt;/p&gt;
+&lt;h4 id=&quot;題意&quot;&gt;&lt;a href=&quot;#題意&quot; class=&quot;headerlink&quot; title=&quot;題意:&quot;&gt;&lt;/a&gt;題意:&lt;/h4&gt;&lt;p&gt;編程一個擁有新增功能的二元樹，在每次新增點時，如果key大於node-&amp;gt;key，就新增在node-&amp;gt;right，否則新增在node-&amp;gt;left。最後輸出Preorder與Inorder。&lt;/p&gt;
     
     </summary>
     
@@ -69,14 +69,14 @@
     <link href="https://chucs.github.io/ALDS1-8-A-Binary-Search-Tree-I/"/>
     <id>https://chucs.github.io/ALDS1-8-A-Binary-Search-Tree-I/</id>
     <published>2020-08-24T05:45:19.000Z</published>
-    <updated>2020-08-24T06:09:01.727Z</updated>
+    <updated>2020-09-08T02:12:21.142Z</updated>
     
     <content type="html"><![CDATA[<h1 id="二元樹搜索-新增"><a href="#二元樹搜索-新增" class="headerlink" title="二元樹搜索 - 新增"></a>二元樹搜索 - 新增</h1><p><a href="https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_8_A" target="_blank" rel="noopener">題目網址</a></p><h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>編程一個擁有新增功能的二元樹，在每次新增點時，如果key大於node-&gt;key，就新增在node-&gt;right，否則新增在node-&gt;left。最後輸出Preorder與Inorder。</p><a id="more"></a><h4 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼:"></a>程式碼:</h4><script src="https://gist.github.com/Daviswww/f392df5b2c8130b6eeff6a0b8c1b82bb.js"></script>]]></content>
     
     <summary type="html">
     
       &lt;h1 id=&quot;二元樹搜索-新增&quot;&gt;&lt;a href=&quot;#二元樹搜索-新增&quot; class=&quot;headerlink&quot; title=&quot;二元樹搜索 - 新增&quot;&gt;&lt;/a&gt;二元樹搜索 - 新增&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_8_A&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;題目網址&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&quot;題意&quot;&gt;&lt;a href=&quot;#題意&quot; class=&quot;headerlink&quot; title=&quot;題意:&quot;&gt;&lt;/a&gt;題意:&lt;/h4&gt;&lt;p&gt;編程一個擁有新增功能的二元樹，在每次新增點時，如果key大於node-&amp;gt;key，就新增在node-&amp;gt;right，否則新增在node-&amp;gt;left。最後輸出Preorder與Inorder。&lt;/p&gt;
+&lt;h4 id=&quot;題意&quot;&gt;&lt;a href=&quot;#題意&quot; class=&quot;headerlink&quot; title=&quot;題意:&quot;&gt;&lt;/a&gt;題意:&lt;/h4&gt;&lt;p&gt;編程一個擁有新增功能的二元樹，在每次新增點時，如果key大於node-&amp;gt;key，就新增在node-&amp;gt;right，否則新增在node-&amp;gt;left。最後輸出Preorder與Inorder。&lt;/p&gt;
     
     </summary>
     
