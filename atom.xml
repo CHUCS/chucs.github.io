@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://chucs.github.io/"/>
-  <updated>2020-09-23T06:09:43.338Z</updated>
+  <updated>2020-10-16T15:26:49.151Z</updated>
   <id>https://chucs.github.io/</id>
   
   <author>
@@ -17,11 +17,127 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Codeforces 1426D</title>
+    <link href="https://chucs.github.io/Non-zero-Segments/"/>
+    <id>https://chucs.github.io/Non-zero-Segments/</id>
+    <published>2020-10-03T07:10:30.000Z</published>
+    <updated>2020-10-16T15:26:49.151Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Codeforces-1426D-Non-zero-Segments"><a href="#Codeforces-1426D-Non-zero-Segments" class="headerlink" title="Codeforces 1426D - Non-zero Segments"></a>Codeforces 1426D - Non-zero Segments</h1><p><a href="https://codeforces.com/problemset/problem/1426/D" target="_blank" rel="noopener">題目網址</a></p><h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>Kolya有一陣列a，裡面數字有正有負，因為Kolya不喜歡0所以不包含0，Kolya也不喜歡子陣列中的總合為0(子陣列為一個連續的範圍)。<br>你要幫Kolya調整陣列使得任意子陣列總和不為0，你可以在陣列中的任一位置插入任意數字，就算數字超過可顯示範圍也行，請找出「最少」需要插入的數字的次數。</p><a id="more"></a><h4 id="思路"><a href="#思路" class="headerlink" title="思路:"></a>思路:</h4><p>需要從a<sub>i</sub>加到a<sub>j</sub>, (i &lt; j)來確認總和，因此是個前綴和的問題，從開頭開始加，用map紀錄出現過的總和，對每次的總和作判斷，如果前面出現過相同的總和代表在這區間中有子陣列總和為0，例: a=[8 5 -5]，子陣列總和=[8 13 8]，8重複出現可以發現因為有子陣列[5 -5]總和為0的關係，因此這區間需要插入一個數，因為插入一個數的關係，所以左邊的區間總和不會出現0，因此出現過的總和(map)需要重置，重新計算總和。</p><h4 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼:"></a>程式碼:</h4><script src="https://gist.github.com/zxzxcc112/cb5049de13da8958e88679cb0375f3ac.js"></script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Codeforces-1426D-Non-zero-Segments&quot;&gt;&lt;a href=&quot;#Codeforces-1426D-Non-zero-Segments&quot; class=&quot;headerlink&quot; title=&quot;Codeforces 1426D - Non-zero Segments&quot;&gt;&lt;/a&gt;Codeforces 1426D - Non-zero Segments&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://codeforces.com/problemset/problem/1426/D&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;題目網址&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&quot;題意&quot;&gt;&lt;a href=&quot;#題意&quot; class=&quot;headerlink&quot; title=&quot;題意:&quot;&gt;&lt;/a&gt;題意:&lt;/h4&gt;&lt;p&gt;Kolya有一陣列a，裡面數字有正有負，因為Kolya不喜歡0所以不包含0，Kolya也不喜歡子陣列中的總合為0(子陣列為一個連續的範圍)。&lt;br&gt;你要幫Kolya調整陣列使得任意子陣列總和不為0，你可以在陣列中的任一位置插入任意數字，就算數字超過可顯示範圍也行，請找出「最少」需要插入的數字的次數。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Codeforces" scheme="https://chucs.github.io/categories/Codeforces/"/>
+    
+    
+      <category term="sortings" scheme="https://chucs.github.io/tags/sortings/"/>
+    
+      <category term="greedy" scheme="https://chucs.github.io/tags/greedy/"/>
+    
+      <category term="constructive algorithms" scheme="https://chucs.github.io/tags/constructive-algorithms/"/>
+    
+      <category term="data structures" scheme="https://chucs.github.io/tags/data-structures/"/>
+    
+      <category term="1500" scheme="https://chucs.github.io/tags/1500/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Codeforces 1426C</title>
+    <link href="https://chucs.github.io/Increase-and-Copy/"/>
+    <id>https://chucs.github.io/Increase-and-Copy/</id>
+    <published>2020-10-03T07:10:14.000Z</published>
+    <updated>2020-10-16T15:26:49.151Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Codeforces-1426C-Increase-and-Copy"><a href="#Codeforces-1426C-Increase-and-Copy" class="headerlink" title="Codeforces 1426C - Increase and Copy"></a>Codeforces 1426C - Increase and Copy</h1><p><a href="https://codeforces.com/problemset/problem/1426/C" target="_blank" rel="noopener">題目網址</a></p><h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>你有一陣列a，一開始只有一個元素1(a = [1])，每次動作你能做以下一種事:<br>1.對a中其中一個元素+1<br>2.對a中其中一個元素做複製，並放在陣列最後面<br>你要找出「最小」次數的動作讓陣列a裡的元素總和至少為n。</p><a id="more"></a><h4 id="思路"><a href="#思路" class="headerlink" title="思路:"></a>思路:</h4><p>要次數最小，所以一次動作加越多數字越好，因此應該是先+1到某個數字後在做複製，根據數學可以知道某數的平方數字最大(算幾)，也會發現執行動作次數最少，所以要加到sqrt(n)之後作複製到超過n所需的次數。</p><h4 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼:"></a>程式碼:</h4><script src="https://gist.github.com/zxzxcc112/6e6e6cc5ae4c3bd72ddfc6b89c8d648b.js"></script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Codeforces-1426C-Increase-and-Copy&quot;&gt;&lt;a href=&quot;#Codeforces-1426C-Increase-and-Copy&quot; class=&quot;headerlink&quot; title=&quot;Codeforces 1426C - Increase and Copy&quot;&gt;&lt;/a&gt;Codeforces 1426C - Increase and Copy&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://codeforces.com/problemset/problem/1426/C&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;題目網址&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&quot;題意&quot;&gt;&lt;a href=&quot;#題意&quot; class=&quot;headerlink&quot; title=&quot;題意:&quot;&gt;&lt;/a&gt;題意:&lt;/h4&gt;&lt;p&gt;你有一陣列a，一開始只有一個元素1(a = [1])，每次動作你能做以下一種事:&lt;br&gt;1.對a中其中一個元素+1&lt;br&gt;2.對a中其中一個元素做複製，並放在陣列最後面&lt;br&gt;你要找出「最小」次數的動作讓陣列a裡的元素總和至少為n。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Codeforces" scheme="https://chucs.github.io/categories/Codeforces/"/>
+    
+    
+      <category term="math" scheme="https://chucs.github.io/tags/math/"/>
+    
+      <category term="binary search" scheme="https://chucs.github.io/tags/binary-search/"/>
+    
+      <category term="constructive algorithms" scheme="https://chucs.github.io/tags/constructive-algorithms/"/>
+    
+      <category term="1100" scheme="https://chucs.github.io/tags/1100/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Codeforces 1426B</title>
+    <link href="https://chucs.github.io/Symmetric-Matrix/"/>
+    <id>https://chucs.github.io/Symmetric-Matrix/</id>
+    <published>2020-10-03T07:09:56.000Z</published>
+    <updated>2020-10-16T15:26:49.151Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Codeforces-1426B-Symmetric-Matrix"><a href="#Codeforces-1426B-Symmetric-Matrix" class="headerlink" title="Codeforces 1426B - Symmetric Matrix"></a>Codeforces 1426B - Symmetric Matrix</h1><p><a href="https://codeforces.com/problemset/problem/1426/B" target="_blank" rel="noopener">題目網址</a></p><h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>Masha有n種類型2x2大小的磁磚，磁磚上每格各有一個數字，Masha想利用這幾種磁磚組成mxm的矩形(可用任意種類與任意數量組成)，然後Masha希望這個矩形上的數字是對稱的–對任一對位置(i,j)要符合s[i][j] = s[j][i]，請問Masha有辦法組成他想要的矩形嗎?</p><a id="more"></a><h4 id="思路"><a href="#思路" class="headerlink" title="思路:"></a>思路:</h4><p>當m為奇數就不可能用2x2組成，觀察後可以發現當磁磚右上與左下數字相同必能符合對稱條件，反之則不符合對稱條件，因此在n種磁磚中有一種右上左下數字相同就能組成。</p><h4 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼:"></a>程式碼:</h4><script src="https://gist.github.com/zxzxcc112/bded1c9c1f388bf6a4f1a331a2a08147.js"></script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Codeforces-1426B-Symmetric-Matrix&quot;&gt;&lt;a href=&quot;#Codeforces-1426B-Symmetric-Matrix&quot; class=&quot;headerlink&quot; title=&quot;Codeforces 1426B - Symmetric Matrix&quot;&gt;&lt;/a&gt;Codeforces 1426B - Symmetric Matrix&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://codeforces.com/problemset/problem/1426/B&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;題目網址&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&quot;題意&quot;&gt;&lt;a href=&quot;#題意&quot; class=&quot;headerlink&quot; title=&quot;題意:&quot;&gt;&lt;/a&gt;題意:&lt;/h4&gt;&lt;p&gt;Masha有n種類型2x2大小的磁磚，磁磚上每格各有一個數字，Masha想利用這幾種磁磚組成mxm的矩形(可用任意種類與任意數量組成)，然後Masha希望這個矩形上的數字是對稱的–對任一對位置(i,j)要符合s[i][j] = s[j][i]，請問Masha有辦法組成他想要的矩形嗎?&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Codeforces" scheme="https://chucs.github.io/categories/Codeforces/"/>
+    
+    
+      <category term="implementation" scheme="https://chucs.github.io/tags/implementation/"/>
+    
+      <category term="900" scheme="https://chucs.github.io/tags/900/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Codeforces 1426A</title>
+    <link href="https://chucs.github.io/Floor-Number/"/>
+    <id>https://chucs.github.io/Floor-Number/</id>
+    <published>2020-10-03T07:09:35.000Z</published>
+    <updated>2020-10-16T15:26:49.151Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Codeforces-1426A-Floor-Number"><a href="#Codeforces-1426A-Floor-Number" class="headerlink" title="Codeforces 1426A - Floor Number"></a>Codeforces 1426A - Floor Number</h1><p><a href="https://codeforces.com/problemset/problem/1426/A" target="_blank" rel="noopener">題目網址</a></p><h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>Vasya拜訪Petya，Petya在公寓的第n號房間，公寓裡第一層房間為1號、2號，第二層開始每層有x間房間，請問Petya的房間在第幾層?</p><a id="more"></a><h4 id="思路"><a href="#思路" class="headerlink" title="思路:"></a>思路:</h4><p>根據題目公式計算n在哪個區間，並進行樓層計算。</p><h4 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼:"></a>程式碼:</h4><script src="https://gist.github.com/zxzxcc112/0e7813a59b9e23c50d8364af4c850a65.js"></script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Codeforces-1426A-Floor-Number&quot;&gt;&lt;a href=&quot;#Codeforces-1426A-Floor-Number&quot; class=&quot;headerlink&quot; title=&quot;Codeforces 1426A - Floor Number&quot;&gt;&lt;/a&gt;Codeforces 1426A - Floor Number&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://codeforces.com/problemset/problem/1426/A&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;題目網址&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&quot;題意&quot;&gt;&lt;a href=&quot;#題意&quot; class=&quot;headerlink&quot; title=&quot;題意:&quot;&gt;&lt;/a&gt;題意:&lt;/h4&gt;&lt;p&gt;Vasya拜訪Petya，Petya在公寓的第n號房間，公寓裡第一層房間為1號、2號，第二層開始每層有x間房間，請問Petya的房間在第幾層?&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Codeforces" scheme="https://chucs.github.io/categories/Codeforces/"/>
+    
+    
+      <category term="implementation" scheme="https://chucs.github.io/tags/implementation/"/>
+    
+      <category term="math" scheme="https://chucs.github.io/tags/math/"/>
+    
+      <category term="800" scheme="https://chucs.github.io/tags/800/"/>
+    
+  </entry>
+  
+  <entry>
     <title>CodeForces 1418B</title>
     <link href="https://chucs.github.io/Negative-Prefixes/"/>
     <id>https://chucs.github.io/Negative-Prefixes/</id>
     <published>2020-09-22T14:52:31.000Z</published>
-    <updated>2020-09-23T06:09:43.338Z</updated>
+    <updated>2020-10-16T15:28:09.166Z</updated>
     
     <content type="html"><![CDATA[<h1 id="CodeForces-1418B-Negative-Prefixes"><a href="#CodeForces-1418B-Negative-Prefixes" class="headerlink" title="CodeForces 1418B - Negative Prefixes"></a>CodeForces 1418B - Negative Prefixes</h1><p><a href="https://codeforces.com/problemset/problem/1418/B" target="_blank" rel="noopener">題目網址</a></p><h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>你有一個陣列a，裡面有n個整數，有些整數被鎖住有些沒有，你能對沒有鎖住的整數做交換位置的動作(沒鎖對沒鎖)，另外有個序列p，為a<sub>1</sub>~a<sub>n</sub>的總和:p<sub>1</sub> = a<sub>1</sub>, p<sub>2</sub> = a<sub>1</sub> + a<sub>2</sub>… p<sub>n</sub> = a<sub>1</sub> + a<sub>2</sub> +…+ a<sub>n</sub><br>讓k為最大值j，並且p<sub>j</sub> &lt; 0 ，若p中沒有任何p<sub>j</sub> &lt; 0，則 k=0<br>你要交換未鎖住整數的位置，使得k為最小值，印出調整過後的陣列a</p><a id="more"></a><h4 id="思路"><a href="#思路" class="headerlink" title="思路:"></a>思路:</h4><p>將沒鎖住的整數獨立出來，由大到小排序，再依序從頭一一放回陣列中沒鎖住的位置。<br>不考慮鎖住的數字，當正整數總和 &gt;= 負整數總和時，將正整數排前面則k=0<br>當正整數總和 &lt; 負整數總和時，則不管甚麼順序k最大<br>不選擇小排到大是因為第一個狀況，若負整數先在前面則k值不會最小</p><h4 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼:"></a>程式碼:</h4><script src="https://gist.github.com/zxzxcc112/14bcb2bffc5c9b8cd2341a8758f78b47.js"></script>]]></content>
     
@@ -33,7 +149,7 @@
     </summary>
     
     
-      <category term="CodeForces" scheme="https://chucs.github.io/categories/CodeForces/"/>
+      <category term="Codeforces" scheme="https://chucs.github.io/categories/Codeforces/"/>
     
     
       <category term="sortings" scheme="https://chucs.github.io/tags/sortings/"/>
@@ -49,7 +165,7 @@
     <link href="https://chucs.github.io/Buying-Torches/"/>
     <id>https://chucs.github.io/Buying-Torches/</id>
     <published>2020-09-22T14:51:35.000Z</published>
-    <updated>2020-09-23T06:09:43.337Z</updated>
+    <updated>2020-10-16T15:29:20.976Z</updated>
     
     <content type="html"><![CDATA[<h1 id="CodeForces-1418A-Buying-Torches"><a href="#CodeForces-1418A-Buying-Torches" class="headerlink" title="CodeForces 1418A - Buying Torches"></a>CodeForces 1418A - Buying Torches</h1><p><a href="https://codeforces.com/problemset/problem/1418/A" target="_blank" rel="noopener">題目網址</a></p><h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>你玩遊戲想要製作k個火把，每個火把需要一根棒子和一個煤炭，一開始你只有一根棒子,你能跟商人做兩種交易:<br>    1.用一根棒子交換x根棒子<br>    2.用y根棒子交換一個煤炭<br>每次只能做其中一種交易，請問你需要k個火把「最少」需要幾次交易? (測資必存在解答)</p><a id="more"></a><h4 id="思路"><a href="#思路" class="headerlink" title="思路:"></a>思路:</h4><p>數學問題，幾個煤炭就需要交易幾次，並且煤炭等於y根棒子，所以交易次數=到達所需棒子量的交易次數+換煤炭的次數。</p><h4 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼:"></a>程式碼:</h4><script src="https://gist.github.com/zxzxcc112/fce4c025b50df9f1982acbd833a09d91.js"></script>]]></content>
     
@@ -61,7 +177,7 @@
     </summary>
     
     
-      <category term="CodeForces" scheme="https://chucs.github.io/categories/CodeForces/"/>
+      <category term="Codeforces" scheme="https://chucs.github.io/categories/Codeforces/"/>
     
     
       <category term="math" scheme="https://chucs.github.io/tags/math/"/>
@@ -407,100 +523,6 @@
     
       &lt;h1 id=&quot;線性排序&quot;&gt;&lt;a href=&quot;#線性排序&quot; class=&quot;headerlink&quot; title=&quot;線性排序&quot;&gt;&lt;/a&gt;線性排序&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_4_A&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;題目網址&lt;/a&gt;&lt;/p&gt;
 &lt;h4 id=&quot;題意&quot;&gt;&lt;a href=&quot;#題意&quot; class=&quot;headerlink&quot; title=&quot;題意:&quot;&gt;&lt;/a&gt;題意:&lt;/h4&gt;&lt;p&gt;給N個整數數列S，還有q個整數數列T，請輸出T在S裡面有找到幾個。利用線性搜索來尋找。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="AOJ" scheme="https://chucs.github.io/categories/AOJ/"/>
-    
-    
-      <category term="implementation" scheme="https://chucs.github.io/tags/implementation/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SwiftUI Stack</title>
-    <link href="https://chucs.github.io/swiftui-stack/"/>
-    <id>https://chucs.github.io/swiftui-stack/</id>
-    <published>2020-07-14T04:04:13.000Z</published>
-    <updated>2020-08-09T12:42:15.860Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="SwiftUI-Stack-堆疊方式"><a href="#SwiftUI-Stack-堆疊方式" class="headerlink" title="SwiftUI Stack 堆疊方式"></a>SwiftUI Stack 堆疊方式</h1><p>在SwiftUI中有三種堆疊分別為VStack、ZStack和HStack，這些堆疊可以讓顯示的東西以不同的方式呈現。</p><a id="more"></a><h2 id="VStack-縱向堆疊"><a href="#VStack-縱向堆疊" class="headerlink" title="VStack 縱向堆疊"></a>VStack 縱向堆疊</h2><p>VStack可以使文字逐一縱向的堆疊。</p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">VStack</span>() &#123;</span><br><span class="line">    <span class="type">Text</span>(<span class="string">"Hello"</span>)</span><br><span class="line">    <span class="type">Text</span>(<span class="string">"SwiftUI"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>顯示的結果為：<br>Hello<br>SwiftUI</p><h2 id="HStack-橫向堆疊"><a href="#HStack-橫向堆疊" class="headerlink" title="HStack 橫向堆疊"></a>HStack 橫向堆疊</h2><p>HStack可以使文字逐一橫向的堆疊。</p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">HStack</span>() &#123;</span><br><span class="line">    <span class="type">Text</span>(<span class="string">"Hello"</span>)</span><br><span class="line">    <span class="type">Text</span>(<span class="string">"SwiftUI"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>顯示的結果為：<br>Hello SwiftUI</p><h2 id="ZStack-重疊"><a href="#ZStack-重疊" class="headerlink" title="ZStack 重疊"></a>ZStack 重疊</h2><p>HStack可以使文字重疊。</p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">ZStack</span>() &#123;</span><br><span class="line">    <span class="type">Text</span>(<span class="string">"Hello"</span>)</span><br><span class="line">    <span class="type">Text</span>(<span class="string">"SwiftUI !!"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="alignment與spacing-校準與間距"><a href="#alignment與spacing-校準與間距" class="headerlink" title="alignment與spacing 校準與間距"></a>alignment與spacing 校準與間距</h2><p>alignment可以控制校準的位置，你可以把VStack內的東西靠左靠右等等等…。spacing可以控制每個區塊距離。</p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">VStack</span>(alignment: .leading, spacing: <span class="number">50</span>) &#123;</span><br><span class="line">    <span class="type">Text</span>(<span class="string">"Hello"</span>)</span><br><span class="line">    <span class="type">Text</span>(<span class="string">"SwiftUI !!"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="多個Stack"><a href="#多個Stack" class="headerlink" title="多個Stack"></a>多個Stack</h2><p>你可以使用多個堆疊來表現不同的樣式，例如下面代碼。</p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">HStack</span>()&#123;</span><br><span class="line">    <span class="type">VStack</span>() &#123;</span><br><span class="line">        <span class="type">Text</span>(<span class="string">"1. Hello"</span>)</span><br><span class="line">        <span class="type">Text</span>(<span class="string">"SwiftUI"</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">VStack</span>() &#123;</span><br><span class="line">        <span class="type">Text</span>(<span class="string">"2. Hello"</span>)</span><br><span class="line">        <span class="type">Text</span>(<span class="string">"SwiftUI"</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;SwiftUI-Stack-堆疊方式&quot;&gt;&lt;a href=&quot;#SwiftUI-Stack-堆疊方式&quot; class=&quot;headerlink&quot; title=&quot;SwiftUI Stack 堆疊方式&quot;&gt;&lt;/a&gt;SwiftUI Stack 堆疊方式&lt;/h1&gt;&lt;p&gt;在SwiftUI中有三種堆疊分別為VStack、ZStack和HStack，這些堆疊可以讓顯示的東西以不同的方式呈現。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="SwiftUI tutorials" scheme="https://chucs.github.io/categories/SwiftUI-tutorials/"/>
-    
-    
-      <category term="swiftui" scheme="https://chucs.github.io/tags/swiftui/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SwiftUI Color</title>
-    <link href="https://chucs.github.io/swiftui-color/"/>
-    <id>https://chucs.github.io/swiftui-color/</id>
-    <published>2020-07-14T03:44:25.000Z</published>
-    <updated>2020-08-09T12:43:05.388Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="SwiftUI-Hex-Color-十六進至顏色轉換"><a href="#SwiftUI-Hex-Color-十六進至顏色轉換" class="headerlink" title="SwiftUI Hex Color 十六進至顏色轉換"></a>SwiftUI Hex Color 十六進至顏色轉換</h1><p>如果想要使用hex的色碼的話可以先定義好轉換方式，之後只需要設定Color裡面的hex就可以轉換成想要的顏色。當然你必須先定義好你的函式。</p><a id="more"></a><p>首先你需要在extension定義好色碼轉換方法，例如下面的代碼。</p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> SwiftUI</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">extension</span> <span class="title">Color</span> </span>&#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">let</span> cloloABC = <span class="type">Color</span>(hex: <span class="string">"#FFFFFF"</span>, alpha: <span class="number">0.5</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">init</span>(hex: <span class="type">String</span>, alpha: <span class="type">CGFloat</span> = <span class="number">1.0</span>) &#123;</span><br><span class="line">        <span class="keyword">var</span> hex = hex.trimmingCharacters(<span class="keyword">in</span>: <span class="type">CharacterSet</span>.alphanumerics.inverted)</span><br><span class="line">        <span class="keyword">if</span> hex.hasPrefix(<span class="string">"#"</span>) &#123;</span><br><span class="line">            hex = <span class="type">String</span>(hex.<span class="built_in">dropFirst</span>())</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">assert</span>(hex.<span class="built_in">count</span> == <span class="number">3</span> || hex.<span class="built_in">count</span> == <span class="number">6</span> || hex.<span class="built_in">count</span> == <span class="number">8</span>, <span class="string">"Invalid hex code used. hex count is #(3, 6, 8)."</span>)</span><br><span class="line">        <span class="keyword">var</span> int: <span class="type">UInt64</span> = <span class="number">0</span></span><br><span class="line">        <span class="type">Scanner</span>(string: hex).scanHexInt64(&amp;int)</span><br><span class="line">        <span class="keyword">let</span> r, g, b: <span class="type">UInt64</span></span><br><span class="line">        <span class="keyword">switch</span> hex.<span class="built_in">count</span> &#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">3</span>: <span class="comment">// RGB (12-bit)</span></span><br><span class="line">            (r, g, b) = ((int &gt;&gt; <span class="number">8</span>) * <span class="number">17</span>, (int &gt;&gt; <span class="number">4</span> &amp; <span class="number">0xF</span>) * <span class="number">17</span>, (int &amp; <span class="number">0xF</span>) * <span class="number">17</span>)</span><br><span class="line">        <span class="keyword">case</span> <span class="number">6</span>: <span class="comment">// RGB (24-bit)</span></span><br><span class="line">            (r, g, b) = (int &gt;&gt; <span class="number">16</span>, int &gt;&gt; <span class="number">8</span> &amp; <span class="number">0xFF</span>, int &amp; <span class="number">0xFF</span>)</span><br><span class="line">        <span class="keyword">case</span> <span class="number">8</span>: <span class="comment">// ARGB (32-bit)</span></span><br><span class="line">            (r, g, b) = (int &gt;&gt; <span class="number">16</span> &amp; <span class="number">0xFF</span>, int &gt;&gt; <span class="number">8</span> &amp; <span class="number">0xFF</span>, int &amp; <span class="number">0xFF</span>)</span><br><span class="line">        <span class="keyword">default</span>:</span><br><span class="line">            (r, g, b) = (<span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>)</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">self</span>.<span class="keyword">init</span>(</span><br><span class="line">            .sRGB,</span><br><span class="line">            red: <span class="type">Double</span>(r) / <span class="number">255</span>,</span><br><span class="line">            green: <span class="type">Double</span>(g) / <span class="number">255</span>,</span><br><span class="line">            blue:  <span class="type">Double</span>(b) / <span class="number">255</span>,</span><br><span class="line">            opacity: <span class="type">Double</span>(alpha)</span><br><span class="line">        )</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>定義完成後，你可以在ContentView裡面直接使用。</p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Text</span>(<span class="string">"Hello, World!"</span>)</span><br><span class="line">    .foregroundColor(<span class="type">Color</span>.<span class="keyword">init</span>(hex: <span class="string">"#FFFFFF"</span>, alpha: <span class="number">1.0</span>))</span><br></pre></td></tr></table></figure><p>也可以定義在extension內這樣就可以直接使用而且不必重新設定色碼。</p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Text</span>(<span class="string">"Hello, World!"</span>)</span><br><span class="line">    .foregroundColor(<span class="type">Color</span>.cloloABC)</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;SwiftUI-Hex-Color-十六進至顏色轉換&quot;&gt;&lt;a href=&quot;#SwiftUI-Hex-Color-十六進至顏色轉換&quot; class=&quot;headerlink&quot; title=&quot;SwiftUI Hex Color 十六進至顏色轉換&quot;&gt;&lt;/a&gt;SwiftUI Hex Color 十六進至顏色轉換&lt;/h1&gt;&lt;p&gt;如果想要使用hex的色碼的話可以先定義好轉換方式，之後只需要設定Color裡面的hex就可以轉換成想要的顏色。當然你必須先定義好你的函式。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="SwiftUI tutorials" scheme="https://chucs.github.io/categories/SwiftUI-tutorials/"/>
-    
-    
-      <category term="swiftui" scheme="https://chucs.github.io/tags/swiftui/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SwiftUI Text</title>
-    <link href="https://chucs.github.io/swiftui-text/"/>
-    <id>https://chucs.github.io/swiftui-text/</id>
-    <published>2020-07-13T07:47:34.000Z</published>
-    <updated>2020-08-09T12:43:37.111Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Text-用法"><a href="#Text-用法" class="headerlink" title="Text 用法"></a>Text 用法</h2><h3 id="顯示簡單文字"><a href="#顯示簡單文字" class="headerlink" title="顯示簡單文字"></a>顯示簡單文字</h3><p>ContentView已在中生成的範例代碼向你展示瞭如何顯示一行文字。</p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Text</span>(<span class="string">"Hello, World!"</span>)</span><br></pre></td></tr></table></figure><a id="more"></a><h3 id="更改字體類型"><a href="#更改字體類型" class="headerlink" title="更改字體類型"></a>更改字體類型</h3><h4 id="fontWeight-文字類型"><a href="#fontWeight-文字類型" class="headerlink" title="fontWeight 文字類型"></a>fontWeight 文字類型</h4><p>你可以使用fontWeight來更改字體的類型，例如下面所使用的粗體字，當然字體類型有很多種像是heavy, light, medium等等等…</p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Text</span>(<span class="string">"Hello, World!"</span>)</span><br><span class="line">    .fontWeight(.bold)</span><br></pre></td></tr></table></figure><h4 id="font-字體樣式"><a href="#font-字體樣式" class="headerlink" title="font 字體樣式"></a>font 字體樣式</h4><p>字體樣式中你可以修改字體的大小, 字形和大小。</p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Text</span>(<span class="string">"Hello, World!"</span>)</span><br><span class="line">    .font(.title)</span><br></pre></td></tr></table></figure><p>如果想要進一步修改字體的設計你可以像這樣寫：</p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.font(.system(.largeTitle, design: .rounded))</span><br></pre></td></tr></table></figure><p>這樣寫字體就會被修成largeTitle的樣式而且是圓弧的。</p><p>該font修改器可以更改字體屬性。在上面的代碼中，我們指定使用標題字體類型以放大文本。</p><p>如果要使用固定大小的字體你只要在system裡面設定size就可以了。</p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.font(.system(size: <span class="number">20</span>))</span><br></pre></td></tr></table></figure><p>如果想更改字體的字型的話可以使用custom來更改字型。</p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.font(.custom(<span class="string">"Helvetica Neue"</span>, size: <span class="number">25</span>))</span><br></pre></td></tr></table></figure><p>字體名稱可以在“字體書”中找到。您可以打開Finder應用程序，然後單擊字體簿以啟動該應用程序。</p><h4 id="shadow-陰影"><a href="#shadow-陰影" class="headerlink" title="shadow 陰影"></a>shadow 陰影</h4><p>為文本增加陰影效果可以使字體更有感覺，而radius可以設定陰影的風格。</p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.shadow(color: .black, radius: <span class="number">2</span>, x: <span class="number">0</span>, y: <span class="number">15</span>)</span><br></pre></td></tr></table></figure><h3 id="更改字體顏色"><a href="#更改字體顏色" class="headerlink" title="更改字體顏色"></a>更改字體顏色</h3><h4 id="foregroundColor-修改顏色"><a href="#foregroundColor-修改顏色" class="headerlink" title="foregroundColor 修改顏色"></a>foregroundColor 修改顏色</h4><p>您可以使用其他內置值喜歡.red，.purple等等。如果你想知道如何使用hex色碼的話可以參考<a href="https://chucs.github.io/swiftui-text/">SwiftUI Color</a>。</p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Text</span>(<span class="string">"Hello, World!"</span>)</span><br><span class="line">    .foregroundColor(.red)</span><br></pre></td></tr></table></figure><h3 id="多個修處理多行文字飾"><a href="#多個修處理多行文字飾" class="headerlink" title="多個修處理多行文字飾"></a>多個修處理多行文字飾</h3><p>在SwiftUI裡支持多個修飾，你可以使用foregroundColor修改顏色fontWeight修改字體類型等等等…</p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Text</span>(<span class="string">"Hello, World!"</span>)</span><br><span class="line">    .fontWeight(.bold)</span><br><span class="line">    .font(.title)</span><br></pre></td></tr></table></figure><h3 id="處理多行文字"><a href="#處理多行文字" class="headerlink" title="處理多行文字"></a>處理多行文字</h3><p>Text默認情況下支持多行，因此它可以顯示文本段落，而無需使用任何其他修飾符。但你可以使用一些函式來修改文本。</p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Text</span>(<span class="string">"Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!"</span>)</span><br><span class="line">    .fontWeight(.bold)</span><br><span class="line">    .font(.title)</span><br></pre></td></tr></table></figure><h4 id="multilineTextAlignment-修改文字位置"><a href="#multilineTextAlignment-修改文字位置" class="headerlink" title="multilineTextAlignment 修改文字位置"></a>multilineTextAlignment 修改文字位置</h4><p>要使文本置中對齊，請插入multilineTextAlignment修飾符並將值設置為.center如下所示，當然你也可以靠左對齊靠右對齊。</p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.multilineTextAlignment(.center)</span><br></pre></td></tr></table></figure><h4 id="lineLimit-行數行數限制"><a href="#lineLimit-行數行數限制" class="headerlink" title="lineLimit 行數行數限制"></a>lineLimit 行數行數限制</h4><p>你可能希望將行數限制為一定數量。</p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.lineLimit(<span class="number">3</span>)</span><br></pre></td></tr></table></figure><h3 id="設置填充和行距"><a href="#設置填充和行距" class="headerlink" title="設置填充和行距"></a>設置填充和行距</h3><h4 id="lineSpacing-行距調整"><a href="#lineSpacing-行距調整" class="headerlink" title="lineSpacing 行距調整"></a>lineSpacing 行距調整</h4><p>默認行間距足以應付大多數情況。如果要更改默認設置，可以使用lineSpacing修飾符來調整行距。</p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.lineSpacing(<span class="number">10</span>)</span><br></pre></td></tr></table></figure><h4 id="padding-填充空間"><a href="#padding-填充空間" class="headerlink" title="padding 填充空間"></a>padding 填充空間</h4><p>如您所見，文本太靠近邊緣的左側和右側。要給它更多的空間，可以使用padding修飾符，該修飾符為文本的每一側增加一些額外的空間。</p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.padding()</span><br></pre></td></tr></table></figure><p>如果沒有在裡面設定數字的話就會是默認的長度。如果想要設定固定長度的話可以直接帶入數字。</p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.padding(<span class="number">10</span>)</span><br></pre></td></tr></table></figure><p>在padding修飾符中也可以設定你想要哪幾個邊做增加。</p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.padding([.top, .leading, .trailing])</span><br></pre></td></tr></table></figure><h3 id="旋轉文字"><a href="#旋轉文字" class="headerlink" title="旋轉文字"></a>旋轉文字</h3><h4 id="rotationEffect-旋轉"><a href="#rotationEffect-旋轉" class="headerlink" title="rotationEffect 旋轉"></a>rotationEffect 旋轉</h4><p>SwiftUI框架提供了API，無論是2D還是3D都可以讓您輕鬆旋轉文本。</p><p>2D旋轉</p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.rotationEffect(.degrees(<span class="number">20</span>), anchor: <span class="type">UnitPoint</span>(x: <span class="number">0</span>, y: <span class="number">0</span>))</span><br></pre></td></tr></table></figure><p>3D旋轉</p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.rotation3DEffect(.degrees(<span class="number">60</span>), axis: (x: <span class="number">1</span>, y: <span class="number">0</span>, z: <span class="number">0</span>))</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;Text-用法&quot;&gt;&lt;a href=&quot;#Text-用法&quot; class=&quot;headerlink&quot; title=&quot;Text 用法&quot;&gt;&lt;/a&gt;Text 用法&lt;/h2&gt;&lt;h3 id=&quot;顯示簡單文字&quot;&gt;&lt;a href=&quot;#顯示簡單文字&quot; class=&quot;headerlink&quot; title=&quot;顯示簡單文字&quot;&gt;&lt;/a&gt;顯示簡單文字&lt;/h3&gt;&lt;p&gt;ContentView已在中生成的範例代碼向你展示瞭如何顯示一行文字。&lt;/p&gt;
-&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;type&quot;&gt;Text&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;Hello, World!&quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-    
-      <category term="SwiftUI tutorials" scheme="https://chucs.github.io/categories/SwiftUI-tutorials/"/>
-    
-    
-      <category term="swiftui" scheme="https://chucs.github.io/tags/swiftui/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>AOJ ALDS1_3_C - Doubly Linked List</title>
-    <link href="https://chucs.github.io/ALDS1-3-C-Doubly-Linked-List/"/>
-    <id>https://chucs.github.io/ALDS1-3-C-Doubly-Linked-List/</id>
-    <published>2020-07-13T05:06:41.000Z</published>
-    <updated>2020-08-11T06:32:51.616Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="雙向鏈結串列"><a href="#雙向鏈結串列" class="headerlink" title="雙向鏈結串列"></a>雙向鏈結串列</h1><p><a href="https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_3_C" target="_blank" rel="noopener">題目網址</a></p><h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>寫一個具備以下功能的Doubly Linked List:<br>insert x: 加入一個元素x在list的最前面.<br>delete x: 刪除一個元素x. 如果沒有找到，不必做任何動作.<br>deleteFirst: 刪除list第一個元素.<br>deleteLast: 刪除list最後一個元素.</p><a id="more"></a><h4 id="思路"><a href="#思路" class="headerlink" title="思路:"></a>思路:</h4><h5 id="節點"><a href="#節點" class="headerlink" title="節點"></a>節點</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Node</span>&#123;</span></span><br><span class="line"><span class="keyword">int</span> data;</span><br><span class="line">    <span class="comment">// 上一個節點</span></span><br><span class="line">Node* prev;</span><br><span class="line">    <span class="comment">// 下一個節點</span></span><br><span class="line">Node* next;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p>首先我們要先宣告一個結構分別為資料,上個節點和下一個節點。</p><h5 id="新增數字"><a href="#新增數字" class="headerlink" title="新增數字"></a>新增數字</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">insertNode</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">    Node* tmpNode = motherNode-&gt;next;</span><br><span class="line">    motherNode-&gt;next = <span class="keyword">new</span> Node();</span><br><span class="line">    motherNode-&gt;next-&gt;data = x;</span><br><span class="line">    motherNode-&gt;next-&gt;next = tmpNode;</span><br><span class="line">    motherNode-&gt;next-&gt;prev = motherNode;</span><br><span class="line">    tmpNode-&gt;prev = motherNode-&gt;next;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p>先新增一個新節點然後將資料放入後，與主節點做連接。</p><h5 id="刪除數字"><a href="#刪除數字" class="headerlink" title="刪除數字"></a>刪除數字</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">deleteNode</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">    Node* tmpNode = motherNode-&gt;next;</span><br><span class="line">    <span class="keyword">while</span>(tmpNode != motherNode &amp;&amp; tmpNode-&gt;data != x)&#123;</span><br><span class="line">        tmpNode = tmpNode-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(tmpNode != motherNode)&#123;</span><br><span class="line">        tmpNode-&gt;prev-&gt;next = tmpNode-&gt;next;</span><br><span class="line">        tmpNode-&gt;next-&gt;prev = tmpNode-&gt;prev;</span><br><span class="line">        <span class="keyword">delete</span> tmpNode;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p>逐一檢查節點資料是否為x，如果找到了就將next與prev的節點換成下一個位置的，然後刪除節點。</p><h5 id="刪除最前面的"><a href="#刪除最前面的" class="headerlink" title="刪除最前面的"></a>刪除最前面的</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">deleteFirst</span><span class="params">()</span></span>&#123;</span><br><span class="line">    Node* tmpNode = motherNode-&gt;next;</span><br><span class="line">    motherNode-&gt;next = motherNode-&gt;next-&gt;next;</span><br><span class="line">    motherNode-&gt;next-&gt;prev = motherNode;</span><br><span class="line">    <span class="keyword">delete</span> tmpNode;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p>將最前面的節點交換後與主節點連接，然後再將他刪除。</p><h5 id="刪除最後面的"><a href="#刪除最後面的" class="headerlink" title="刪除最後面的"></a>刪除最後面的</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">deleteLast</span><span class="params">()</span></span>&#123;</span><br><span class="line">    Node* tmpNode = motherNode-&gt;prev;</span><br><span class="line">    motherNode-&gt;prev = motherNode-&gt;prev-&gt;prev;</span><br><span class="line">    motherNode-&gt;prev-&gt;next = motherNode;</span><br><span class="line">    <span class="keyword">delete</span> tmpNode; </span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p>將最後面的節點交換後與主節點連接，然後再將他刪除。</p><h4 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼:"></a>程式碼:</h4><script src="https://gist.github.com/Daviswww/b9f0ee48e8f8965c9b8b30ecaeee9afe.js"></script>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;雙向鏈結串列&quot;&gt;&lt;a href=&quot;#雙向鏈結串列&quot; class=&quot;headerlink&quot; title=&quot;雙向鏈結串列&quot;&gt;&lt;/a&gt;雙向鏈結串列&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_3_C&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;題目網址&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&quot;題意&quot;&gt;&lt;a href=&quot;#題意&quot; class=&quot;headerlink&quot; title=&quot;題意:&quot;&gt;&lt;/a&gt;題意:&lt;/h4&gt;&lt;p&gt;寫一個具備以下功能的Doubly Linked List:&lt;br&gt;insert x: 加入一個元素x在list的最前面.&lt;br&gt;delete x: 刪除一個元素x. 如果沒有找到，不必做任何動作.&lt;br&gt;deleteFirst: 刪除list第一個元素.&lt;br&gt;deleteLast: 刪除list最後一個元素.&lt;/p&gt;
     
     </summary>
     
