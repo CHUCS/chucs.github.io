@@ -2,6 +2,55 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://chucs.github.io/rust-006-types/</loc>
+    
+    <lastmod>2020-11-09T13:09:03.505Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/rust-005-variable/</loc>
+    
+    <lastmod>2020-11-09T13:09:03.505Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/rust-003-function/</loc>
+    
+    <lastmod>2020-11-09T13:09:03.504Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/rust-004-format/</loc>
+    
+    <lastmod>2020-11-09T13:09:03.504Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/rust-002-project/</loc>
+    
+    <lastmod>2020-11-09T13:09:03.502Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/rust-001-install/</loc>
+    
+    <lastmod>2020-11-09T13:09:03.498Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/parallel-001-MS-MPI-install/</loc>
+    
+    <lastmod>2020-11-09T13:09:03.491Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://chucs.github.io/hexo-tutorials/</loc>
     
     <lastmod>2020-11-06T07:26:23.525Z</lastmod>

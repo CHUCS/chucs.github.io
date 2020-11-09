@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://chucs.github.io/"/>
-  <updated>2020-10-16T15:26:49.151Z</updated>
+  <updated>2020-11-09T13:09:03.505Z</updated>
   <id>https://chucs.github.io/</id>
   
   <author>
@@ -15,6 +15,164 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Rust-006 Types</title>
+    <link href="https://chucs.github.io/rust-006-types/"/>
+    <id>https://chucs.github.io/rust-006-types/</id>
+    <published>2020-11-09T12:53:39.000Z</published>
+    <updated>2020-11-09T13:09:03.505Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Rust-型態"><a href="#Rust-型態" class="headerlink" title="Rust 型態"></a>Rust 型態</h1><h4 id="Integer-Types"><a href="#Integer-Types" class="headerlink" title="Integer Types"></a>Integer Types</h4><p>整數是沒有小數部分的數字。以下是在RUST中整數型態的表示方法。</p><a id="more"></a><table><thead><tr><th>Length</th><th>Signed</th><th>Unsigned</th></tr></thead><tbody><tr><td>8-bit</td><td>i8</td><td>u8</td></tr><tr><td>16-bit</td><td>i16</td><td>u16</td></tr><tr><td>32-bit</td><td>i32</td><td>u32</td></tr><tr><td>64-bit</td><td>i64</td><td>u64</td></tr><tr><td>128-bit</td><td>i128</td><td>u128</td></tr></tbody></table><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a: <span class="built_in">i8</span> = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> b: <span class="built_in">i16</span> = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> c: <span class="built_in">i32</span> = <span class="number">3</span>;</span><br></pre></td></tr></table></figure><h4 id="Floating-Point-Types"><a href="#Floating-Point-Types" class="headerlink" title="Floating-Point Types"></a>Floating-Point Types</h4><p>Rust對於浮點數也有兩種原始類型<code>f32</code>和<code>f64</code>。</p><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> x = <span class="number">5.0</span>; <span class="comment">// f64</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> y: <span class="built_in">f32</span> = <span class="number">3.0</span>; <span class="comment">// f32</span></span><br></pre></td></tr></table></figure><h4 id="The-Boolean-Type"><a href="#The-Boolean-Type" class="headerlink" title="The Boolean Type"></a>The Boolean Type</h4><p>在布林函數中只有對和錯。</p><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> x = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> y: <span class="built_in">bool</span> = <span class="literal">false</span>;</span><br></pre></td></tr></table></figure><h4 id="The-Character-Type"><a href="#The-Character-Type" class="headerlink" title="The Character Type"></a>The Character Type</h4><p>字元型態中可儲存一個字，如果一個以上就會變成字串。</p><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="string">'A'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> b = <span class="string">'B'</span>;</span><br></pre></td></tr></table></figure><h4 id="The-Array-Type"><a href="#The-Array-Type" class="headerlink" title="The Array Type"></a>The Array Type</h4><p>利用陣列儲存多筆資料，取用時只需要輸入對應的<code>index</code>就可以了。</p><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> first = a[<span class="number">0</span>];</span><br><span class="line"><span class="keyword">let</span> second = a[<span class="number">1</span>];</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Rust-型態&quot;&gt;&lt;a href=&quot;#Rust-型態&quot; class=&quot;headerlink&quot; title=&quot;Rust 型態&quot;&gt;&lt;/a&gt;Rust 型態&lt;/h1&gt;&lt;h4 id=&quot;Integer-Types&quot;&gt;&lt;a href=&quot;#Integer-Types&quot; class=&quot;headerlink&quot; title=&quot;Integer Types&quot;&gt;&lt;/a&gt;Integer Types&lt;/h4&gt;&lt;p&gt;整數是沒有小數部分的數字。以下是在RUST中整數型態的表示方法。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Rust tutorials" scheme="https://chucs.github.io/categories/Rust-tutorials/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Rust 005 Variable</title>
+    <link href="https://chucs.github.io/rust-005-variable/"/>
+    <id>https://chucs.github.io/rust-005-variable/</id>
+    <published>2020-11-09T12:52:30.000Z</published>
+    <updated>2020-11-09T13:09:03.505Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Rust-變量"><a href="#Rust-變量" class="headerlink" title="Rust 變量"></a>Rust 變量</h1><p>在變量中我們可以給予一些固定的值在變數中，而這些值不允許被任意更改。</p><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> name = <span class="string">"Bob"</span>;</span><br><span class="line"><span class="built_in">println!</span>(<span class="string">"My name is &#123;&#125;."</span>, name);</span><br></pre></td></tr></table></figure><a id="more"></a><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> ID: <span class="built_in">i32</span> = <span class="number">001</span>;</span><br><span class="line"><span class="built_in">println!</span>(<span class="string">"My ID is &#123;&#125;."</span>, ID);</span><br></pre></td></tr></table></figure><p>分配多個變量的值。</p><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> ( a, b ) = (<span class="string">"Alice"</span>, <span class="number">23</span>);</span><br><span class="line"><span class="built_in">println!</span>(<span class="string">"&#123;&#125; is &#123;&#125;."</span>, a, b);</span><br></pre></td></tr></table></figure><p>輸出結果<br><img src="gZqndHG.png" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Rust-變量&quot;&gt;&lt;a href=&quot;#Rust-變量&quot; class=&quot;headerlink&quot; title=&quot;Rust 變量&quot;&gt;&lt;/a&gt;Rust 變量&lt;/h1&gt;&lt;p&gt;在變量中我們可以給予一些固定的值在變數中，而這些值不允許被任意更改。&lt;/p&gt;
+&lt;figure class=&quot;highlight rust&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; name = &lt;span class=&quot;string&quot;&gt;&quot;Bob&quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;println!&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;My name is &amp;#123;&amp;#125;.&quot;&lt;/span&gt;, name);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="Rust tutorials" scheme="https://chucs.github.io/categories/Rust-tutorials/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Rust 004 Format</title>
+    <link href="https://chucs.github.io/rust-004-format/"/>
+    <id>https://chucs.github.io/rust-004-format/</id>
+    <published>2020-11-09T12:50:45.000Z</published>
+    <updated>2020-11-09T13:09:03.504Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Rust-格式化輸出"><a href="#Rust-格式化輸出" class="headerlink" title="Rust 格式化輸出"></a>Rust 格式化輸出</h1><p>格式化輸出可以讓你方便的排版你想要的輸出方式，以下我們介紹幾中常見的格式化輸出。  </p><p>利用大括弧來標示變數所在的地方，由左而右依序輸出。</p><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">println!</span>(<span class="string">"Num: &#123;&#125;, &#123;&#125;"</span>, <span class="number">1</span>, <span class="number">2</span>);</span><br></pre></td></tr></table></figure><a id="more"></a><p>在大括弧內設下index，以照後面資料的順序索取你需要的資料。</p><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">println!</span>(<span class="string">"&#123;0&#125; is &#123;0&#125; and &#123;1&#125; haha &#123;2&#125;."</span>, <span class="string">"Bob"</span>, <span class="string">"Alice"</span>, <span class="string">"John"</span>);</span><br></pre></td></tr></table></figure><p>在大括弧內設下變數，在後面以變數給予值。</p><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">println!</span>(<span class="string">"&#123;a&#125; is &#123;b&#125; and &#123;c&#125; haha &#123;a&#125;."</span>, b = <span class="string">"Bob"</span>, a = <span class="string">"Alice"</span>, c = <span class="string">"John"</span>);</span><br></pre></td></tr></table></figure><p>依照型態命名，輸出則會以我們所設的型態輸出。</p><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">println!</span>(<span class="string">"Binary: &#123;:b&#125;, Hex: &#123;:x&#125;, Octal: &#123;:o&#125;."</span>, <span class="number">10</span>, <span class="number">10</span>, <span class="number">10</span>);</span><br></pre></td></tr></table></figure><p>輸出結果<br><img src="HgVZM4p.png" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Rust-格式化輸出&quot;&gt;&lt;a href=&quot;#Rust-格式化輸出&quot; class=&quot;headerlink&quot; title=&quot;Rust 格式化輸出&quot;&gt;&lt;/a&gt;Rust 格式化輸出&lt;/h1&gt;&lt;p&gt;格式化輸出可以讓你方便的排版你想要的輸出方式，以下我們介紹幾中常見的格式化輸出。  &lt;/p&gt;
+&lt;p&gt;利用大括弧來標示變數所在的地方，由左而右依序輸出。&lt;/p&gt;
+&lt;figure class=&quot;highlight rust&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;println!&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;Num: &amp;#123;&amp;#125;, &amp;#123;&amp;#125;&quot;&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="Rust tutorials" scheme="https://chucs.github.io/categories/Rust-tutorials/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Rust 003 Function</title>
+    <link href="https://chucs.github.io/rust-003-function/"/>
+    <id>https://chucs.github.io/rust-003-function/</id>
+    <published>2020-11-09T12:21:48.000Z</published>
+    <updated>2020-11-09T13:09:03.504Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Rust-函式"><a href="#Rust-函式" class="headerlink" title="Rust 函式"></a>Rust 函式</h1><p>我們可以在src下創建一個新的檔案<code>print.rs</code>，編寫一下程式。</p><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">pub</span> <span class="function"><span class="keyword">fn</span> <span class="title">run</span></span>()&#123;</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">"Hello print.rs run!!"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><a id="more"></a><p>然後我們回到主程式來引用我們寫得函式。</p><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">mod</span> print;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">main</span></span>() &#123;</span><br><span class="line">    print::run();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>接著執行就可以看到我們的結果了。</p><p><img src="iMTn529.png" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Rust-函式&quot;&gt;&lt;a href=&quot;#Rust-函式&quot; class=&quot;headerlink&quot; title=&quot;Rust 函式&quot;&gt;&lt;/a&gt;Rust 函式&lt;/h1&gt;&lt;p&gt;我們可以在src下創建一個新的檔案&lt;code&gt;print.rs&lt;/code&gt;，編寫一下程式。&lt;/p&gt;
+&lt;figure class=&quot;highlight rust&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;pub&lt;/span&gt; &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;fn&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;run&lt;/span&gt;&lt;/span&gt;()&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;println!&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;Hello print.rs run!!&quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="Rust tutorials" scheme="https://chucs.github.io/categories/Rust-tutorials/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Rust 002 Project</title>
+    <link href="https://chucs.github.io/rust-002-project/"/>
+    <id>https://chucs.github.io/rust-002-project/</id>
+    <published>2020-11-09T12:15:13.000Z</published>
+    <updated>2020-11-09T13:09:03.502Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Rust-第一個專案"><a href="#Rust-第一個專案" class="headerlink" title="Rust 第一個專案"></a>Rust 第一個專案</h1><p>安裝完RUST後我們可以開始寫我們第一個RUST得程式了，首先我們先下<code>cargo init</code>這將會替我們創建一些基本的檔案。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cargo init</span><br></pre></td></tr></table></figure><a id="more"></a><p><img src="uMvHeRj.png" alt=""></p><p>目錄應該是長下面這樣，<code>Cargo.toml</code>裡面寫的是一些設定檔案，版本訊息等等，<code>main.rs</code>則是我們主要寫程式的地方。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">|-- Cargo.toml</span><br><span class="line">&#96;-- src</span><br><span class="line">    &#96;-- main.rs</span><br></pre></td></tr></table></figure><p>然後打開<code>main.rs</code>編寫我們第一個RUST程式。</p><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">main</span></span>() &#123;</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">"Hello, world!"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>接著執行程式</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cargo run</span><br></pre></td></tr></table></figure><p><img src="J4JlXIU.png" alt=""></p><p>執行完後你會看到你剛剛寫的<code>Hello, world!</code>印在終端機上面。</p><p>如果你不想要執行程式的話可以輸入<code>build</code>就好。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cargo build</span><br></pre></td></tr></table></figure><p><img src="vudWD4D.png" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Rust-第一個專案&quot;&gt;&lt;a href=&quot;#Rust-第一個專案&quot; class=&quot;headerlink&quot; title=&quot;Rust 第一個專案&quot;&gt;&lt;/a&gt;Rust 第一個專案&lt;/h1&gt;&lt;p&gt;安裝完RUST後我們可以開始寫我們第一個RUST得程式了，首先我們先下&lt;code&gt;cargo init&lt;/code&gt;這將會替我們創建一些基本的檔案。&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ cargo init&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="Rust tutorials" scheme="https://chucs.github.io/categories/Rust-tutorials/"/>
+    
+    
+      <category term="rust" scheme="https://chucs.github.io/tags/rust/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Rust 001 Install</title>
+    <link href="https://chucs.github.io/rust-001-install/"/>
+    <id>https://chucs.github.io/rust-001-install/</id>
+    <published>2020-11-09T12:13:19.000Z</published>
+    <updated>2020-11-09T13:09:03.498Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="RUST-介紹與安裝"><a href="#RUST-介紹與安裝" class="headerlink" title="RUST 介紹與安裝"></a>RUST 介紹與安裝</h1><h2 id="優點"><a href="#優點" class="headerlink" title="優點"></a>優點</h2><p>安全：Rust 擁有豐富類型系統和所有權模型，保證了內存安全性和線程安全性。</p><p>並發：Rust 可讓程序在編譯時並發執行，也就是多個事件在同一時間間隔執行，並且將安全與並發完美統一。</p><p>高效：Rust 快且節省內存。</p><a id="more"></a><h2 id="安裝-RUST"><a href="#安裝-RUST" class="headerlink" title="安裝 RUST"></a>安裝 RUST</h2><p>到<a href="https://www.rust-lang.org/" target="_blank" rel="noopener">RUST</a>的官網按下<code>get started</code>然後你會看到下載畫面，選擇你的作業系統下載對應的下載檔案，通常他會先替你選好。</p><p><img src="E2SfgQY.png" alt=""></p><p>打開你下載好的<code>rustup-init</code>檔案，打開後你會看到他所幫你安裝的路徑等資訊，接著在終端機內輸入1使用預設的安裝。</p><p><img src="MOrVY0n.png" alt=""></p><p>安裝完後可以在終端機輸入<code>rustc --version</code>和<code>cargo --version</code>查看你所安裝版本。</p><p>接下來下載<code>Visual Studio Code</code>，打開後點擊左邊第四個選項來新增RUST套件，新增完後重新載入<code>Visual Studio Code</code>，然後右下角會跳出安裝RUST提醒就直接<code>install</code>。<br><img src="Dt3OZKz.png" alt=""></p><p>新建一個<code>hello.rs</code>然後打開檔案將以下程式碼寫入。</p><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">main</span></span>() &#123;</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">"Hello, world!"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>完成後打開終端機到檔案下的目錄執行下面的指令。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ rustc hello.rs</span><br><span class="line">$ ./hello</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;RUST-介紹與安裝&quot;&gt;&lt;a href=&quot;#RUST-介紹與安裝&quot; class=&quot;headerlink&quot; title=&quot;RUST 介紹與安裝&quot;&gt;&lt;/a&gt;RUST 介紹與安裝&lt;/h1&gt;&lt;h2 id=&quot;優點&quot;&gt;&lt;a href=&quot;#優點&quot; class=&quot;headerlink&quot; title=&quot;優點&quot;&gt;&lt;/a&gt;優點&lt;/h2&gt;&lt;p&gt;安全：Rust 擁有豐富類型系統和所有權模型，保證了內存安全性和線程安全性。&lt;/p&gt;
+&lt;p&gt;並發：Rust 可讓程序在編譯時並發執行，也就是多個事件在同一時間間隔執行，並且將安全與並發完美統一。&lt;/p&gt;
+&lt;p&gt;高效：Rust 快且節省內存。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Rust tutorials" scheme="https://chucs.github.io/categories/Rust-tutorials/"/>
+    
+    
+      <category term="rust" scheme="https://chucs.github.io/tags/rust/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Parallel Programming MS-MPI install</title>
+    <link href="https://chucs.github.io/parallel-001-MS-MPI-install/"/>
+    <id>https://chucs.github.io/parallel-001-MS-MPI-install/</id>
+    <published>2020-11-09T11:14:25.000Z</published>
+    <updated>2020-11-09T13:09:03.491Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Parallel-Programming-平行程式"><a href="#Parallel-Programming-平行程式" class="headerlink" title="Parallel Programming 平行程式"></a>Parallel Programming 平行程式</h1><p>平行計算是一種類型的計算，許多計算或執行過程是同時進行的。把大問題分為小問題，然後同時解決。以下式建置平行程式環境的流程。</p><a id="more"></a><h2 id="MS-MPI-安裝教學"><a href="#MS-MPI-安裝教學" class="headerlink" title="MS-MPI 安裝教學"></a>MS-MPI 安裝教學</h2><p>首先打開<a href="https://docs.microsoft.com/en-us/message-passing-interface/microsoft-mpi" target="_blank" rel="noopener">MS-MPI</a>然後到下載的地方點擊MS-MPI vxx.x.x，如下圖紫色字體。</p><p><img src="Otdr8uZ.png" alt=""></p><p>接著將所有檔案打勾然後按下一步就會把檔案下載下來了。</p><p><img src="a8jSD2x.png" alt=""></p><p>下載下來後執行並下移步到底，若要更換路徑請自行記得路徑。<br>接著打開Visual Studio 開啟一個C++專案。</p><p><img src="hfmZ9fk.png" alt=""></p><p>點擊右邊專案右鍵，屬性。</p><p><img src="eC9A1o6.png" alt=""></p><p>打開後按<code>C/C++</code>-&gt;<code>其他include目錄</code>，將剛剛按裝好的<code>MPI/Include</code>路徑設好。</p><p><img src="1LVNsYp.png" alt=""></p><p><img src="tXWUuIj.png" alt=""></p><p>建置完後就會產出一個<code>.exe</code>的檔案。</p><p><img src="1q8F8cx.png" alt=""></p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;mpi.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">int</span> rank, <span class="built_in">size</span>;</span><br><span class="line">MPI_Init(&amp;argc, &amp;argv);</span><br><span class="line"></span><br><span class="line">MPI_Comm_rank(MPI_COMM_WORLD, &amp;rank);</span><br><span class="line">MPI_Comm_size(MPI_COMM_WORLD, &amp;<span class="built_in">size</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"Hello, World.  I am %d of %d\n"</span>, rank, <span class="built_in">size</span>);</span><br><span class="line"></span><br><span class="line">MPI_Finalize();</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><img src="HKDJrkG.png" alt=""></p><p>將終端機打開<code>source\repos\MpiTest\Debug</code>執行面下指令(這個路徑是你的專案路徑，因此可能會有所不同)，你就會看到下圖結果。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mpiexec -n 4 MpiTest.exe</span><br></pre></td></tr></table></figure><p>若無此指令請確認環境變數是否有設定完成。<br><img src="aXnvwD9.png" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Parallel-Programming-平行程式&quot;&gt;&lt;a href=&quot;#Parallel-Programming-平行程式&quot; class=&quot;headerlink&quot; title=&quot;Parallel Programming 平行程式&quot;&gt;&lt;/a&gt;Parallel Programming 平行程式&lt;/h1&gt;&lt;p&gt;平行計算是一種類型的計算，許多計算或執行過程是同時進行的。把大問題分為小問題，然後同時解決。以下式建置平行程式環境的流程。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Parallel Programming" scheme="https://chucs.github.io/categories/Parallel-Programming/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Codeforces 1426D</title>
@@ -352,177 +510,6 @@
 &lt;p&gt;2.分割：重新排序數列，所有比基準值小的元素擺放在基準前面，所有比基準值大的元素擺在基準後面（與基準值相等的數可以到任何一邊）。在這個分割結束之後，對基準值的排序就已經完成。&lt;/p&gt;
 &lt;p&gt;3.遞迴排序子序列：遞迴地將小於基準值元素的子序列和大於基準值元素的子序列排序。&lt;/p&gt;
 &lt;p&gt;完成排序後檢查出現順序是否依照順序，例如先輸入”D 1”、”H 1”，輸出時若為”D 1”、”H 1”就輸出”Stable”，否則輸出”Not stable”。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="AOJ" scheme="https://chucs.github.io/categories/AOJ/"/>
-    
-    
-      <category term="implementation" scheme="https://chucs.github.io/tags/implementation/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>AOJ ALDS1_6_B - Partition</title>
-    <link href="https://chucs.github.io/ALDS1-6-B-Partition/"/>
-    <id>https://chucs.github.io/ALDS1-6-B-Partition/</id>
-    <published>2020-07-15T06:26:38.000Z</published>
-    <updated>2020-08-11T06:29:28.401Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="快速排序劃分"><a href="#快速排序劃分" class="headerlink" title="快速排序劃分"></a>快速排序劃分</h1><p><a href="https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_6_B" target="_blank" rel="noopener">題目網址</a></p><h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>快速排序有三個步驟：<br>1.挑選基準值：從數列中挑出一個元素，稱為「基準」（pivot）。</p><p>2.分割：重新排序數列，所有比基準值小的元素擺放在基準前面，所有比基準值大的元素擺在基準後面（與基準值相等的數可以到任何一邊）。在這個分割結束之後，對基準值的排序就已經完成。</p><p>3.遞迴排序子序列：遞迴地將小於基準值元素的子序列和大於基準值元素的子序列排序。</p><p>而這題要做的就是分割這個動作。</p><a id="more"></a><h4 id="思路"><a href="#思路" class="headerlink" title="思路:"></a>思路:</h4><p>如果(a[j] &lt;= x)我們就交換，最後我們將最後一個切割點輸出。</p><h4 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼:"></a>程式碼:</h4><script src="https://gist.github.com/Daviswww/2b61bf149936044aab2d398c8496b1b3.js"></script>    ]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;快速排序劃分&quot;&gt;&lt;a href=&quot;#快速排序劃分&quot; class=&quot;headerlink&quot; title=&quot;快速排序劃分&quot;&gt;&lt;/a&gt;快速排序劃分&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_6_B&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;題目網址&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&quot;題意&quot;&gt;&lt;a href=&quot;#題意&quot; class=&quot;headerlink&quot; title=&quot;題意:&quot;&gt;&lt;/a&gt;題意:&lt;/h4&gt;&lt;p&gt;快速排序有三個步驟：&lt;br&gt;1.挑選基準值：從數列中挑出一個元素，稱為「基準」（pivot）。&lt;/p&gt;
-&lt;p&gt;2.分割：重新排序數列，所有比基準值小的元素擺放在基準前面，所有比基準值大的元素擺在基準後面（與基準值相等的數可以到任何一邊）。在這個分割結束之後，對基準值的排序就已經完成。&lt;/p&gt;
-&lt;p&gt;3.遞迴排序子序列：遞迴地將小於基準值元素的子序列和大於基準值元素的子序列排序。&lt;/p&gt;
-&lt;p&gt;而這題要做的就是分割這個動作。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="AOJ" scheme="https://chucs.github.io/categories/AOJ/"/>
-    
-    
-      <category term="implementation" scheme="https://chucs.github.io/tags/implementation/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>AOJ ALDS1_6_A - Counting Sort</title>
-    <link href="https://chucs.github.io/ALDS1-6-A-Counting-Sort/"/>
-    <id>https://chucs.github.io/ALDS1-6-A-Counting-Sort/</id>
-    <published>2020-07-15T05:33:29.000Z</published>
-    <updated>2020-08-11T06:29:28.401Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="索引排序"><a href="#索引排序" class="headerlink" title="索引排序"></a>索引排序</h1><p><a href="https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_6_A" target="_blank" rel="noopener">題目網址</a></p><h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>計數排序可用於對數組中的元素進行排序，用一個陣列來計算元素有幾個，而他的index就是原本的數字裡面存的是出現次數。請利用計數排序排序下列數列。</p><a id="more"></a><h4 id="思路"><a href="#思路" class="headerlink" title="思路:"></a>思路:</h4><p>將每個數字都放進Ｃ陣列內計數(c[a[i]]++)，處理完後從0跑到K並根據C陣列內的計數，將所有的數字輸出一遍。</p><h4 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼:"></a>程式碼:</h4><script src="https://gist.github.com/Daviswww/245397223969f64944326fb98f0b1e80.js"></script>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;索引排序&quot;&gt;&lt;a href=&quot;#索引排序&quot; class=&quot;headerlink&quot; title=&quot;索引排序&quot;&gt;&lt;/a&gt;索引排序&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_6_A&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;題目網址&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&quot;題意&quot;&gt;&lt;a href=&quot;#題意&quot; class=&quot;headerlink&quot; title=&quot;題意:&quot;&gt;&lt;/a&gt;題意:&lt;/h4&gt;&lt;p&gt;計數排序可用於對數組中的元素進行排序，用一個陣列來計算元素有幾個，而他的index就是原本的數字裡面存的是出現次數。請利用計數排序排序下列數列。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="AOJ" scheme="https://chucs.github.io/categories/AOJ/"/>
-    
-    
-      <category term="implementation" scheme="https://chucs.github.io/tags/implementation/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>AOJ ALDS1_5_B - Merge Sort</title>
-    <link href="https://chucs.github.io/ALDS1-5-B-Merge-Sort/"/>
-    <id>https://chucs.github.io/ALDS1-5-B-Merge-Sort/</id>
-    <published>2020-07-15T04:39:23.000Z</published>
-    <updated>2020-08-11T06:29:28.401Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="合併排序"><a href="#合併排序" class="headerlink" title="合併排序"></a>合併排序</h1><p><a href="https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_5_B" target="_blank" rel="noopener">題目網址</a></p><h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>給你N個整數序列S創建一個程序，根據上面的虛擬碼通過合併排序由小到大進行排序。另外，請報告合併中的比較總數。</p><a id="more"></a><h4 id="思路"><a href="#思路" class="headerlink" title="思路:"></a>思路:</h4><p>先拆開然後檢查左邊和右邊誰大誰小，小的放左邊大的放右邊合併，重複這個動作到結束。</p><h4 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼:"></a>程式碼:</h4><script src="https://gist.github.com/Daviswww/86ace3aedb574bee48d1a7869cca847c.js"></script>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;合併排序&quot;&gt;&lt;a href=&quot;#合併排序&quot; class=&quot;headerlink&quot; title=&quot;合併排序&quot;&gt;&lt;/a&gt;合併排序&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_5_B&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;題目網址&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&quot;題意&quot;&gt;&lt;a href=&quot;#題意&quot; class=&quot;headerlink&quot; title=&quot;題意:&quot;&gt;&lt;/a&gt;題意:&lt;/h4&gt;&lt;p&gt;給你N個整數序列S創建一個程序，根據上面的虛擬碼通過合併排序由小到大進行排序。另外，請報告合併中的比較總數。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="AOJ" scheme="https://chucs.github.io/categories/AOJ/"/>
-    
-    
-      <category term="implementation" scheme="https://chucs.github.io/tags/implementation/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>AOJ ALDS1_5_A - Exhaustive Search</title>
-    <link href="https://chucs.github.io/ALDS1-5-A-Exhaustive-Search/"/>
-    <id>https://chucs.github.io/ALDS1-5-A-Exhaustive-Search/</id>
-    <published>2020-07-14T08:13:31.000Z</published>
-    <updated>2020-08-11T06:29:28.401Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="全面搜索"><a href="#全面搜索" class="headerlink" title="全面搜索"></a>全面搜索</h1><p><a href="https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_5_A" target="_blank" rel="noopener">題目網址</a></p><h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>給N個整數數列A，Q個整數數列M，判斷A任意數字加起來是否等於Mi，如果有輸出”yes”，否則輸出”no”。</p><a id="more"></a><h4 id="思路"><a href="#思路" class="headerlink" title="思路:"></a>思路:</h4><p>直接建一張查詢表把所有的可能加一遍並修改，之後直接查表。<br>累加後遞迴然後把位子移動到下一個數字。</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">build(sum+a[index], index+<span class="number">1</span>, n);</span><br></pre></td></tr></table></figure><p>把自己也改變。<br>build(sum, index+1, n);</p><h4 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼:"></a>程式碼:</h4><script src="https://gist.github.com/Daviswww/ca85b1798c3535457231e0d3a4c645e9.js"></script>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;全面搜索&quot;&gt;&lt;a href=&quot;#全面搜索&quot; class=&quot;headerlink&quot; title=&quot;全面搜索&quot;&gt;&lt;/a&gt;全面搜索&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_5_A&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;題目網址&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&quot;題意&quot;&gt;&lt;a href=&quot;#題意&quot; class=&quot;headerlink&quot; title=&quot;題意:&quot;&gt;&lt;/a&gt;題意:&lt;/h4&gt;&lt;p&gt;給N個整數數列A，Q個整數數列M，判斷A任意數字加起來是否等於Mi，如果有輸出”yes”，否則輸出”no”。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="AOJ" scheme="https://chucs.github.io/categories/AOJ/"/>
-    
-    
-      <category term="implementation" scheme="https://chucs.github.io/tags/implementation/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>AOJ ALDS1_4_C - Dictionary</title>
-    <link href="https://chucs.github.io/ALDS1-4-C-Dictionary/"/>
-    <id>https://chucs.github.io/ALDS1-4-C-Dictionary/</id>
-    <published>2020-07-14T06:51:04.000Z</published>
-    <updated>2020-08-11T06:29:28.401Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h1><p><a href="https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_4_C" target="_blank" rel="noopener">題目網址</a></p><h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>寫一個具備以下功能的字典程式:<br>insert str: 插入一個字串到字典裡。<br>find str: 找尋字串如果找到輸出”yes”，否則”no”。</p><a id="more"></a><h4 id="思路"><a href="#思路" class="headerlink" title="思路:"></a>思路:</h4><p>利用C++的map函式來加入，使用find的功能來查詢，如果沒找會輸出0，所以我們就可以放在判斷式裡面做判斷。</p><h4 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼:"></a>程式碼:</h4><script src="https://gist.github.com/Daviswww/0e68ebaec599b3a3b31c9e84fbac8840.js"></script>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;字典&quot;&gt;&lt;a href=&quot;#字典&quot; class=&quot;headerlink&quot; title=&quot;字典&quot;&gt;&lt;/a&gt;字典&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_4_C&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;題目網址&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&quot;題意&quot;&gt;&lt;a href=&quot;#題意&quot; class=&quot;headerlink&quot; title=&quot;題意:&quot;&gt;&lt;/a&gt;題意:&lt;/h4&gt;&lt;p&gt;寫一個具備以下功能的字典程式:&lt;br&gt;insert str: 插入一個字串到字典裡。&lt;br&gt;find str: 找尋字串如果找到輸出”yes”，否則”no”。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="AOJ" scheme="https://chucs.github.io/categories/AOJ/"/>
-    
-    
-      <category term="implementation" scheme="https://chucs.github.io/tags/implementation/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>AOJ ALDS1_4_B - Binary Search</title>
-    <link href="https://chucs.github.io/ALDS1-4-B-Binary-Search/"/>
-    <id>https://chucs.github.io/ALDS1-4-B-Binary-Search/</id>
-    <published>2020-07-14T05:24:03.000Z</published>
-    <updated>2020-08-11T06:29:28.401Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="二分搜索"><a href="#二分搜索" class="headerlink" title="二分搜索"></a>二分搜索</h1><p><a href="https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_4_B" target="_blank" rel="noopener">題目網址</a></p><h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>給N個整數數列S，還有q個整數數列T，請輸出T在S裡面有找到幾個。利用二分搜索來尋找。</p><a id="more"></a><h4 id="思路"><a href="#思路" class="headerlink" title="思路:"></a>思路:</h4><p>宣告三個變數分別紀錄左邊、右邊和中間位置，每次判斷中間那個數字是否等於要找的數字，如果沒有則判斷大於小於以利切割，如果大於的話就把r換成中間的位置，小於則把l換成中間的位置。</p><h4 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼:"></a>程式碼:</h4><script src="https://gist.github.com/Daviswww/b7e47a957066b3bb5888030be0aac43f.js"></script>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;二分搜索&quot;&gt;&lt;a href=&quot;#二分搜索&quot; class=&quot;headerlink&quot; title=&quot;二分搜索&quot;&gt;&lt;/a&gt;二分搜索&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_4_B&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;題目網址&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&quot;題意&quot;&gt;&lt;a href=&quot;#題意&quot; class=&quot;headerlink&quot; title=&quot;題意:&quot;&gt;&lt;/a&gt;題意:&lt;/h4&gt;&lt;p&gt;給N個整數數列S，還有q個整數數列T，請輸出T在S裡面有找到幾個。利用二分搜索來尋找。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="AOJ" scheme="https://chucs.github.io/categories/AOJ/"/>
-    
-    
-      <category term="implementation" scheme="https://chucs.github.io/tags/implementation/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>AOJ ALDS1_4_A - Linear Search</title>
-    <link href="https://chucs.github.io/ALDS1-4-A-Linear-Search/"/>
-    <id>https://chucs.github.io/ALDS1-4-A-Linear-Search/</id>
-    <published>2020-07-14T04:39:48.000Z</published>
-    <updated>2020-08-11T06:18:59.336Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="線性排序"><a href="#線性排序" class="headerlink" title="線性排序"></a>線性排序</h1><p><a href="https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_4_A" target="_blank" rel="noopener">題目網址</a></p><h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>給N個整數數列S，還有q個整數數列T，請輸出T在S裡面有找到幾個。利用線性搜索來尋找。</p><a id="more"></a><h4 id="思路"><a href="#思路" class="headerlink" title="思路:"></a>思路:</h4><p>逐一檢查，如果相等count加一然後斷開避免重複加到。</p><h4 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼:"></a>程式碼:</h4><script src="https://gist.github.com/Daviswww/be27322df4e6cf323429cc22b66ebcd3.js"></script>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;線性排序&quot;&gt;&lt;a href=&quot;#線性排序&quot; class=&quot;headerlink&quot; title=&quot;線性排序&quot;&gt;&lt;/a&gt;線性排序&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_4_A&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;題目網址&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&quot;題意&quot;&gt;&lt;a href=&quot;#題意&quot; class=&quot;headerlink&quot; title=&quot;題意:&quot;&gt;&lt;/a&gt;題意:&lt;/h4&gt;&lt;p&gt;給N個整數數列S，還有q個整數數列T，請輸出T在S裡面有找到幾個。利用線性搜索來尋找。&lt;/p&gt;
     
     </summary>
     
