@@ -211,6 +211,114 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://chucs.github.io/rust-007-struct/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/header.jpg">
+      <meta itemprop="name" content="CHUCSIE">
+      <meta itemprop="description" content="解題報告">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CHUCSIE">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/rust-007-struct/" class="post-title-link" itemprop="url">Rust 007 Struct</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+              
+
+              <time title="創建時間：2020-11-11 20:45:13 / 修改時間：22:07:42" itemprop="dateCreated datePublished" datetime="2020-11-11T20:45:13+08:00">2020-11-11</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Rust-tutorials/" itemprop="url" rel="index"><span itemprop="name">Rust tutorials</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/rust-007-struct/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="rust-007-struct/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+    
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Rust-結構與模塊"><a href="#Rust-結構與模塊" class="headerlink" title="Rust 結構與模塊"></a>Rust 結構與模塊</h1><p>Struct是自定義的數據類型，因此我們可以自行定義，而他也使我們能夠根據自己的需求調整數據的結構。Methods是將你所有的函式包裝再一起，而當你可以在這個模組下找到相關的函式。</p>
+<h2 id="Struct"><a href="#Struct" class="headerlink" title="Struct"></a>Struct</h2><p>我們利用Struct定義我們結構，他就像一個物件一樣包含了所有你所定義的東西，當你需要取得值時你只需要<code>name.a</code>或是<code>name.b</code>就可以輕鬆地取得。</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Object</span></span>&#123;</span><br><span class="line">    width: <span class="built_in">u32</span>,</span><br><span class="line">    height: <span class="built_in">u32</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>接著我們創建一個函式來計算面積，傳進去的東西就是我們剛剛所宣告的物件。</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">area</span></span>(obj: Object) -&gt; <span class="built_in">u32</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> obj.width * obj.height;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在這邊我們利用我們所創的結構將整個物件傳入函式，你可以在Object裡面拿到你所定義的值，當你的值越多時，他可以讓你的程式碼更加得清楚，使用起來更加方便。</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Object</span></span>&#123;</span><br><span class="line">    width: <span class="built_in">u32</span>,</span><br><span class="line">    height: <span class="built_in">u32</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">area</span></span>(obj: Object) -&gt; <span class="built_in">u32</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> obj.width * obj.height;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">run</span></span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> o = Object &#123;</span><br><span class="line">        width: <span class="number">10</span>,</span><br><span class="line">        height: <span class="number">5</span>,</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">"&#123;&#125;"</span>, area(o));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">main</span></span>() &#123;</span><br><span class="line">    run();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="Impl"><a href="#Impl" class="headerlink" title="Impl"></a>Impl</h1><p>impl關鍵字被主要用於對類型限定的方式，而<code>impl</code>中定義的功能可以是獨立的，這意味著將其稱為<code>hello::world()</code>。這有點類似於<code>hello.world()</code>的概念。  </p>
+<p>在使用<code>impl</code>時我們一樣先創建一個<code>struct</code>來定義我們所需要的數據。</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Object</span></span>&#123;</span><br><span class="line">    width: <span class="built_in">u32</span>,</span><br><span class="line">    height: <span class="built_in">u32</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>創建完後將<code>impl</code>與創建得<code>struct</code>名稱宣告成一樣的，這將會使他綁定再一起的感覺，你可以在裡面使用你所宣告的數據。<code>self</code>得用意是引用當前模塊和標記方法的接收者，這就是為什麼下面還有一個<code>new</code>的函式，我將直傳進去後在當前的模塊中，<code>self</code>就可以拿到我所須要的數據，而這邊有一個很特別的點是，<code>new</code>裡面的<code>Object</code>可以不用寫成<code>width:width</code>，因為在rust中只要他定義的名字是一樣的就會動傳到裡面去。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">struct Object&#123;</span><br><span class="line">    width: u32,</span><br><span class="line">    height: u32,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">impl Object &#123;</span><br><span class="line">    fn area(&amp;self) -&gt; u32 &#123;</span><br><span class="line">        return self.width * self.height;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    fn new(width: u32, height: u32) -&gt; Object &#123;</span><br><span class="line">        Object &#123;</span><br><span class="line">            width,</span><br><span class="line">            height,</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">fn run() &#123;</span><br><span class="line">    let obj &#x3D; Object::new(10, 3);</span><br><span class="line"></span><br><span class="line">    println!(&quot;&#123;&#125;&quot;, obj.area());</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">fn main() &#123;</span><br><span class="line">    run();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果你想要把它拆的細一點，你也可以把<code>new</code>和<code>area</code>拆開寫也是可以的。</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">impl</span> Object &#123;</span><br><span class="line">    <span class="function"><span class="keyword">fn</span> <span class="title">area</span></span>(&amp;<span class="keyword">self</span>) -&gt; <span class="built_in">u32</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">self</span>.width * <span class="keyword">self</span>.height;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">impl</span> Object&#123;</span><br><span class="line">    <span class="function"><span class="keyword">fn</span> <span class="title">new</span></span>(width: <span class="built_in">u32</span>, height: <span class="built_in">u32</span>) -&gt; Object &#123;</span><br><span class="line">        Object &#123;</span><br><span class="line">            width,</span><br><span class="line">            height,</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 橫幅廣告 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8906140811059676"
+     data-ad-slot="2513800005"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
     <link itemprop="mainEntityOfPage" href="https://chucs.github.io/rust-006-types/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -225,7 +333,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/rust-006-types/" class="post-title-link" itemprop="url">Rust-006 Types</a>
+            <a href="/rust-006-types/" class="post-title-link" itemprop="url">Rust 006 Types</a>
         </h2>
 
         <div class="post-meta">
@@ -234,10 +342,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">發表於</span>
-              
 
-              <time title="創建時間：2020-11-09 20:53:39 / 修改時間：21:09:03" itemprop="dateCreated datePublished" datetime="2020-11-09T20:53:39+08:00">2020-11-09</time>
+              <time title="創建時間：2020-11-09 20:53:39" itemprop="dateCreated datePublished" datetime="2020-11-09T20:53:39+08:00">2020-11-09</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2020-11-10 21:24:17" itemprop="dateModified" datetime="2020-11-10T21:24:17+08:00">2020-11-10</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -1128,113 +1242,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://chucs.github.io/Symmetric-Matrix/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/header.jpg">
-      <meta itemprop="name" content="CHUCSIE">
-      <meta itemprop="description" content="解題報告">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CHUCSIE">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/Symmetric-Matrix/" class="post-title-link" itemprop="url">Codeforces 1426B</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">發表於</span>
-
-              <time title="創建時間：2020-10-03 15:09:56" itemprop="dateCreated datePublished" datetime="2020-10-03T15:09:56+08:00">2020-10-03</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2020-10-16 23:26:49" itemprop="dateModified" datetime="2020-10-16T23:26:49+08:00">2020-10-16</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分類於</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Codeforces/" itemprop="url" rel="index"><span itemprop="name">Codeforces</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/Symmetric-Matrix/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="Symmetric-Matrix/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-    
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="Codeforces-1426B-Symmetric-Matrix"><a href="#Codeforces-1426B-Symmetric-Matrix" class="headerlink" title="Codeforces 1426B - Symmetric Matrix"></a>Codeforces 1426B - Symmetric Matrix</h1><p><a href="https://codeforces.com/problemset/problem/1426/B" target="_blank" rel="noopener">題目網址</a></p>
-<h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>Masha有n種類型2x2大小的磁磚，磁磚上每格各有一個數字，Masha想利用這幾種磁磚組成mxm的矩形(可用任意種類與任意數量組成)，然後Masha希望這個矩形上的數字是對稱的–對任一對位置(i,j)要符合s[i][j] = s[j][i]，請問Masha有辦法組成他想要的矩形嗎?</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/Symmetric-Matrix/#more" rel="contents">
-                閱讀全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- 橫幅廣告 -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-8906140811059676"
-     data-ad-slot="2513800005"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1306,7 +1313,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">305</span>
+          <span class="site-state-item-count">306</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
