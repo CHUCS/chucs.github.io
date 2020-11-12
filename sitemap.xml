@@ -2,9 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://chucs.github.io/rust-009-loop/</loc>
+    
+    <lastmod>2020-11-12T12:35:25.922Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/rust-008-if-else/</loc>
+    
+    <lastmod>2020-11-12T12:35:01.226Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/rust-010-match/</loc>
+    
+    <lastmod>2020-11-12T12:34:33.971Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://chucs.github.io/rust-007-struct/</loc>
     
-    <lastmod>2020-11-11T14:17:49.245Z</lastmod>
+    <lastmod>2020-11-11T14:35:28.189Z</lastmod>
     
   </url>
   
