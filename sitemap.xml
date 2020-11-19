@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://chucs.github.io/hexo-tutorials/</loc>
+    
+    <lastmod>2020-11-19T05:00:29.965Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://chucs.github.io/rust-009-loop/</loc>
     
     <lastmod>2020-11-12T12:35:25.922Z</lastmod>
@@ -75,13 +82,6 @@
     <loc>https://chucs.github.io/parallel-001-MS-MPI-install/</loc>
     
     <lastmod>2020-11-09T13:09:03.491Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://chucs.github.io/hexo-tutorials/</loc>
-    
-    <lastmod>2020-11-06T07:26:23.525Z</lastmod>
     
   </url>
   
