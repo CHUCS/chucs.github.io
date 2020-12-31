@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://chucs.github.io/"/>
-  <updated>2020-11-12T12:34:33.971Z</updated>
+  <updated>2020-12-31T06:54:46.807Z</updated>
   <id>https://chucs.github.io/</id>
   
   <author>
@@ -15,6 +15,53 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>rust-011-eof-input</title>
+    <link href="https://chucs.github.io/rust-012-eof-input/"/>
+    <id>https://chucs.github.io/rust-012-eof-input/</id>
+    <published>2020-12-31T06:48:20.000Z</published>
+    <updated>2020-12-31T06:54:46.807Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Rust-EOF-輸入"><a href="#Rust-EOF-輸入" class="headerlink" title="Rust EOF 輸入"></a>Rust EOF 輸入</h1><p>如果你的輸入是要EOF的也就是用<code>ctrl+Z</code>結束輸入的話，我們可以使用rust的stdin來判斷它是不是0，那我們在這使用Option來回傳使否成功，如果輸入有值得話Some就會回傳輸入的值否則就是空的，那麼上面的while迴圈就會結束。</p><a id="more"></a><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">main</span></span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">mut</span> vec1 = <span class="built_in">Vec</span>::new();</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">"Input"</span>);</span><br><span class="line">    <span class="keyword">while</span> <span class="keyword">let</span> <span class="literal">Some</span>(input) = single_input() &#123; </span><br><span class="line">        vec1.push(input);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">single_input</span></span>() -&gt; <span class="built_in">Option</span>&lt;<span class="built_in">i32</span>&gt; &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">mut</span> s = <span class="built_in">String</span>::new();</span><br><span class="line">    <span class="keyword">let</span> input = std::io::stdin().read_line(&amp;<span class="keyword">mut</span> s).expect(<span class="string">"err read"</span>);</span><br><span class="line">    <span class="keyword">if</span> input == <span class="number">0</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">Some</span>(s.trim().parse::&lt;<span class="built_in">i32</span>&gt;().unwrap());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Rust-EOF-輸入&quot;&gt;&lt;a href=&quot;#Rust-EOF-輸入&quot; class=&quot;headerlink&quot; title=&quot;Rust EOF 輸入&quot;&gt;&lt;/a&gt;Rust EOF 輸入&lt;/h1&gt;&lt;p&gt;如果你的輸入是要EOF的也就是用&lt;code&gt;ctrl+Z&lt;/code&gt;結束輸入的話，我們可以使用rust的stdin來判斷它是不是0，那我們在這使用Option來回傳使否成功，如果輸入有值得話Some就會回傳輸入的值否則就是空的，那麼上面的while迴圈就會結束。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Rust tutorials" scheme="https://chucs.github.io/categories/Rust-tutorials/"/>
+    
+    
+      <category term="rust" scheme="https://chucs.github.io/tags/rust/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Rust 011 Input</title>
+    <link href="https://chucs.github.io/rust-011-input/"/>
+    <id>https://chucs.github.io/rust-011-input/</id>
+    <published>2020-12-31T06:46:07.000Z</published>
+    <updated>2020-12-31T06:54:39.362Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Rust-輸入"><a href="#Rust-輸入" class="headerlink" title="Rust 輸入"></a>Rust 輸入</h1><h3 id="單一輸入"><a href="#單一輸入" class="headerlink" title="單一輸入"></a>單一輸入</h3><p>利用rust的標準輸入法輸入一行字串，<code>std::io::stdin()</code></p><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">main</span></span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">mut</span> s = <span class="built_in">String</span>::new();</span><br><span class="line">    std::io::stdin().read_line(&amp;<span class="keyword">mut</span> s).expect(<span class="string">"err read"</span>);</span><br><span class="line">        <span class="built_in">println!</span>(<span class="string">"&#123;&#125;"</span>, s);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><a id="more"></a><p>如果使用一個loop在這裡輸入時你會發現你的輸入會一直連續下去，跟其他語言不同他並不會取代掉原本的輸入，只要不重新new原本的變數的話輸入是會一直連續下去的，因此輸入後可以對字串進行切割等處理。</p><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">main</span></span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">mut</span> s = <span class="built_in">String</span>::new();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">loop</span>&#123;</span><br><span class="line">        std::io::stdin().read_line(&amp;<span class="keyword">mut</span> s).expect(<span class="string">"err read"</span>);</span><br><span class="line">        <span class="built_in">println!</span>(<span class="string">"&#123;&#125;"</span>, s);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><img src="vHHdK7O.png" alt=""></p><h3 id="重新產生避免連續"><a href="#重新產生避免連續" class="headerlink" title="重新產生避免連續"></a>重新產生避免連續</h3><p>又或者我們可以寫成一個函式讓他每次都重新產生一次。</p><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">main</span></span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> input = single_input();</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">"&#123;&#125;"</span>, input);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">single_input</span></span>() -&gt; <span class="built_in">String</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">mut</span> s = <span class="built_in">String</span>::new();</span><br><span class="line">    std::io::stdin().read_line(&amp;<span class="keyword">mut</span> s).expect(<span class="string">"err read"</span>);</span><br><span class="line">    <span class="keyword">return</span> s;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><img src="SZeE6yq.png" alt=""></p><h3 id="輸入型態轉換"><a href="#輸入型態轉換" class="headerlink" title="輸入型態轉換"></a>輸入型態轉換</h3><p>接著我們來將依行輸入轉成其他的型態，由下面來看關鍵的就是我們將上面return的<code>String</code>改成<code>i32</code>，接著最重要的一行就是我們將字串轉成其他的型態<code>s.trim().parse::&lt;i32&gt;().unwrap();</code>，我們來將它分解開來逐一介紹。</p><p><code>trim()</code>的意思是會把字串前後不重要的符號都移除 (例如空白跟換行符號)。  </p><p><code>parse::&lt;T&gt;()</code>是可以解析成其他的型態，只要在角括號裡改成想要的型態就可以了。  </p><p><code>unwrap()</code>很多情況下 function 吐回來的東西是 Result，Result 的意思是他除了是你想要的東西之外，也有可能是一個錯誤一般情況下應該要處理這個錯誤，如果對 Result 做 unwrap() 代表忽略錯誤的情況真的發生錯誤時就直接讓程式終止。</p><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">main</span></span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> input: <span class="built_in">i32</span> = single_input();</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">"Output: &#123;&#125;"</span>, input);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">single_input</span></span>() -&gt; <span class="built_in">i32</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">mut</span> s = <span class="built_in">String</span>::new();</span><br><span class="line">    std::io::stdin().read_line(&amp;<span class="keyword">mut</span> s).expect(<span class="string">"err read"</span>);</span><br><span class="line">    <span class="keyword">return</span> s.trim().parse::&lt;<span class="built_in">i32</span>&gt;().unwrap();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><img src="T8IzkIC.png" alt=""></p><h3 id="輸入後存進vector"><a href="#輸入後存進vector" class="headerlink" title="輸入後存進vector"></a>輸入後存進vector</h3><p>如果你的輸入是輸入一個換一行的話，你可以將每次的輸入都<code>push</code>進一個vec內，這樣所有的值都可以存在你所創的vec內。</p><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">main</span></span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">mut</span> vec = <span class="built_in">Vec</span>::new();</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="number">0</span>..<span class="number">3</span> &#123;</span><br><span class="line">        <span class="keyword">let</span> input: <span class="built_in">i32</span> = single_input();</span><br><span class="line">        vec.push(input);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> vec &#123;</span><br><span class="line">        <span class="built_in">println!</span>(<span class="string">"&#123;&#125;"</span>, i);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">single_input</span></span>() -&gt; <span class="built_in">i32</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">mut</span> s = <span class="built_in">String</span>::new();</span><br><span class="line">    std::io::stdin().read_line(&amp;<span class="keyword">mut</span> s).expect(<span class="string">"err read"</span>);</span><br><span class="line">    <span class="keyword">return</span> s.trim().parse::&lt;<span class="built_in">i32</span>&gt;().unwrap();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><img src="x64eg4b.png" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Rust-輸入&quot;&gt;&lt;a href=&quot;#Rust-輸入&quot; class=&quot;headerlink&quot; title=&quot;Rust 輸入&quot;&gt;&lt;/a&gt;Rust 輸入&lt;/h1&gt;&lt;h3 id=&quot;單一輸入&quot;&gt;&lt;a href=&quot;#單一輸入&quot; class=&quot;headerlink&quot; title=&quot;單一輸入&quot;&gt;&lt;/a&gt;單一輸入&lt;/h3&gt;&lt;p&gt;利用rust的標準輸入法輸入一行字串，&lt;code&gt;std::io::stdin()&lt;/code&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight rust&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;fn&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;/span&gt;() &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;mut&lt;/span&gt; s = &lt;span class=&quot;built_in&quot;&gt;String&lt;/span&gt;::new();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    std::io::stdin().read_line(&amp;amp;&lt;span class=&quot;keyword&quot;&gt;mut&lt;/span&gt; s).expect(&lt;span class=&quot;string&quot;&gt;&quot;err read&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;built_in&quot;&gt;println!&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;&amp;#123;&amp;#125;&quot;&lt;/span&gt;, s);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="Rust tutorials" scheme="https://chucs.github.io/categories/Rust-tutorials/"/>
+    
+    
+      <category term="rust" scheme="https://chucs.github.io/tags/rust/"/>
+    
+  </entry>
   
   <entry>
     <title>Rust 010 Match</title>
@@ -449,54 +496,6 @@
     
       &lt;h1 id=&quot;二元樹搜索-刪除&quot;&gt;&lt;a href=&quot;#二元樹搜索-刪除&quot; class=&quot;headerlink&quot; title=&quot;二元樹搜索 - 刪除&quot;&gt;&lt;/a&gt;二元樹搜索 - 刪除&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_8_C&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;題目網址&lt;/a&gt;&lt;/p&gt;
 &lt;h4 id=&quot;題意&quot;&gt;&lt;a href=&quot;#題意&quot; class=&quot;headerlink&quot; title=&quot;題意:&quot;&gt;&lt;/a&gt;題意:&lt;/h4&gt;&lt;p&gt;編程一個擁有新增、查詢、刪除功能的二元樹，在每次新增點時，如果key大於node-&amp;gt;key，就新增在node-&amp;gt;right，否則新增在node-&amp;gt;left。最後輸出Preorder與Inorder。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="AOJ" scheme="https://chucs.github.io/categories/AOJ/"/>
-    
-    
-      <category term="implementation" scheme="https://chucs.github.io/tags/implementation/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>AOJ ALDS1_8_B - Binary Search Tree II</title>
-    <link href="https://chucs.github.io/ALDS1-8-B-Binary-Search-Tree-II/"/>
-    <id>https://chucs.github.io/ALDS1-8-B-Binary-Search-Tree-II/</id>
-    <published>2020-08-24T05:45:33.000Z</published>
-    <updated>2020-09-08T12:13:55.599Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="二元樹搜索-查詢"><a href="#二元樹搜索-查詢" class="headerlink" title="二元樹搜索 - 查詢"></a>二元樹搜索 - 查詢</h1><p><a href="https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_8_B" target="_blank" rel="noopener">題目網址</a></p><h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>編程一個擁有新增功能的二元樹，在每次新增點時，如果key大於node-&gt;key，就新增在node-&gt;right，否則新增在node-&gt;left。最後輸出Preorder與Inorder。</p><a id="more"></a><h4 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼:"></a>程式碼:</h4><script src="https://gist.github.com/Daviswww/64cf5d826826134e302151c569adb7d8.js"></script>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;二元樹搜索-查詢&quot;&gt;&lt;a href=&quot;#二元樹搜索-查詢&quot; class=&quot;headerlink&quot; title=&quot;二元樹搜索 - 查詢&quot;&gt;&lt;/a&gt;二元樹搜索 - 查詢&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_8_B&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;題目網址&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&quot;題意&quot;&gt;&lt;a href=&quot;#題意&quot; class=&quot;headerlink&quot; title=&quot;題意:&quot;&gt;&lt;/a&gt;題意:&lt;/h4&gt;&lt;p&gt;編程一個擁有新增功能的二元樹，在每次新增點時，如果key大於node-&amp;gt;key，就新增在node-&amp;gt;right，否則新增在node-&amp;gt;left。最後輸出Preorder與Inorder。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="AOJ" scheme="https://chucs.github.io/categories/AOJ/"/>
-    
-    
-      <category term="implementation" scheme="https://chucs.github.io/tags/implementation/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>AOJ ALDS1_8_A - Binary Search Tree I</title>
-    <link href="https://chucs.github.io/ALDS1-8-A-Binary-Search-Tree-I/"/>
-    <id>https://chucs.github.io/ALDS1-8-A-Binary-Search-Tree-I/</id>
-    <published>2020-08-24T05:45:19.000Z</published>
-    <updated>2020-09-08T12:13:52.258Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="二元樹搜索-新增"><a href="#二元樹搜索-新增" class="headerlink" title="二元樹搜索 - 新增"></a>二元樹搜索 - 新增</h1><p><a href="https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_8_A" target="_blank" rel="noopener">題目網址</a></p><h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>編程一個擁有新增功能的二元樹，在每次新增點時，如果key大於node-&gt;key，就新增在node-&gt;right，否則新增在node-&gt;left。最後輸出Preorder與Inorder。</p><a id="more"></a><h4 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼:"></a>程式碼:</h4><script src="https://gist.github.com/Daviswww/f392df5b2c8130b6eeff6a0b8c1b82bb.js"></script>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;二元樹搜索-新增&quot;&gt;&lt;a href=&quot;#二元樹搜索-新增&quot; class=&quot;headerlink&quot; title=&quot;二元樹搜索 - 新增&quot;&gt;&lt;/a&gt;二元樹搜索 - 新增&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_8_A&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;題目網址&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&quot;題意&quot;&gt;&lt;a href=&quot;#題意&quot; class=&quot;headerlink&quot; title=&quot;題意:&quot;&gt;&lt;/a&gt;題意:&lt;/h4&gt;&lt;p&gt;編程一個擁有新增功能的二元樹，在每次新增點時，如果key大於node-&amp;gt;key，就新增在node-&amp;gt;right，否則新增在node-&amp;gt;left。最後輸出Preorder與Inorder。&lt;/p&gt;
     
     </summary>
     

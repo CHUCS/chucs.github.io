@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://chucs.github.io/rust-012-eof-input/</loc>
+    
+    <lastmod>2020-12-31T06:54:46.807Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/rust-011-input/</loc>
+    
+    <lastmod>2020-12-31T06:54:39.362Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://chucs.github.io/hexo-tutorials/</loc>
     
     <lastmod>2020-11-19T05:00:29.965Z</lastmod>
