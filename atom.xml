@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://chucs.github.io/"/>
-  <updated>2021-01-01T06:39:29.169Z</updated>
+  <updated>2021-01-19T06:11:55.906Z</updated>
   <id>https://chucs.github.io/</id>
   
   <author>
@@ -15,6 +15,76 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Rust 013 Enums</title>
+    <link href="https://chucs.github.io/rust-013-enums/"/>
+    <id>https://chucs.github.io/rust-013-enums/</id>
+    <published>2021-01-19T06:04:02.000Z</published>
+    <updated>2021-01-19T06:11:55.906Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Rust-Enums"><a href="#Rust-Enums" class="headerlink" title="Rust Enums"></a>Rust Enums</h1><p>Rust中的枚舉與其他編譯語言（如C）相似，但有一些重要區別，使它們更強大。如果您來自函數式編程背景，Rust稱為枚舉的數通常被稱為代數數據類型。重要的細節是每個枚舉變量都可以具有數據。</p><a id="more"></a><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">enum</span> <span class="title">Direction</span></span> &#123;</span><br><span class="line">    Up(Point),</span><br><span class="line">    Down(Point),</span><br><span class="line">    Left(Point),</span><br><span class="line">    Right(Point),</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Point</span></span>&#123;</span><br><span class="line">    x: <span class="built_in">i32</span>,</span><br><span class="line">    y: <span class="built_in">i32</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">main</span></span>() &#123;</span><br><span class="line">    <span class="comment">// input::single_input_string_I32();</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> u = Direction::Up(Point &#123;x: <span class="number">0</span>, y: <span class="number">1</span>&#125;);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>我們接著可以利用match來判斷，現在選的是哪個enum。而在下面這個程式是利用座標來判斷這個變數是屬於哪個enum的，然後再輸出對應的按鍵。而在destruct這個函式中可以看到<code>ref</code>，<code>ref</code>用來表示你要引用一個未打包的值。</p><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#![allow(dead_code)]</span></span><br><span class="line"><span class="keyword">mod</span> input;</span><br><span class="line"></span><br><span class="line"><span class="meta">#[derive(Debug)]</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Point</span></span>&#123;</span><br><span class="line">    x: <span class="built_in">i32</span>,</span><br><span class="line">    y: <span class="built_in">i32</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">#[derive(Debug)]</span></span><br><span class="line"><span class="class"><span class="keyword">enum</span> <span class="title">Direction</span></span> &#123;</span><br><span class="line">    Up(Point),</span><br><span class="line">    Down(Point),</span><br><span class="line">    Left(Point),</span><br><span class="line">    Right(Point),</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">#[derive(Debug)]</span></span><br><span class="line"><span class="class"><span class="keyword">enum</span> <span class="title">Keys</span></span> &#123;</span><br><span class="line">    UpKey(<span class="built_in">String</span>),</span><br><span class="line">    DownKey(<span class="built_in">String</span>),</span><br><span class="line">    LeftKey(<span class="built_in">String</span>),</span><br><span class="line">    RightKey(<span class="built_in">String</span>),</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">impl</span> Direction &#123;</span><br><span class="line">    <span class="function"><span class="keyword">fn</span> <span class="title">match_direction</span></span>(&amp;<span class="keyword">self</span>) -&gt; Keys &#123;</span><br><span class="line">        <span class="keyword">match</span> *<span class="keyword">self</span>&#123;</span><br><span class="line">            Direction::Up(_) =&gt; Keys::UpKey(<span class="built_in">String</span>::from(<span class="string">"W"</span>)),</span><br><span class="line">            Direction::Down(_) =&gt; Keys::DownKey(<span class="built_in">String</span>::from(<span class="string">"s"</span>)),</span><br><span class="line">            Direction::Left(_) =&gt; Keys::LeftKey(<span class="built_in">String</span>::from(<span class="string">"a"</span>)),</span><br><span class="line">            Direction::Right(_) =&gt; Keys::RightKey(<span class="built_in">String</span>::from(<span class="string">"d"</span>)),</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">impl</span> Keys &#123;</span><br><span class="line">    <span class="function"><span class="keyword">fn</span> <span class="title">destruct</span></span>(&amp;<span class="keyword">self</span>) -&gt; &amp;<span class="built_in">String</span> &#123;</span><br><span class="line">        <span class="keyword">match</span> *<span class="keyword">self</span>&#123;</span><br><span class="line">            Keys::UpKey(<span class="keyword">ref</span> s) =&gt; s,</span><br><span class="line">            Keys::DownKey(<span class="keyword">ref</span> s) =&gt; s,</span><br><span class="line">            Keys::LeftKey(<span class="keyword">ref</span> s) =&gt; s,</span><br><span class="line">            Keys::RightKey(<span class="keyword">ref</span> s) =&gt; s,</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">main</span></span>() &#123;</span><br><span class="line">    <span class="comment">// input::single_input_string_I32();</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> u = Direction::Up(Point &#123;x: <span class="number">0</span>, y: <span class="number">1</span>&#125;);</span><br><span class="line">    <span class="keyword">let</span> k = u.match_direction();</span><br><span class="line"></span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">"&#123;:?&#125;"</span>, k);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Rust-Enums&quot;&gt;&lt;a href=&quot;#Rust-Enums&quot; class=&quot;headerlink&quot; title=&quot;Rust Enums&quot;&gt;&lt;/a&gt;Rust Enums&lt;/h1&gt;&lt;p&gt;Rust中的枚舉與其他編譯語言（如C）相似，但有一些重要區別，使它們更強大。如果您來自函數式編程背景，Rust稱為枚舉的數通常被稱為代數數據類型。重要的細節是每個枚舉變量都可以具有數據。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Rust tutorials" scheme="https://chucs.github.io/categories/Rust-tutorials/"/>
+    
+    
+      <category term="rust" scheme="https://chucs.github.io/tags/rust/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Rust 013 Options</title>
+    <link href="https://chucs.github.io/rust-014-options/"/>
+    <id>https://chucs.github.io/rust-014-options/</id>
+    <published>2021-01-19T06:03:44.000Z</published>
+    <updated>2021-01-19T06:11:59.504Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Options"><a href="#Options" class="headerlink" title="Options"></a>Options</h1><p>利用Options回傳一個直來判斷函式中有沒有錯誤，如果有錯誤就可以為傳None否則回傳Some，而在Some裡面的直就是回傳變數的值。我們可以利用下面的程式碼來判斷y是不是為零，如果是零就回傳None否則回傳相除。</p><a id="more"></a><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">div</span></span>(x: <span class="built_in">f64</span>, y: <span class="built_in">f64</span>) -&gt; <span class="built_in">Option</span>&lt;<span class="built_in">f64</span>&gt; &#123;</span><br><span class="line">    <span class="keyword">if</span> y == <span class="number">0.0</span> &#123;</span><br><span class="line">        <span class="literal">None</span></span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="literal">Some</span>(x / y)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">main</span></span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> res = div(<span class="number">5.0</span>, <span class="number">7.0</span>);</span><br><span class="line">    <span class="keyword">match</span> res &#123;</span><br><span class="line">        <span class="literal">Some</span>(x) =&gt; <span class="built_in">println!</span>(<span class="string">"&#123;:.3&#125;"</span>, x),</span><br><span class="line">        <span class="literal">None</span> =&gt; <span class="built_in">println!</span>(<span class="string">"y == 0"</span>),</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Options&quot;&gt;&lt;a href=&quot;#Options&quot; class=&quot;headerlink&quot; title=&quot;Options&quot;&gt;&lt;/a&gt;Options&lt;/h1&gt;&lt;p&gt;利用Options回傳一個直來判斷函式中有沒有錯誤，如果有錯誤就可以為傳None否則回傳Some，而在Some裡面的直就是回傳變數的值。我們可以利用下面的程式碼來判斷y是不是為零，如果是零就回傳None否則回傳相除。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Rust tutorials" scheme="https://chucs.github.io/categories/Rust-tutorials/"/>
+    
+    
+      <category term="rust" scheme="https://chucs.github.io/tags/rust/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Flutter 001 Install</title>
+    <link href="https://chucs.github.io/flutter-001-install/"/>
+    <id>https://chucs.github.io/flutter-001-install/</id>
+    <published>2021-01-18T06:37:26.000Z</published>
+    <updated>2021-01-19T06:13:06.824Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Install-Flutter-（macOS）"><a href="#Install-Flutter-（macOS）" class="headerlink" title="Install Flutter （macOS）"></a>Install Flutter （macOS）</h1><h3 id="Get-the-Flutter-SDK"><a href="#Get-the-Flutter-SDK" class="headerlink" title="Get the Flutter SDK"></a>Get the Flutter SDK</h3><ol><li><p>下載以下安裝包以獲取Flutter SDK的最新穩定版本:<br><a href="https://storage.googleapis.com/flutter_infra/releases/stable/macos/flutter_macos_1.22.5-stable.zip" target="_blank" rel="noopener">flutter_macos_1.22.5-stable.zip</a></p><a id="more"></a></li><li><p>將文件打開到所需位置</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ~/development</span><br><span class="line">$ unzip ~/Downloads/flutter_macos_1.22.5-stable.zip</span><br></pre></td></tr></table></figure></li><li><p>將Flutter工具添加到您的路徑：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">export</span> PATH=<span class="string">"<span class="variable">$PATH</span>:`pwd`/flutter/bin"</span></span><br></pre></td></tr></table></figure></li></ol><p>如果路徑加入後會消失的話可以參考一下步驟：</p><ol><li><p>開啟終端機後到達根目錄然後打開zshrc（如果因權限問題無法修改可輸入<code>sudo vim .zshrc</code>）</p> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ~</span><br><span class="line">$ vim .zshrc</span><br></pre></td></tr></table></figure><blockquote><p>你也可以設定<code>bash</code>或其他的終端機。</p></blockquote></li></ol><ol start="2"><li>輸入 i 來新增路徑你的<code>Flutter(/bin:/Library/flutter/bin)</code>安裝路徑在<code>.bin:$PATH/</code>後面，例如：<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export PATH=<span class="string">"$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH/bin:/Library/flutter/bin"</span></span><br></pre></td></tr></table></figure><blockquote><p>輸入完成後, 按下<code>esc</code>然後<code>:wq</code>儲存</p></blockquote></li></ol><ol start="3"><li>檢查是否成功設置<blockquote><p>將設置的終端機關閉後重新開器一個新的終端機來檢查路徑是否設置成功。</p></blockquote><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">which</span> flutter</span><br></pre></td></tr></table></figure></li></ol><hr><h3 id="設置-VSCdoe"><a href="#設置-VSCdoe" class="headerlink" title="設置 VSCdoe"></a>設置 VSCdoe</h3><p>安裝VSCode的<code>Dart</code>套件包。<br><img src="Ok6J2f9.jpg" alt=""><br>安裝VSCode的<code>Flutter</code>套件包。<br><img src="QL4qXq8.jpg" alt=""></p><hr><h3 id="設置-XCode"><a href="#設置-XCode" class="headerlink" title="設置 XCode"></a>設置 XCode</h3><ol><li><p>安裝Xcode的最新穩定版本（使用Web下載或Mac App Store）。</p></li><li><p>通過從命令行運行以下命令，將Xcode命令行工具配置為使用新安裝的Xcode版本：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer</span><br><span class="line">$ sudo xcodebuild -runFirstLaunch</span><br></pre></td></tr></table></figure></li><li><p>通過一次打開Xcode並<code>sudo xcodebuild -license</code>從命令行確認或運行來確保Xcode許可協議已簽署 。<br>:::info<br>使用Xcode，您將能夠在iOS設備或模擬器上運行Flutter應用。<br>:::</p></li></ol><hr><h3 id="設置-模擬器"><a href="#設置-模擬器" class="headerlink" title="設置 模擬器"></a>設置 模擬器</h3><p>要準備在iOS模擬器上運行和測試您的Flutter應用，請執行以下步驟：</p><ol><li><p>在終端機中輸入以下命令</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ open -a Simulator</span><br></pre></td></tr></table></figure></li><li><p>點擊模擬器右鍵，選擇Device-&gt;IOS-&gt;選擇一個模擬器安裝。（建議iPhone 5s以上）</p></li><li><p>安裝完後就開著</p></li></ol><hr><h3 id="Create-the-app"><a href="#Create-the-app" class="headerlink" title="Create the app"></a>Create the app</h3><p>檢查設備確認與設備連線。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ flutter devices</span><br></pre></td></tr></table></figure><p>:::info<br>1 connected device:</p><p>iphone X (mobile) • 3E841537-934D-4DBE-933A-3E1C9A5D727F • ios •<br>com.apple.CoreSimulator.SimRuntime.iOS-14-3 (simulator)<br>:::</p><p>執行APP如下面命令，，成功後的畫面如下:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ flutter run</span><br></pre></td></tr></table></figure><p><img src="vPUuq1N.jpg" alt=""></p><hr><h3 id="Run-flutter-doctor"><a href="#Run-flutter-doctor" class="headerlink" title="Run flutter doctor"></a>Run flutter doctor</h3><p>運行以下命令以查看是否需要安裝任何依賴項才能完成設置，由於我沒有裝Android所以顯示未安裝成功。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ flutter doctor</span><br></pre></td></tr></table></figure><p><img src="1rHwDHW.jpg" alt=""></p><hr><p><a href="https://flutter.dev/docs/get-started/install/macos" target="_blank" rel="noopener">flutter source</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Install-Flutter-（macOS）&quot;&gt;&lt;a href=&quot;#Install-Flutter-（macOS）&quot; class=&quot;headerlink&quot; title=&quot;Install Flutter （macOS）&quot;&gt;&lt;/a&gt;Install Flutter （macOS）&lt;/h1&gt;&lt;h3 id=&quot;Get-the-Flutter-SDK&quot;&gt;&lt;a href=&quot;#Get-the-Flutter-SDK&quot; class=&quot;headerlink&quot; title=&quot;Get the Flutter SDK&quot;&gt;&lt;/a&gt;Get the Flutter SDK&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;下載以下安裝包以獲取Flutter SDK的最新穩定版本:&lt;br&gt;&lt;a href=&quot;https://storage.googleapis.com/flutter_infra/releases/stable/macos/flutter_macos_1.22.5-stable.zip&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;flutter_macos_1.22.5-stable.zip&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Flutter tutorials" scheme="https://chucs.github.io/categories/Flutter-tutorials/"/>
+    
+    
+      <category term="flutter" scheme="https://chucs.github.io/tags/flutter/"/>
+    
+  </entry>
   
   <entry>
     <title>Rust 012 EOF input</title>
@@ -426,84 +496,6 @@
       <category term="math" scheme="https://chucs.github.io/tags/math/"/>
     
       <category term="800" scheme="https://chucs.github.io/tags/800/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CodeForces 1418B</title>
-    <link href="https://chucs.github.io/Negative-Prefixes/"/>
-    <id>https://chucs.github.io/Negative-Prefixes/</id>
-    <published>2020-09-22T14:52:31.000Z</published>
-    <updated>2020-10-16T15:28:09.166Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="CodeForces-1418B-Negative-Prefixes"><a href="#CodeForces-1418B-Negative-Prefixes" class="headerlink" title="CodeForces 1418B - Negative Prefixes"></a>CodeForces 1418B - Negative Prefixes</h1><p><a href="https://codeforces.com/problemset/problem/1418/B" target="_blank" rel="noopener">題目網址</a></p><h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>你有一個陣列a，裡面有n個整數，有些整數被鎖住有些沒有，你能對沒有鎖住的整數做交換位置的動作(沒鎖對沒鎖)，另外有個序列p，為a<sub>1</sub>~a<sub>n</sub>的總和:p<sub>1</sub> = a<sub>1</sub>, p<sub>2</sub> = a<sub>1</sub> + a<sub>2</sub>… p<sub>n</sub> = a<sub>1</sub> + a<sub>2</sub> +…+ a<sub>n</sub><br>讓k為最大值j，並且p<sub>j</sub> &lt; 0 ，若p中沒有任何p<sub>j</sub> &lt; 0，則 k=0<br>你要交換未鎖住整數的位置，使得k為最小值，印出調整過後的陣列a</p><a id="more"></a><h4 id="思路"><a href="#思路" class="headerlink" title="思路:"></a>思路:</h4><p>將沒鎖住的整數獨立出來，由大到小排序，再依序從頭一一放回陣列中沒鎖住的位置。<br>不考慮鎖住的數字，當正整數總和 &gt;= 負整數總和時，將正整數排前面則k=0<br>當正整數總和 &lt; 負整數總和時，則不管甚麼順序k最大<br>不選擇小排到大是因為第一個狀況，若負整數先在前面則k值不會最小</p><h4 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼:"></a>程式碼:</h4><script src="https://gist.github.com/zxzxcc112/14bcb2bffc5c9b8cd2341a8758f78b47.js"></script>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;CodeForces-1418B-Negative-Prefixes&quot;&gt;&lt;a href=&quot;#CodeForces-1418B-Negative-Prefixes&quot; class=&quot;headerlink&quot; title=&quot;CodeForces 1418B - Negative Prefixes&quot;&gt;&lt;/a&gt;CodeForces 1418B - Negative Prefixes&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://codeforces.com/problemset/problem/1418/B&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;題目網址&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&quot;題意&quot;&gt;&lt;a href=&quot;#題意&quot; class=&quot;headerlink&quot; title=&quot;題意:&quot;&gt;&lt;/a&gt;題意:&lt;/h4&gt;&lt;p&gt;你有一個陣列a，裡面有n個整數，有些整數被鎖住有些沒有，你能對沒有鎖住的整數做交換位置的動作(沒鎖對沒鎖)，另外有個序列p，為a&lt;sub&gt;1&lt;/sub&gt;~a&lt;sub&gt;n&lt;/sub&gt;的總和:p&lt;sub&gt;1&lt;/sub&gt; = a&lt;sub&gt;1&lt;/sub&gt;, p&lt;sub&gt;2&lt;/sub&gt; = a&lt;sub&gt;1&lt;/sub&gt; + a&lt;sub&gt;2&lt;/sub&gt;… p&lt;sub&gt;n&lt;/sub&gt; = a&lt;sub&gt;1&lt;/sub&gt; + a&lt;sub&gt;2&lt;/sub&gt; +…+ a&lt;sub&gt;n&lt;/sub&gt;&lt;br&gt;讓k為最大值j，並且p&lt;sub&gt;j&lt;/sub&gt; &amp;lt; 0 ，若p中沒有任何p&lt;sub&gt;j&lt;/sub&gt; &amp;lt; 0，則 k=0&lt;br&gt;你要交換未鎖住整數的位置，使得k為最小值，印出調整過後的陣列a&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Codeforces" scheme="https://chucs.github.io/categories/Codeforces/"/>
-    
-    
-      <category term="sortings" scheme="https://chucs.github.io/tags/sortings/"/>
-    
-      <category term="greedy" scheme="https://chucs.github.io/tags/greedy/"/>
-    
-      <category term="1300" scheme="https://chucs.github.io/tags/1300/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CodeForces 1418A</title>
-    <link href="https://chucs.github.io/Buying-Torches/"/>
-    <id>https://chucs.github.io/Buying-Torches/</id>
-    <published>2020-09-22T14:51:35.000Z</published>
-    <updated>2020-10-16T15:29:20.976Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="CodeForces-1418A-Buying-Torches"><a href="#CodeForces-1418A-Buying-Torches" class="headerlink" title="CodeForces 1418A - Buying Torches"></a>CodeForces 1418A - Buying Torches</h1><p><a href="https://codeforces.com/problemset/problem/1418/A" target="_blank" rel="noopener">題目網址</a></p><h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>你玩遊戲想要製作k個火把，每個火把需要一根棒子和一個煤炭，一開始你只有一根棒子,你能跟商人做兩種交易:<br>    1.用一根棒子交換x根棒子<br>    2.用y根棒子交換一個煤炭<br>每次只能做其中一種交易，請問你需要k個火把「最少」需要幾次交易? (測資必存在解答)</p><a id="more"></a><h4 id="思路"><a href="#思路" class="headerlink" title="思路:"></a>思路:</h4><p>數學問題，幾個煤炭就需要交易幾次，並且煤炭等於y根棒子，所以交易次數=到達所需棒子量的交易次數+換煤炭的次數。</p><h4 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼:"></a>程式碼:</h4><script src="https://gist.github.com/zxzxcc112/fce4c025b50df9f1982acbd833a09d91.js"></script>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;CodeForces-1418A-Buying-Torches&quot;&gt;&lt;a href=&quot;#CodeForces-1418A-Buying-Torches&quot; class=&quot;headerlink&quot; title=&quot;CodeForces 1418A - Buying Torches&quot;&gt;&lt;/a&gt;CodeForces 1418A - Buying Torches&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://codeforces.com/problemset/problem/1418/A&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;題目網址&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&quot;題意&quot;&gt;&lt;a href=&quot;#題意&quot; class=&quot;headerlink&quot; title=&quot;題意:&quot;&gt;&lt;/a&gt;題意:&lt;/h4&gt;&lt;p&gt;你玩遊戲想要製作k個火把，每個火把需要一根棒子和一個煤炭，一開始你只有一根棒子,你能跟商人做兩種交易:&lt;br&gt;    1.用一根棒子交換x根棒子&lt;br&gt;    2.用y根棒子交換一個煤炭&lt;br&gt;每次只能做其中一種交易，請問你需要k個火把「最少」需要幾次交易? (測資必存在解答)&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Codeforces" scheme="https://chucs.github.io/categories/Codeforces/"/>
-    
-    
-      <category term="math" scheme="https://chucs.github.io/tags/math/"/>
-    
-      <category term="1000" scheme="https://chucs.github.io/tags/1000/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>AOJ ALDS1_8_C - Binary Search Tree III</title>
-    <link href="https://chucs.github.io/ALDS1-8-C-Binary-Search-Tree-III/"/>
-    <id>https://chucs.github.io/ALDS1-8-C-Binary-Search-Tree-III/</id>
-    <published>2020-08-24T05:45:44.000Z</published>
-    <updated>2020-09-08T12:13:58.944Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="二元樹搜索-刪除"><a href="#二元樹搜索-刪除" class="headerlink" title="二元樹搜索 - 刪除"></a>二元樹搜索 - 刪除</h1><p><a href="https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_8_C" target="_blank" rel="noopener">題目網址</a></p><h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>編程一個擁有新增、查詢、刪除功能的二元樹，在每次新增點時，如果key大於node-&gt;key，就新增在node-&gt;right，否則新增在node-&gt;left。最後輸出Preorder與Inorder。</p><a id="more"></a><h4 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼:"></a>程式碼:</h4><script src="https://gist.github.com/Daviswww/e5a835cfa1a3f511e096388e9697423c.js"></script>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;二元樹搜索-刪除&quot;&gt;&lt;a href=&quot;#二元樹搜索-刪除&quot; class=&quot;headerlink&quot; title=&quot;二元樹搜索 - 刪除&quot;&gt;&lt;/a&gt;二元樹搜索 - 刪除&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_8_C&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;題目網址&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&quot;題意&quot;&gt;&lt;a href=&quot;#題意&quot; class=&quot;headerlink&quot; title=&quot;題意:&quot;&gt;&lt;/a&gt;題意:&lt;/h4&gt;&lt;p&gt;編程一個擁有新增、查詢、刪除功能的二元樹，在每次新增點時，如果key大於node-&amp;gt;key，就新增在node-&amp;gt;right，否則新增在node-&amp;gt;left。最後輸出Preorder與Inorder。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="AOJ" scheme="https://chucs.github.io/categories/AOJ/"/>
-    
-    
-      <category term="implementation" scheme="https://chucs.github.io/tags/implementation/"/>
     
   </entry>
   

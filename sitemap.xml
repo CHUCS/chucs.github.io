@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://chucs.github.io/flutter-001-install/</loc>
+    
+    <lastmod>2021-01-19T06:13:06.824Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/rust-014-options/</loc>
+    
+    <lastmod>2021-01-19T06:11:59.504Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/rust-013-enums/</loc>
+    
+    <lastmod>2021-01-19T06:11:55.906Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://chucs.github.io/rust-012-eof-input/</loc>
     
     <lastmod>2021-01-01T06:39:29.169Z</lastmod>
