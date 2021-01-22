@@ -2,9 +2,198 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://chucs.github.io/swift-001-variables-and-constants/</loc>
+    
+    <lastmod>2021-01-22T05:45:22.156Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/swift-002-type-of-data/</loc>
+    
+    <lastmod>2021-01-22T05:45:18.406Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/swift-003-operators/</loc>
+    
+    <lastmod>2021-01-22T05:45:14.535Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/swift-004-string-interpolation/</loc>
+    
+    <lastmod>2021-01-22T05:45:12.437Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/swift-005-arrays/</loc>
+    
+    <lastmod>2021-01-22T05:45:08.459Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/swift-006-dictionaries/</loc>
+    
+    <lastmod>2021-01-22T05:45:05.657Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/swift-007-conditional-statements/</loc>
+    
+    <lastmod>2021-01-22T05:45:03.318Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/swift-008-loop/</loc>
+    
+    <lastmod>2021-01-22T05:45:00.911Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/swift-009-switch-case/</loc>
+    
+    <lastmod>2021-01-22T05:44:58.266Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/swift-010-functions/</loc>
+    
+    <lastmod>2021-01-22T05:44:54.282Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/swift-011-optionals/</loc>
+    
+    <lastmod>2021-01-22T05:44:50.883Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/swift-012-optional-chaining/</loc>
+    
+    <lastmod>2021-01-22T05:44:47.993Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/swift-013-enumerations/</loc>
+    
+    <lastmod>2021-01-22T05:44:45.200Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/swift-014-structs/</loc>
+    
+    <lastmod>2021-01-22T05:44:42.181Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/swift-015-classes/</loc>
+    
+    <lastmod>2021-01-22T05:44:39.083Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/swift-019-polymorphism-and-typecasting/</loc>
+    
+    <lastmod>2021-01-22T05:44:29.478Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/swift-018-access-control/</loc>
+    
+    <lastmod>2021-01-22T05:44:28.008Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/swift-017-static-properties-and-methods/</loc>
+    
+    <lastmod>2021-01-22T05:44:27.213Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/swift-016-properties/</loc>
+    
+    <lastmod>2021-01-22T05:44:25.975Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/swift-timeIntervalSince1970/</loc>
+    
+    <lastmod>2021-01-22T05:44:15.040Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/swiftui-circle/</loc>
+    
+    <lastmod>2021-01-22T05:44:12.316Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/swiftui-clipShape/</loc>
+    
+    <lastmod>2021-01-22T05:44:05.839Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/swiftui-localized/</loc>
+    
+    <lastmod>2021-01-22T05:43:53.014Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/swiftui-system-images/</loc>
+    
+    <lastmod>2021-01-22T05:43:40.255Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/swiftui-stack/</loc>
+    
+    <lastmod>2021-01-22T05:18:45.969Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/swiftui-color/</loc>
+    
+    <lastmod>2021-01-22T05:18:41.999Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chucs.github.io/swiftui-text/</loc>
+    
+    <lastmod>2021-01-22T05:18:40.081Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://chucs.github.io/flutter-001-install/</loc>
     
-    <lastmod>2021-01-19T06:13:06.824Z</lastmod>
+    <lastmod>2021-01-21T03:54:35.271Z</lastmod>
     
   </url>
   
@@ -327,27 +516,6 @@
     <loc>https://chucs.github.io/ALDS1-2-A-Bubble-Sort/</loc>
     
     <lastmod>2020-08-11T06:16:53.439Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://chucs.github.io/swiftui-text/</loc>
-    
-    <lastmod>2020-08-09T12:43:37.111Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://chucs.github.io/swiftui-color/</loc>
-    
-    <lastmod>2020-08-09T12:43:05.388Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://chucs.github.io/swiftui-stack/</loc>
-    
-    <lastmod>2020-08-09T12:42:15.860Z</lastmod>
     
   </url>
   
