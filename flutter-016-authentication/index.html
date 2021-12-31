@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.0.0">
+<script data-ad-client="ca-pub-8906140811059676" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="3grsEVPDeg5_ktwC4lbJ6p3Ts2vmlUyUSQwPtFp0jQs">
+  <meta name="msvalidate.01" content="DCF11F2014E9D53E3226C978BCE45EEC">
+  <meta name="yandex-verification" content="4227a483ac83a3da">
+  <meta name="baidu-site-verification" content="acBHhdI7H6">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"chucs.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.json"};
+  </script>
+
+  <meta name="description" content="前言Hi, 我是魚板伯爵今天要教大家 Firebase Authentication 和開通 Google 登入，教學內容只會擷取片段程式碼，建議大家搭配完整程式碼來練習。  完整程式碼">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Flutter 016 - Firebase Authentication &amp; Google Sign-In ( IOS &amp; Android )">
+<meta property="og:url" content="https://chucs.github.io/flutter-016-authentication/index.html">
+<meta property="og:site_name" content="CHUPCCA">
+<meta property="og:description" content="前言Hi, 我是魚板伯爵今天要教大家 Firebase Authentication 和開通 Google 登入，教學內容只會擷取片段程式碼，建議大家搭配完整程式碼來練習。  完整程式碼">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/Q5cC1Vi.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/myrDyyX.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/l89sA0T.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/RMfZ78n.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/VFM9v3l.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/AUA7ont.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/6P2PXBr.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/pwM2XQv.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/IWpcLA4.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/3xlFDEz.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/yfPvMm7.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/ESN5tgl.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/ZA13p6o.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/L9waVvZ.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/7odXW9M.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/5j0iC5W.gif">
+<meta property="article:published_time" content="2021-12-31T13:49:32.000Z">
+<meta property="article:modified_time" content="2021-12-31T14:23:11.576Z">
+<meta property="article:author" content="CHUPCCA">
+<meta property="article:tag" content="flutter">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/Q5cC1Vi.png">
+
+<link rel="canonical" href="https://chucs.github.io/flutter-016-authentication/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-TW'
+  };
+</script>
+
+  <title>Flutter 016 - Firebase Authentication & Google Sign-In ( IOS & Android ) | CHUPCCA</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134507655-1"></script>
+    <script>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-134507655-1');
+      }
+    </script>
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?be512bd008c5b387799d9e82e9ef25e1";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="CHUPCCA" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">CHUPCCA</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">解題報告</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜尋..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://chucs.github.io/flutter-016-authentication/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/header.jpg">
+      <meta itemprop="name" content="CHUPCCA">
+      <meta itemprop="description" content="解題報告">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CHUPCCA">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Flutter 016 - Firebase Authentication & Google Sign-In ( IOS & Android )
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+              
+
+              <time title="創建時間：2021-12-31 21:49:32 / 修改時間：22:23:11" itemprop="dateCreated datePublished" datetime="2021-12-31T21:49:32+08:00">2021-12-31</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Flutter-tutorials/" itemprop="url" rel="index"><span itemprop="name">Flutter tutorials</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="閱讀次數" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">閱讀次數：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/flutter-016-authentication/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="flutter-016-authentication/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+    
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Hi, 我是魚板伯爵今天要教大家 Firebase Authentication 和開通 Google 登入，教學內容只會擷取片段程式碼，建議大家搭配完整程式碼來練習。</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/Daviswww/triathlon_flutter/tree/master/day16">完整程式碼</a></p>
+</blockquote>
+<span id="more"></span>
+<h3 id="創建一個-Firebase-專案"><a href="#創建一個-Firebase-專案" class="headerlink" title="創建一個 Firebase 專案"></a>創建一個 Firebase 專案</h3><p>取個專案名字下一步到底就可以了，若沒有<code>google analytics</code>就點開選單建造一個，然後一樣下一步到底。<br><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/Q5cC1Vi.png" alt=""></p>
+<h3 id="開啟-Google-登入"><a href="#開啟-Google-登入" class="headerlink" title="開啟 Google 登入"></a>開啟 Google 登入</h3><p>完成專案創就後點擊左邊Authentication，然後把google的登入給啟用。<br><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/myrDyyX.png" alt=""></p>
+<p>儲存後你可以看到google的狀態變成已啟用(綠燈)<br><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/l89sA0T.png" alt=""></p>
+<h3 id="創建APP"><a href="#創建APP" class="headerlink" title="創建APP"></a>創建APP</h3><p>回到專案總覽，以下會介紹IOS和Andriod的創建方式。<br><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/RMfZ78n.png" alt=""></p>
+<h3 id="Android-設定"><a href="#Android-設定" class="headerlink" title="Android 設定"></a>Android 設定</h3><h4 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h4><p><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/VFM9v3l.png" alt=""></p>
+<h4 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h4><p>下載<code>google-services.json</code>放入<code>android/app</code>。<br><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/AUA7ont.png" alt=""></p>
+<h4 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h4><p>在<code>android/day16_android.iml</code>的<code>dependencies</code>層中加入<code>classpath &#39;com.google.gms:google-services:4.3.10&#39;</code></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">dependencies &#123;</span><br><span class="line">    classpath &#x27;com.android.tools.build:gradle:<span class="number">4.1</span><span class="number">.0</span>&#x27;</span><br><span class="line">    classpath <span class="string">&quot;org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version&quot;</span></span><br><span class="line">    classpath &#x27;com.google.gms:google-services:<span class="number">4.3</span><span class="number">.10</span>&#x27;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在<code>android/app/build.gradle</code>加入<code>apply plugin: &#39;com.google.gms.google-services&#39;</code>隨便加在最外層就可以了。</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">apply plugin: <span class="string">&#x27;com.android.application&#x27;</span></span><br><span class="line">apply plugin: <span class="string">&#x27;kotlin-android&#x27;</span></span><br><span class="line">apply <span class="keyword">from</span>: <span class="string">&quot;$flutterRoot/packages/flutter_tools/gradle/flutter.gradle&quot;</span></span><br><span class="line">apply plugin: <span class="string">&#x27;com.google.gms.google-services&#x27;</span></span><br></pre></td></tr></table></figure>
+<p>修改applicationId<br><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/6P2PXBr.png" alt=""></p>
+<h4 id="第五部"><a href="#第五部" class="headerlink" title="第五部"></a>第五部</h4><p>打開終端機輸入<code>keytool -list -v -alias androiddebugkey -keystore ~/.android/debug.keystore</code>，密碼就打個android然後你會得到SHA1和SHA256。<br><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/pwM2XQv.png" alt=""></p>
+<p>回到firebase點開控制台溜到最下新增指紋，兩個都給他新增上去。<br><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/IWpcLA4.png" alt=""><br><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/3xlFDEz.png" alt=""><br><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/yfPvMm7.png" alt=""></p>
+<h3 id="IOS-設定"><a href="#IOS-設定" class="headerlink" title="IOS 設定"></a>IOS 設定</h3><h4 id="第一步-1"><a href="#第一步-1" class="headerlink" title="第一步"></a>第一步</h4><p>輸入IOS ID 和 App 名字就可以。<br><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/ESN5tgl.png" alt=""></p>
+<h4 id="第二步-1"><a href="#第二步-1" class="headerlink" title="第二步"></a>第二步</h4><p>開啟專案把<code>GoogleService-Info.plist</code>放入<code>ios/Runner</code>，然後345步驟都不重要下一步到底。<br><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/ZA13p6o.png" alt=""></p>
+<p>然後打開XCode右鍵資料夾加入檔案，選擇<code>GoogleService-Info.plist</code>。<br><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/L9waVvZ.png" alt=""></p>
+<h4 id="第三步-1"><a href="#第三步-1" class="headerlink" title="第三步"></a>第三步</h4><p>打開<code>ios/Runner/Info.plist</code>把<code>GoogleService-Info.plist</code>裡面的<code>REVERSED_CLIENT_ID</code>複製到<code>&lt;string&gt;REVERSED_CLIENT_ID&lt;/string&gt;</code>裡面。</p>
+<figure class="highlight plist"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Google Sign-In section --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">key</span>&gt;</span>CFBundleURLTypes<span class="tag">&lt;/<span class="name">key</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">array</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dict</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">key</span>&gt;</span>CFBundleTypeRole<span class="tag">&lt;/<span class="name">key</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">string</span>&gt;</span>Editor<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">key</span>&gt;</span>CFBundleURLSchemes<span class="tag">&lt;/<span class="name">key</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">array</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!-- TODO Replace this value: --&gt;</span></span><br><span class="line">            <span class="comment">&lt;!-- Copied from GoogleService-Info.plist key REVERSED_CLIENT_ID --&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">string</span>&gt;</span>REVERSED_CLIENT_ID<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">array</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dict</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">array</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">key</span>&gt;</span>NSAppTransportSecurity<span class="tag">&lt;/<span class="name">key</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dict</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">key</span>&gt;</span>NSAllowsLocalNetworking<span class="tag">&lt;/<span class="name">key</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">true</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dict</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- End of the Google Sign-In section --&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h3><p>如果ios有遇到pod的問題請到<code>ios/Podfile</code>把請版本打開，並更新一下<code>pod repo update</code>。<br><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/7odXW9M.png" alt=""></p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">dependencies:</span></span><br><span class="line">  <span class="attr">flutter:</span></span><br><span class="line">    <span class="attr">sdk:</span> <span class="string">flutter</span></span><br><span class="line">  <span class="attr">google_sign_in:</span> <span class="string">^5.0.5</span></span><br><span class="line">  <span class="attr">firebase_auth:</span> <span class="string">^3.0.1</span></span><br><span class="line">  <span class="attr">firebase_core:</span> <span class="string">^1.4.0</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="實作登入"><a href="#實作登入" class="headerlink" title="實作登入"></a>實作登入</h3><p>在main裡面做初始化。</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> main() <span class="keyword">async</span> &#123;</span><br><span class="line">  WidgetsFlutterBinding.ensureInitialized();</span><br><span class="line">  <span class="keyword">await</span> Firebase.initializeApp();</span><br><span class="line">  runApp(MyApp());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>寫一個簡單的登入和登出的Class，來測試有沒有設定成功。</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">&#x27;package:google_sign_in/google_sign_in.dart&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;package:firebase_auth/firebase_auth.dart&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">AuthRepositoryImpl</span> </span>&#123;</span><br><span class="line">  Future&lt;<span class="built_in">bool</span>&gt; signInWithGoogle();</span><br><span class="line">  Future&lt;<span class="keyword">void</span>&gt; signOut();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">AuthRepository</span> <span class="keyword">implements</span> <span class="title">AuthRepositoryImpl</span> </span>&#123;</span><br><span class="line">  <span class="keyword">final</span> FirebaseAuth _firebaseAuth;</span><br><span class="line">  <span class="keyword">final</span> GoogleSignIn _googleSignIn;</span><br><span class="line"></span><br><span class="line">  AuthRepository()</span><br><span class="line">      : _firebaseAuth = FirebaseAuth.instance,</span><br><span class="line">        _googleSignIn = GoogleSignIn();</span><br><span class="line"></span><br><span class="line">  <span class="meta">@override</span></span><br><span class="line">  Future&lt;<span class="built_in">bool</span>&gt; signInWithGoogle() <span class="keyword">async</span> &#123;</span><br><span class="line">    <span class="keyword">final</span> GoogleSignInAccount? googleUser = <span class="keyword">await</span> _googleSignIn.signIn();</span><br><span class="line">    <span class="keyword">if</span> (googleUser == <span class="keyword">null</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">final</span> GoogleSignInAuthentication googleAuth =</span><br><span class="line">        <span class="keyword">await</span> googleUser.authentication;</span><br><span class="line">    <span class="keyword">final</span> AuthCredential credential = GoogleAuthProvider.credential(</span><br><span class="line">      accessToken: googleAuth.accessToken,</span><br><span class="line">      idToken: googleAuth.idToken,</span><br><span class="line">    );</span><br><span class="line">    <span class="keyword">await</span> _firebaseAuth.signInWithCredential(credential);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@override</span></span><br><span class="line">  Future&lt;<span class="keyword">void</span>&gt; signOut() <span class="keyword">async</span> &#123;</span><br><span class="line">    Future.wait([</span><br><span class="line">      _firebaseAuth.signOut(),</span><br><span class="line">      _googleSignIn.signOut(),</span><br><span class="line">    ]);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>然後在頁面上的按鈕使用登入的函式</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">LoginPage</span> <span class="keyword">extends</span> <span class="title">StatelessWidget</span> </span>&#123;</span><br><span class="line">  <span class="keyword">final</span> AuthRepository _authRepository = AuthRepository();</span><br><span class="line"></span><br><span class="line">  LoginPage(&#123;Key? key&#125;) : <span class="keyword">super</span>(key: key);</span><br><span class="line"></span><br><span class="line">  <span class="meta">@override</span></span><br><span class="line">  Widget build(BuildContext context) &#123;</span><br><span class="line">    <span class="keyword">return</span> Scaffold(</span><br><span class="line">      appBar: AppBar(</span><br><span class="line">        title: Text(<span class="string">&quot;LOGIN&quot;</span>),</span><br><span class="line">      ),</span><br><span class="line">      body: Container(</span><br><span class="line">        child: Center(</span><br><span class="line">          child: TextButton(</span><br><span class="line">            onPressed: () <span class="keyword">async</span> &#123;</span><br><span class="line">              <span class="keyword">final</span> ok = <span class="keyword">await</span> _authRepository.signInWithGoogle();</span><br><span class="line">              <span class="keyword">if</span> (ok) &#123;</span><br><span class="line">                Navigator.pushReplacement(</span><br><span class="line">                  context,</span><br><span class="line">                  MaterialPageRoute(</span><br><span class="line">                    builder: (context) =&gt; HomePage(),</span><br><span class="line">                  ),</span><br><span class="line">                );</span><br><span class="line">              &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            child: Text(<span class="string">&quot;SIGN IN&quot;</span>),</span><br><span class="line">          ),</span><br><span class="line">        ),</span><br><span class="line">      ),</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/5j0iC5W.gif" alt=""></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/flutter/" rel="tag"># flutter</a>
+          </div>
+        
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/flutter-015-dartz/" rel="prev" title="Flutter 015 - 大海撈針不是辦法 ( Dartz )">
+      <i class="fa fa-chevron-left"></i> Flutter 015 - 大海撈針不是辦法 ( Dartz )
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/flutter-017-domain-driven-design/" rel="next" title="Flutter 017 - 實作篇：專案架構 (Domain Driven Design)">
+      Flutter 017 - 實作篇：專案架構 (Domain Driven Design) <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 橫幅廣告 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8906140811059676"
+     data-ad-slot="2513800005"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%B5%E5%BB%BA%E4%B8%80%E5%80%8B-Firebase-%E5%B0%88%E6%A1%88"><span class="nav-number">2.</span> <span class="nav-text">創建一個 Firebase 專案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%96%8B%E5%95%9F-Google-%E7%99%BB%E5%85%A5"><span class="nav-number">3.</span> <span class="nav-text">開啟 Google 登入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%B5%E5%BB%BAAPP"><span class="nav-number">4.</span> <span class="nav-text">創建APP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Android-%E8%A8%AD%E5%AE%9A"><span class="nav-number">5.</span> <span class="nav-text">Android 設定</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5"><span class="nav-number">5.1.</span> <span class="nav-text">第一步</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5"><span class="nav-number">5.2.</span> <span class="nav-text">第二步</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5"><span class="nav-number">5.3.</span> <span class="nav-text">第三步</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AC%AC%E4%BA%94%E9%83%A8"><span class="nav-number">5.4.</span> <span class="nav-text">第五部</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IOS-%E8%A8%AD%E5%AE%9A"><span class="nav-number">6.</span> <span class="nav-text">IOS 設定</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5-1"><span class="nav-number">6.1.</span> <span class="nav-text">第一步</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5-1"><span class="nav-number">6.2.</span> <span class="nav-text">第二步</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5-1"><span class="nav-number">6.3.</span> <span class="nav-text">第三步</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%9D"><span class="nav-number">7.</span> <span class="nav-text">安裝</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%A6%E4%BD%9C%E7%99%BB%E5%85%A5"><span class="nav-number">8.</span> <span class="nav-text">實作登入</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="CHUPCCA"
+      src="/images/header.jpg">
+  <p class="site-author-name" itemprop="name">CHUPCCA</p>
+  <div class="site-description" itemprop="description">解題報告</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">367</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">52</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/CHUCS" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;CHUCS" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://github.com/Daviswww" title="https:&#x2F;&#x2F;github.com&#x2F;Daviswww" rel="noopener" target="_blank">Daviswww</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://chucs.github.io/site/" title="https:&#x2F;&#x2F;chucs.github.io&#x2F;site&#x2F;">About</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://chucs.github.io/game/" title="https:&#x2F;&#x2F;chucs.github.io&#x2F;game&#x2F;">Games</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- sidebar -->
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CHUPCCA</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="訪客總數">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="總瀏覽次數">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var canonicalURL, curProtocol;
+      //Get the <link> tag
+      var x=document.getElementsByTagName("link");
+		//Find the last canonical URL
+		if(x.length > 0){
+			for (i=0;i<x.length;i++){
+				if(x[i].rel.toLowerCase() == 'canonical' && x[i].href){
+					canonicalURL=x[i].href;
+				}
+			}
+		}
+    //Get protocol
+	    if (!canonicalURL){
+	    	curProtocol = window.location.protocol.split(':')[0];
+	    }
+	    else{
+	    	curProtocol = canonicalURL.split(':')[0];
+	    }
+      //Get current URL if the canonical URL does not exist
+	    if (!canonicalURL) canonicalURL = window.location.href;
+	    //Assign script content. Replace current URL with the canonical URL
+      !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=canonicalURL,t=document.referrer;if(!e.test(r)){var n=(String(curProtocol).toLowerCase() === 'https')?"https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif":"//api.share.baidu.com/s.gif";t?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var i=new Image;i.src=n}}(window);})();
+  </script>
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<script>
+  function loadCount() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://https-chucs-github-io.disqus.com/count.js';
+    s.id = 'dsq-count-scr';
+    (d.head || d.body).appendChild(s);
+  }
+  // defer loading until the whole page loading is completed
+  window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  var disqus_config = function() {
+    this.page.url = "https://chucs.github.io/flutter-016-authentication/";
+    this.page.identifier = "flutter-016-authentication/";
+    this.page.title = "Flutter 016 - Firebase Authentication & Google Sign-In ( IOS & Android )";
+    };
+  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: disqus_config
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://https-chucs-github-io.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  });
+</script>
+
+</body>
+</html>
