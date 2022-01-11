@@ -25,16 +25,16 @@
     var CONFIG = {"hostname":"chucs.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.json"};
   </script>
 
-  <meta name="description" content="前言Hi, 我是魚板伯爵今天要來創建一個CountBloc，然後就可以開始製作我們的CountButton了，我加了讓數字有彈跳的效果寫了一些動畫，有興趣的可以看原本程式碼。  完整程式碼">
+  <meta name="description" content="前言Hi, 今天要來創建一個CountBloc，然後就可以開始製作我們的CountButton了，我加了讓數字有彈跳的效果寫了一些動畫，有興趣的可以看原本程式碼。  完整程式碼">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Flutter 029 - Presentation Click Game Screen (part13)">
 <meta property="og:url" content="https://chucs.github.io/flutter-029-presentation-click-game-screen/index.html">
 <meta property="og:site_name" content="CHUPCCA">
-<meta property="og:description" content="前言Hi, 我是魚板伯爵今天要來創建一個CountBloc，然後就可以開始製作我們的CountButton了，我加了讓數字有彈跳的效果寫了一些動畫，有興趣的可以看原本程式碼。  完整程式碼">
+<meta property="og:description" content="前言Hi, 今天要來創建一個CountBloc，然後就可以開始製作我們的CountButton了，我加了讓數字有彈跳的效果寫了一些動畫，有興趣的可以看原本程式碼。  完整程式碼">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="https://raw.githubusercontent.com/Daviswww/stunning_tribble/day29/assets/images/sadjuf.gif">
 <meta property="article:published_time" content="2021-12-31T14:07:16.000Z">
-<meta property="article:modified_time" content="2021-12-31T14:23:11.575Z">
+<meta property="article:modified_time" content="2022-01-11T04:07:16.907Z">
 <meta property="article:author" content="CHUPCCA">
 <meta property="article:tag" content="flutter">
 <meta name="twitter:card" content="summary">
@@ -238,10 +238,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">發表於</span>
-              
 
-              <time title="創建時間：2021-12-31 22:07:16 / 修改時間：22:23:11" itemprop="dateCreated datePublished" datetime="2021-12-31T22:07:16+08:00">2021-12-31</time>
+              <time title="創建時間：2021-12-31 22:07:16" itemprop="dateCreated datePublished" datetime="2021-12-31T22:07:16+08:00">2021-12-31</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2022-01-11 12:07:16" itemprop="dateModified" datetime="2022-01-11T12:07:16+08:00">2022-01-11</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -284,7 +290,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Hi, 我是魚板伯爵今天要來創建一個CountBloc，然後就可以開始製作我們的CountButton了，我加了讓數字有彈跳的效果寫了一些動畫，有興趣的可以看原本程式碼。</p>
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Hi, 今天要來創建一個CountBloc，然後就可以開始製作我們的CountButton了，我加了讓數字有彈跳的效果寫了一些動畫，有興趣的可以看原本程式碼。</p>
 <blockquote>
 <p><a target="_blank" rel="noopener" href="https://github.com/Daviswww/stunning_tribble/tree/day29">完整程式碼</a></p>
 </blockquote>
@@ -307,7 +313,7 @@
 
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">  void _tapDown(int count) &#123;</span><br><span class="line">    _animationController.forward();</span><br><span class="line">    HapticFeedback.heavyImpact();</span><br><span class="line">    BlocProvider.of&lt;CountBloc&gt;(context).add(CountIncrementEvent(count));</span><br><span class="line">  &#125;</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://raw.githubusercontent.com/Daviswww/stunning_tribble/day29/assets/images/sadjuf.gif" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/Daviswww/stunning_tribble/day29/assets/images/sadjuf.gif"></p>
 
     </div>
 
@@ -490,7 +496,7 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2021</span>
+  <span itemprop="copyrightYear">2022</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

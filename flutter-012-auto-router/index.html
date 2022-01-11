@@ -25,18 +25,18 @@
     var CONFIG = {"hostname":"chucs.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.json"};
   </script>
 
-  <meta name="description" content="前言Hi, 我是魚板伯爵今天要教大家 Auto Router 這個套件，教學內容只會擷取片段程式碼，建議大家搭配完整程式碼來練習。  完整程式碼  有時候App需要切換很多個頁面，或者太多頁面的路徑常常很難找出錯誤，我們可以使用Autorouter來幫助我們簡化程式碼，如果有哪個路徑不對，只需要檢查我們設定的參數是否有錯誤就可以了。">
+  <meta name="description" content="前言Hi, 今天要教大家 Auto Router 這個套件，教學內容只會擷取片段程式碼，建議大家搭配完整程式碼來練習。  完整程式碼  有時候App需要切換很多個頁面，或者太多頁面的路徑常常很難找出錯誤，我們可以使用Autorouter來幫助我們簡化程式碼，如果有哪個路徑不對，只需要檢查我們設定的參數是否有錯誤就可以了。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Flutter 012 - 場景路徑與轉換 ( Auto Router )">
 <meta property="og:url" content="https://chucs.github.io/flutter-012-auto-router/index.html">
 <meta property="og:site_name" content="CHUPCCA">
-<meta property="og:description" content="前言Hi, 我是魚板伯爵今天要教大家 Auto Router 這個套件，教學內容只會擷取片段程式碼，建議大家搭配完整程式碼來練習。  完整程式碼  有時候App需要切換很多個頁面，或者太多頁面的路徑常常很難找出錯誤，我們可以使用Autorouter來幫助我們簡化程式碼，如果有哪個路徑不對，只需要檢查我們設定的參數是否有錯誤就可以了。">
+<meta property="og:description" content="前言Hi, 今天要教大家 Auto Router 這個套件，教學內容只會擷取片段程式碼，建議大家搭配完整程式碼來練習。  完整程式碼  有時候App需要切換很多個頁面，或者太多頁面的路徑常常很難找出錯誤，我們可以使用Autorouter來幫助我們簡化程式碼，如果有哪個路徑不對，只需要檢查我們設定的參數是否有錯誤就可以了。">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day12/image/vxfvUyN.gif">
 <meta property="og:image" content="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day12/image/VUEcNnv.gif">
 <meta property="og:image" content="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day12/image/Rz1I1US.gif">
 <meta property="article:published_time" content="2021-12-31T13:45:40.000Z">
-<meta property="article:modified_time" content="2021-12-31T14:22:15.540Z">
+<meta property="article:modified_time" content="2022-01-11T04:07:16.907Z">
 <meta property="article:author" content="CHUPCCA">
 <meta property="article:tag" content="flutter">
 <meta name="twitter:card" content="summary">
@@ -240,10 +240,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">發表於</span>
-              
 
-              <time title="創建時間：2021-12-31 21:45:40 / 修改時間：22:22:15" itemprop="dateCreated datePublished" datetime="2021-12-31T21:45:40+08:00">2021-12-31</time>
+              <time title="創建時間：2021-12-31 21:45:40" itemprop="dateCreated datePublished" datetime="2021-12-31T21:45:40+08:00">2021-12-31</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2022-01-11 12:07:16" itemprop="dateModified" datetime="2022-01-11T12:07:16+08:00">2022-01-11</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -286,7 +292,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Hi, 我是魚板伯爵今天要教大家 Auto Router 這個套件，教學內容只會擷取片段程式碼，建議大家搭配完整程式碼來練習。</p>
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Hi, 今天要教大家 Auto Router 這個套件，教學內容只會擷取片段程式碼，建議大家搭配完整程式碼來練習。</p>
 <blockquote>
 <p><a target="_blank" rel="noopener" href="https://github.com/Daviswww/triathlon_flutter/tree/master/day12">完整程式碼</a></p>
 </blockquote>
@@ -316,19 +322,19 @@
 <li><code>pop</code>：退出stack</li>
 </ul>
 <figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">LoginScreen</span> <span class="keyword">extends</span> <span class="title">StatelessWidget</span> </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> LoginScreen(&#123;Key? key&#125;) : <span class="keyword">super</span>(key: key);</span><br><span class="line"></span><br><span class="line">  <span class="meta">@override</span></span><br><span class="line">  Widget build(BuildContext context) &#123;</span><br><span class="line">    <span class="keyword">return</span> Scaffold(</span><br><span class="line">      appBar: AppBar(</span><br><span class="line">        title: Text(<span class="string">&quot;LoginScreen&quot;</span>),</span><br><span class="line">      ),</span><br><span class="line">      backgroundColor: Colors.indigo[<span class="number">50</span>],</span><br><span class="line">      body: Center(</span><br><span class="line">        child: TextButton(</span><br><span class="line">          child: Text(<span class="string">&quot;Sign in&quot;</span>),</span><br><span class="line">          onPressed: () &#123;</span><br><span class="line">            <span class="comment">// 轉場</span></span><br><span class="line">            AutoRouter.of(context).replaceNamed(<span class="string">&quot;/home-screen&quot;</span>);</span><br><span class="line">          &#125;,</span><br><span class="line">        ),</span><br><span class="line">      ),</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day12/image/vxfvUyN.gif" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day12/image/vxfvUyN.gif"></p>
 <h3 id="CustomRoute-使用其他的轉場動畫"><a href="#CustomRoute-使用其他的轉場動畫" class="headerlink" title="CustomRoute 使用其他的轉場動畫"></a>CustomRoute 使用其他的轉場動畫</h3><ul>
 <li><code>transitionsBuilder</code>：轉場動畫設定</li>
 <li><code>durationInMilliseconds</code>：轉場動畫時間</li>
 </ul>
 <figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@MaterialAutoRouter</span>(</span><br><span class="line">  replaceInRouteName: <span class="string">&#x27;Page,Route&#x27;</span>,</span><br><span class="line">  routes: &lt;AutoRoute&gt;[</span><br><span class="line">    AutoRoute(path: <span class="string">&#x27;/&#x27;</span>, page: LoginScreen, initial: <span class="keyword">true</span>),</span><br><span class="line">    AutoRoute(path: <span class="string">&#x27;/home-screen&#x27;</span>, page: HomeScreen),</span><br><span class="line">    CustomRoute(</span><br><span class="line">      path: <span class="string">&#x27;/menu-screen&#x27;</span>,</span><br><span class="line">      page: MenuScreen,</span><br><span class="line">      transitionsBuilder: TransitionsBuilders.fadeIn,</span><br><span class="line">      durationInMilliseconds: <span class="number">1000</span>,</span><br><span class="line">    ),</span><br><span class="line">  ],</span><br><span class="line">)</span><br><span class="line"><span class="class"><span class="keyword">class</span> $<span class="title">AppRouter</span> </span>&#123;&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day12/image/VUEcNnv.gif" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day12/image/VUEcNnv.gif"></p>
 <h3 id="使用自己的轉場動畫"><a href="#使用自己的轉場動畫" class="headerlink" title="使用自己的轉場動畫"></a>使用自己的轉場動畫</h3><p>我們可以用<code>transitionsBuilder</code>來寫自己的轉場動畫，至於如何控制就交給大家自己摸索了，以下就寫一個簡單的範例給大家參考。</p>
 <figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@MaterialAutoRouter</span>(</span><br><span class="line">  replaceInRouteName: <span class="string">&#x27;Page,Route&#x27;</span>,</span><br><span class="line">  routes: &lt;AutoRoute&gt;[</span><br><span class="line">    AutoRoute(path: <span class="string">&#x27;/&#x27;</span>, page: LoginScreen, initial: <span class="keyword">true</span>),</span><br><span class="line">    AutoRoute(path: <span class="string">&#x27;/home-screen&#x27;</span>, page: HomeScreen),</span><br><span class="line">    CustomRoute(</span><br><span class="line">      path: <span class="string">&#x27;/menu-screen&#x27;</span>,</span><br><span class="line">      page: MenuScreen,</span><br><span class="line">      transitionsBuilder: MyTransitions.slideBottomToTop,</span><br><span class="line">      durationInMilliseconds: <span class="number">1000</span>,</span><br><span class="line">    ),</span><br><span class="line">  ],</span><br><span class="line">)</span><br><span class="line"><span class="class"><span class="keyword">class</span> $<span class="title">AppRouter</span> </span>&#123;&#125;</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyTransitions</span> <span class="keyword">extends</span> <span class="title">TransitionsBuilders</span> </span>&#123;</span><br><span class="line">  <span class="keyword">static</span> <span class="keyword">const</span> RouteTransitionsBuilder slideBottomToTop = _slideBottomToTop;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">static</span> Widget _slideBottomToTop(</span><br><span class="line">    BuildContext context,</span><br><span class="line">    Animation&lt;<span class="built_in">double</span>&gt; animation,</span><br><span class="line">    Animation&lt;<span class="built_in">double</span>&gt; secondaryAnimation,</span><br><span class="line">    Widget child,</span><br><span class="line">  ) &#123;</span><br><span class="line">    <span class="keyword">return</span> SlideTransition(</span><br><span class="line">      position: Tween&lt;Offset&gt;(</span><br><span class="line">        begin: <span class="keyword">const</span> Offset(<span class="number">0</span>, <span class="number">1</span>),</span><br><span class="line">        end: Offset.zero,</span><br><span class="line">      ).animate(animation),</span><br><span class="line">      child: child,</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day12/image/Rz1I1US.gif" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day12/image/Rz1I1US.gif"></p>
 <h3 id="Note"><a href="#Note" class="headerlink" title="Note:"></a>Note:</h3><p>由於是Gif的緣故可能有點卡頓的感覺。</p>
 
     </div>
@@ -512,7 +518,7 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2021</span>
+  <span itemprop="copyrightYear">2022</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

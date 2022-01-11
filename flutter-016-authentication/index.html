@@ -25,12 +25,12 @@
     var CONFIG = {"hostname":"chucs.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.json"};
   </script>
 
-  <meta name="description" content="前言Hi, 我是魚板伯爵今天要教大家 Firebase Authentication 和開通 Google 登入，教學內容只會擷取片段程式碼，建議大家搭配完整程式碼來練習。  完整程式碼">
+  <meta name="description" content="前言Hi, 今天要教大家 Firebase Authentication 和開通 Google 登入，教學內容只會擷取片段程式碼，建議大家搭配完整程式碼來練習。  完整程式碼">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Flutter 016 - Firebase Authentication &amp; Google Sign-In ( IOS &amp; Android )">
 <meta property="og:url" content="https://chucs.github.io/flutter-016-authentication/index.html">
 <meta property="og:site_name" content="CHUPCCA">
-<meta property="og:description" content="前言Hi, 我是魚板伯爵今天要教大家 Firebase Authentication 和開通 Google 登入，教學內容只會擷取片段程式碼，建議大家搭配完整程式碼來練習。  完整程式碼">
+<meta property="og:description" content="前言Hi, 今天要教大家 Firebase Authentication 和開通 Google 登入，教學內容只會擷取片段程式碼，建議大家搭配完整程式碼來練習。  完整程式碼">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/Q5cC1Vi.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/myrDyyX.png">
@@ -49,7 +49,7 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/7odXW9M.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/5j0iC5W.gif">
 <meta property="article:published_time" content="2021-12-31T13:49:32.000Z">
-<meta property="article:modified_time" content="2021-12-31T14:23:11.576Z">
+<meta property="article:modified_time" content="2022-01-11T04:07:16.908Z">
 <meta property="article:author" content="CHUPCCA">
 <meta property="article:tag" content="flutter">
 <meta name="twitter:card" content="summary">
@@ -253,10 +253,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">發表於</span>
-              
 
-              <time title="創建時間：2021-12-31 21:49:32 / 修改時間：22:23:11" itemprop="dateCreated datePublished" datetime="2021-12-31T21:49:32+08:00">2021-12-31</time>
+              <time title="創建時間：2021-12-31 21:49:32" itemprop="dateCreated datePublished" datetime="2021-12-31T21:49:32+08:00">2021-12-31</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2022-01-11 12:07:16" itemprop="dateModified" datetime="2022-01-11T12:07:16+08:00">2022-01-11</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -299,32 +305,32 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Hi, 我是魚板伯爵今天要教大家 Firebase Authentication 和開通 Google 登入，教學內容只會擷取片段程式碼，建議大家搭配完整程式碼來練習。</p>
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Hi, 今天要教大家 Firebase Authentication 和開通 Google 登入，教學內容只會擷取片段程式碼，建議大家搭配完整程式碼來練習。</p>
 <blockquote>
 <p><a target="_blank" rel="noopener" href="https://github.com/Daviswww/triathlon_flutter/tree/master/day16">完整程式碼</a></p>
 </blockquote>
 <span id="more"></span>
-<h3 id="創建一個-Firebase-專案"><a href="#創建一個-Firebase-專案" class="headerlink" title="創建一個 Firebase 專案"></a>創建一個 Firebase 專案</h3><p>取個專案名字下一步到底就可以了，若沒有<code>google analytics</code>就點開選單建造一個，然後一樣下一步到底。<br><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/Q5cC1Vi.png" alt=""></p>
-<h3 id="開啟-Google-登入"><a href="#開啟-Google-登入" class="headerlink" title="開啟 Google 登入"></a>開啟 Google 登入</h3><p>完成專案創就後點擊左邊Authentication，然後把google的登入給啟用。<br><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/myrDyyX.png" alt=""></p>
-<p>儲存後你可以看到google的狀態變成已啟用(綠燈)<br><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/l89sA0T.png" alt=""></p>
-<h3 id="創建APP"><a href="#創建APP" class="headerlink" title="創建APP"></a>創建APP</h3><p>回到專案總覽，以下會介紹IOS和Andriod的創建方式。<br><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/RMfZ78n.png" alt=""></p>
-<h3 id="Android-設定"><a href="#Android-設定" class="headerlink" title="Android 設定"></a>Android 設定</h3><h4 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h4><p><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/VFM9v3l.png" alt=""></p>
-<h4 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h4><p>下載<code>google-services.json</code>放入<code>android/app</code>。<br><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/AUA7ont.png" alt=""></p>
+<h3 id="創建一個-Firebase-專案"><a href="#創建一個-Firebase-專案" class="headerlink" title="創建一個 Firebase 專案"></a>創建一個 Firebase 專案</h3><p>取個專案名字下一步到底就可以了，若沒有<code>google analytics</code>就點開選單建造一個，然後一樣下一步到底。<br><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/Q5cC1Vi.png"></p>
+<h3 id="開啟-Google-登入"><a href="#開啟-Google-登入" class="headerlink" title="開啟 Google 登入"></a>開啟 Google 登入</h3><p>完成專案創就後點擊左邊Authentication，然後把google的登入給啟用。<br><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/myrDyyX.png"></p>
+<p>儲存後你可以看到google的狀態變成已啟用(綠燈)<br><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/l89sA0T.png"></p>
+<h3 id="創建APP"><a href="#創建APP" class="headerlink" title="創建APP"></a>創建APP</h3><p>回到專案總覽，以下會介紹IOS和Andriod的創建方式。<br><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/RMfZ78n.png"></p>
+<h3 id="Android-設定"><a href="#Android-設定" class="headerlink" title="Android 設定"></a>Android 設定</h3><h4 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h4><p><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/VFM9v3l.png"></p>
+<h4 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h4><p>下載<code>google-services.json</code>放入<code>android/app</code>。<br><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/AUA7ont.png"></p>
 <h4 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h4><p>在<code>android/day16_android.iml</code>的<code>dependencies</code>層中加入<code>classpath &#39;com.google.gms:google-services:4.3.10&#39;</code></p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">dependencies &#123;</span><br><span class="line">    classpath &#x27;com.android.tools.build:gradle:<span class="number">4.1</span><span class="number">.0</span>&#x27;</span><br><span class="line">    classpath <span class="string">&quot;org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version&quot;</span></span><br><span class="line">    classpath &#x27;com.google.gms:google-services:<span class="number">4.3</span><span class="number">.10</span>&#x27;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>在<code>android/app/build.gradle</code>加入<code>apply plugin: &#39;com.google.gms.google-services&#39;</code>隨便加在最外層就可以了。</p>
 <figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">apply plugin: <span class="string">&#x27;com.android.application&#x27;</span></span><br><span class="line">apply plugin: <span class="string">&#x27;kotlin-android&#x27;</span></span><br><span class="line">apply <span class="keyword">from</span>: <span class="string">&quot;$flutterRoot/packages/flutter_tools/gradle/flutter.gradle&quot;</span></span><br><span class="line">apply plugin: <span class="string">&#x27;com.google.gms.google-services&#x27;</span></span><br></pre></td></tr></table></figure>
-<p>修改applicationId<br><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/6P2PXBr.png" alt=""></p>
-<h4 id="第五部"><a href="#第五部" class="headerlink" title="第五部"></a>第五部</h4><p>打開終端機輸入<code>keytool -list -v -alias androiddebugkey -keystore ~/.android/debug.keystore</code>，密碼就打個android然後你會得到SHA1和SHA256。<br><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/pwM2XQv.png" alt=""></p>
-<p>回到firebase點開控制台溜到最下新增指紋，兩個都給他新增上去。<br><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/IWpcLA4.png" alt=""><br><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/3xlFDEz.png" alt=""><br><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/yfPvMm7.png" alt=""></p>
-<h3 id="IOS-設定"><a href="#IOS-設定" class="headerlink" title="IOS 設定"></a>IOS 設定</h3><h4 id="第一步-1"><a href="#第一步-1" class="headerlink" title="第一步"></a>第一步</h4><p>輸入IOS ID 和 App 名字就可以。<br><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/ESN5tgl.png" alt=""></p>
-<h4 id="第二步-1"><a href="#第二步-1" class="headerlink" title="第二步"></a>第二步</h4><p>開啟專案把<code>GoogleService-Info.plist</code>放入<code>ios/Runner</code>，然後345步驟都不重要下一步到底。<br><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/ZA13p6o.png" alt=""></p>
-<p>然後打開XCode右鍵資料夾加入檔案，選擇<code>GoogleService-Info.plist</code>。<br><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/L9waVvZ.png" alt=""></p>
+<p>修改applicationId<br><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/6P2PXBr.png"></p>
+<h4 id="第五部"><a href="#第五部" class="headerlink" title="第五部"></a>第五部</h4><p>打開終端機輸入<code>keytool -list -v -alias androiddebugkey -keystore ~/.android/debug.keystore</code>，密碼就打個android然後你會得到SHA1和SHA256。<br><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/pwM2XQv.png"></p>
+<p>回到firebase點開控制台溜到最下新增指紋，兩個都給他新增上去。<br><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/IWpcLA4.png"><br><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/3xlFDEz.png"><br><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/yfPvMm7.png"></p>
+<h3 id="IOS-設定"><a href="#IOS-設定" class="headerlink" title="IOS 設定"></a>IOS 設定</h3><h4 id="第一步-1"><a href="#第一步-1" class="headerlink" title="第一步"></a>第一步</h4><p>輸入IOS ID 和 App 名字就可以。<br><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/ESN5tgl.png"></p>
+<h4 id="第二步-1"><a href="#第二步-1" class="headerlink" title="第二步"></a>第二步</h4><p>開啟專案把<code>GoogleService-Info.plist</code>放入<code>ios/Runner</code>，然後345步驟都不重要下一步到底。<br><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/ZA13p6o.png"></p>
+<p>然後打開XCode右鍵資料夾加入檔案，選擇<code>GoogleService-Info.plist</code>。<br><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/L9waVvZ.png"></p>
 <h4 id="第三步-1"><a href="#第三步-1" class="headerlink" title="第三步"></a>第三步</h4><p>打開<code>ios/Runner/Info.plist</code>把<code>GoogleService-Info.plist</code>裡面的<code>REVERSED_CLIENT_ID</code>複製到<code>&lt;string&gt;REVERSED_CLIENT_ID&lt;/string&gt;</code>裡面。</p>
 <figure class="highlight plist"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Google Sign-In section --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">key</span>&gt;</span>CFBundleURLTypes<span class="tag">&lt;/<span class="name">key</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">array</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dict</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">key</span>&gt;</span>CFBundleTypeRole<span class="tag">&lt;/<span class="name">key</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">string</span>&gt;</span>Editor<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">key</span>&gt;</span>CFBundleURLSchemes<span class="tag">&lt;/<span class="name">key</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">array</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!-- TODO Replace this value: --&gt;</span></span><br><span class="line">            <span class="comment">&lt;!-- Copied from GoogleService-Info.plist key REVERSED_CLIENT_ID --&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">string</span>&gt;</span>REVERSED_CLIENT_ID<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">array</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dict</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">array</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">key</span>&gt;</span>NSAppTransportSecurity<span class="tag">&lt;/<span class="name">key</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dict</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">key</span>&gt;</span>NSAllowsLocalNetworking<span class="tag">&lt;/<span class="name">key</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">true</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dict</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- End of the Google Sign-In section --&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h3><p>如果ios有遇到pod的問題請到<code>ios/Podfile</code>把請版本打開，並更新一下<code>pod repo update</code>。<br><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/7odXW9M.png" alt=""></p>
+<h3 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h3><p>如果ios有遇到pod的問題請到<code>ios/Podfile</code>把請版本打開，並更新一下<code>pod repo update</code>。<br><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/7odXW9M.png"></p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">dependencies:</span></span><br><span class="line">  <span class="attr">flutter:</span></span><br><span class="line">    <span class="attr">sdk:</span> <span class="string">flutter</span></span><br><span class="line">  <span class="attr">google_sign_in:</span> <span class="string">^5.0.5</span></span><br><span class="line">  <span class="attr">firebase_auth:</span> <span class="string">^3.0.1</span></span><br><span class="line">  <span class="attr">firebase_core:</span> <span class="string">^1.4.0</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="實作登入"><a href="#實作登入" class="headerlink" title="實作登入"></a>實作登入</h3><p>在main裡面做初始化。</p>
@@ -335,7 +341,7 @@
 
 <p>然後在頁面上的按鈕使用登入的函式</p>
 <figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">LoginPage</span> <span class="keyword">extends</span> <span class="title">StatelessWidget</span> </span>&#123;</span><br><span class="line">  <span class="keyword">final</span> AuthRepository _authRepository = AuthRepository();</span><br><span class="line"></span><br><span class="line">  LoginPage(&#123;Key? key&#125;) : <span class="keyword">super</span>(key: key);</span><br><span class="line"></span><br><span class="line">  <span class="meta">@override</span></span><br><span class="line">  Widget build(BuildContext context) &#123;</span><br><span class="line">    <span class="keyword">return</span> Scaffold(</span><br><span class="line">      appBar: AppBar(</span><br><span class="line">        title: Text(<span class="string">&quot;LOGIN&quot;</span>),</span><br><span class="line">      ),</span><br><span class="line">      body: Container(</span><br><span class="line">        child: Center(</span><br><span class="line">          child: TextButton(</span><br><span class="line">            onPressed: () <span class="keyword">async</span> &#123;</span><br><span class="line">              <span class="keyword">final</span> ok = <span class="keyword">await</span> _authRepository.signInWithGoogle();</span><br><span class="line">              <span class="keyword">if</span> (ok) &#123;</span><br><span class="line">                Navigator.pushReplacement(</span><br><span class="line">                  context,</span><br><span class="line">                  MaterialPageRoute(</span><br><span class="line">                    builder: (context) =&gt; HomePage(),</span><br><span class="line">                  ),</span><br><span class="line">                );</span><br><span class="line">              &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            child: Text(<span class="string">&quot;SIGN IN&quot;</span>),</span><br><span class="line">          ),</span><br><span class="line">        ),</span><br><span class="line">      ),</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/5j0iC5W.gif" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day16/image/5j0iC5W.gif"></p>
 
     </div>
 
@@ -518,7 +524,7 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2021</span>
+  <span itemprop="copyrightYear">2022</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

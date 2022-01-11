@@ -25,12 +25,12 @@
     var CONFIG = {"hostname":"chucs.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.json"};
   </script>
 
-  <meta name="description" content="前言Ya, 我是魚板伯爵 http 套件可以讓你串接API，你可以利用他來做HTTP請求，是一個很ㄅㄧㄤˋ的工具喔。  完整程式碼">
+  <meta name="description" content="前言Ya,  http 套件可以讓你串接API，你可以利用他來做HTTP請求，是一個很ㄅㄧㄤˋ的工具喔。  完整程式碼">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Flutter 014 - 怎麼串接API ( Http )">
 <meta property="og:url" content="https://chucs.github.io/flutter-014-http/index.html">
 <meta property="og:site_name" content="CHUPCCA">
-<meta property="og:description" content="前言Ya, 我是魚板伯爵 http 套件可以讓你串接API，你可以利用他來做HTTP請求，是一個很ㄅㄧㄤˋ的工具喔。  完整程式碼">
+<meta property="og:description" content="前言Ya,  http 套件可以讓你串接API，你可以利用他來做HTTP請求，是一個很ㄅㄧㄤˋ的工具喔。  完整程式碼">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day14/image/3buuZ9L.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day14/image/inexWFm.png">
@@ -38,7 +38,7 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day14/image/peH798I.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day14/image/zrQksFl.png">
 <meta property="article:published_time" content="2021-12-31T13:47:29.000Z">
-<meta property="article:modified_time" content="2021-12-31T14:23:11.574Z">
+<meta property="article:modified_time" content="2022-01-11T04:07:16.907Z">
 <meta property="article:author" content="CHUPCCA">
 <meta property="article:tag" content="flutter">
 <meta name="twitter:card" content="summary">
@@ -242,10 +242,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">發表於</span>
-              
 
-              <time title="創建時間：2021-12-31 21:47:29 / 修改時間：22:23:11" itemprop="dateCreated datePublished" datetime="2021-12-31T21:47:29+08:00">2021-12-31</time>
+              <time title="創建時間：2021-12-31 21:47:29" itemprop="dateCreated datePublished" datetime="2021-12-31T21:47:29+08:00">2021-12-31</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2022-01-11 12:07:16" itemprop="dateModified" datetime="2022-01-11T12:07:16+08:00">2022-01-11</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -288,7 +294,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Ya, 我是魚板伯爵 http 套件可以讓你串接API，你可以利用他來做HTTP請求，是一個很ㄅㄧㄤˋ的工具喔。</p>
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Ya,  http 套件可以讓你串接API，你可以利用他來做HTTP請求，是一個很ㄅㄧㄤˋ的工具喔。</p>
 <blockquote>
 <p><a target="_blank" rel="noopener" href="https://github.com/Daviswww/triathlon_flutter/tree/master/day14">完整程式碼</a></p>
 </blockquote>
@@ -297,24 +303,24 @@
 <h3 id="IOS-amp-Android-設定"><a href="#IOS-amp-Android-設定" class="headerlink" title="IOS &amp; Android 設定"></a>IOS &amp; Android 設定</h3><p>你需要打開IOS和Android的設定檔來開啟一些限制。</p>
 <h4 id="IOS檔案"><a href="#IOS檔案" class="headerlink" title="IOS檔案"></a>IOS檔案</h4><p>路徑<code>/ios/Runner/Info.plist</code>。</p>
 <figure class="highlight plist"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">key</span>&gt;</span>NSAppTransportSecurity<span class="tag">&lt;/<span class="name">key</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dict</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">key</span>&gt;</span>NSAllowsLocalNetworking<span class="tag">&lt;/<span class="name">key</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">true</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dict</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day14/image/3buuZ9L.png" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day14/image/3buuZ9L.png"></p>
 <h4 id="Android檔案"><a href="#Android檔案" class="headerlink" title="Android檔案"></a>Android檔案</h4><p>路徑<code>/android/app/src/main/AndroidManifest.xml</code>。</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">android:usesCleartextTraffic=&quot;true&quot;</span><br></pre></td></tr></table></figure>
-<p><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day14/image/inexWFm.png" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day14/image/inexWFm.png"></p>
 <h3 id="創建一個API"><a href="#創建一個API" class="headerlink" title="創建一個API"></a>創建一個API</h3><p>在這裡我使用<a target="_blank" rel="noopener" href="https://github.com/typicode/json-server">JSON Server</a>來當做測試的API，安裝完json-server後你可以修改<code>db.json</code>來編輯你的API格式。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ json-server --watch db.json</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;auth&quot;</span>: [</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">&quot;id&quot;</span>: <span class="number">1</span>,</span><br><span class="line">      <span class="attr">&quot;username&quot;</span>: <span class="string">&quot;json-server&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;password&quot;</span>: <span class="string">&quot;asdasdlmasdmlasklmklmsad&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="建立資料模型"><a href="#建立資料模型" class="headerlink" title="建立資料模型"></a>建立資料模型</h3><p>不管是傳送還是接收都希望資料的格式是固定的，若為不固定的資料格式可能會導致APP有錯誤。可以利用<a target="_blank" rel="noopener" href="https://quicktype.io/">Quicktype</a>來生成我們的API模型(推薦新手)，又或者自己新增一個Class再用快捷鍵(mac: <code>command</code>+<code>.</code> |win: <code>control</code>+<code>.</code>)來生成，不過這個需要自己先定義好。</p>
-<p><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day14/image/11FPxPz.png" alt=""></p>
-<p><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day14/image/peH798I.png" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day14/image/11FPxPz.png"></p>
+<p><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day14/image/peH798I.png"></p>
 <h3 id="API-接口管理"><a href="#API-接口管理" class="headerlink" title="API 接口管理"></a>API 接口管理</h3><p>第一步我們一樣先創建一個API結構，要注意的是Android的模擬器接口是<code>http://10.0.2.2:3000</code>，IOS的接口是<code>localhost:3000</code>，而後面的port可以以自行修改(如果你的Local API Port是500就改500)。</p>
 <figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/// <span class="markdown">Android calls the http://10.0.2.2:3000/auth endpoint.</span></span></span><br><span class="line"><span class="comment">///</span></span><br><span class="line"><span class="comment">/// <span class="markdown">IOS calls the http://localhost:3000/auth endpoint.</span></span></span><br><span class="line"><span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">ApiDataSource</span> </span>&#123;</span><br><span class="line">  <span class="comment">/// <span class="markdown">Create new user.</span></span></span><br><span class="line">  Future&lt;<span class="built_in">String</span>&gt; createUser(User body);</span><br><span class="line"></span><br><span class="line">  <span class="comment">/// <span class="markdown">Get user info id, username, passowrd</span></span></span><br><span class="line">  Future&lt;<span class="built_in">String</span>&gt; getUser(<span class="built_in">int</span> id);</span><br><span class="line"></span><br><span class="line">  <span class="comment">/// <span class="markdown">Update user data</span></span></span><br><span class="line">  Future&lt;<span class="built_in">String</span>&gt; updateUser(<span class="built_in">int</span> id, User body);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="實作API"><a href="#實作API" class="headerlink" title="實作API"></a>實作API</h3><p>先創建一個domain(使用的API)和client(http請求)，然後再對class名稱點擊快捷鍵，生成API框架。</p>
 <figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">UserRepository</span> <span class="keyword">implements</span> <span class="title">ApiDataSource</span> </span>&#123;</span><br><span class="line">  <span class="keyword">final</span> client = http.Client();</span><br><span class="line">  <span class="keyword">final</span> <span class="built_in">String</span> domain = <span class="string">&quot;http://localhost:3000&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day14/image/zrQksFl.png" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/Daviswww/triathlon_flutter/master/day14/image/zrQksFl.png"></p>
 <h3 id="Http-常用三種請求"><a href="#Http-常用三種請求" class="headerlink" title="Http 常用三種請求"></a>Http 常用三種請求</h3><p>用這三個請求來實作創建使用者、取得使用者資料和更新使用者資料。</p>
 <ul>
 <li>POST：用於提交指定資源的實體，通常會改變伺服器的狀態(創建新資料)。</li>
@@ -506,7 +512,7 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2021</span>
+  <span itemprop="copyrightYear">2022</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
