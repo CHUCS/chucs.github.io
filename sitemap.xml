@@ -2,16 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://chucs.github.io/flutter-021-presentation-auto-router/</loc>
+    <loc>https://chucs.github.io/flutter-001-root/</loc>
     
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://chucs.github.io/flutter-001-root/</loc>
+    <loc>https://chucs.github.io/flutter-021-presentation-auto-router/</loc>
     
     <lastmod>2022-01-11</lastmod>
     
@@ -3325,7 +3325,7 @@
 
   <url>
     <loc>https://chucs.github.io/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -3333,364 +3333,364 @@
   
   <url>
     <loc>https://chucs.github.io/tags/dp/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chucs.github.io/tags/sortings/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chucs.github.io/tags/implementation/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chucs.github.io/tags/dfs-and-similar/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chucs.github.io/tags/greedy/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chucs.github.io/tags/math/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chucs.github.io/tags/%E7%B0%A1%E5%96%AE/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chucs.github.io/tags/CodeForces/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chucs.github.io/tags/%E6%99%AE%E9%80%9A/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chucs.github.io/tags/strings/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chucs.github.io/tags/%E6%96%B0%E6%89%8B/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chucs.github.io/tags/two-pointers/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chucs.github.io/tags/brute-force/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chucs.github.io/tags/graphs/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chucs.github.io/tags/1000/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chucs.github.io/tags/binary-search/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chucs.github.io/tags/bitmasks/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chucs.github.io/tags/tutorials/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chucs.github.io/tags/cpp/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chucs.github.io/tags/%E4%B8%80%E8%88%AC/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chucs.github.io/tags/trees/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chucs.github.io/tags/1200/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chucs.github.io/tags/dsu/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chucs.github.io/tags/1700/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chucs.github.io/tags/constructive-algorithms/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chucs.github.io/tags/1100/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chucs.github.io/tags/CHU-Training/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chucs.github.io/tags/number-theory/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chucs.github.io/tags/800/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chucs.github.io/tags/Brute-force/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chucs.github.io/tags/2000/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chucs.github.io/tags/dus/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chucs.github.io/tags/900/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chucs.github.io/tags/combinatorics/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chucs.github.io/tags/games/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chucs.github.io/tags/hexo/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chucs.github.io/tags/1600/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chucs.github.io/tags/1400/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chucs.github.io/tags/graph-matchings/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chucs.github.io/tags/shortest-paths/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chucs.github.io/tags/geometry/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chucs.github.io/tags/data-structures/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chucs.github.io/tags/asm/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chucs.github.io/tags/mips/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chucs.github.io/tags/x86/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chucs.github.io/tags/%E7%95%99%E8%A8%80%E6%9D%BF/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chucs.github.io/tags/swiftui/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chucs.github.io/tags/1300/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chucs.github.io/tags/1500/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chucs.github.io/tags/rust/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chucs.github.io/tags/flutter/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chucs.github.io/tags/swift/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -3699,77 +3699,77 @@
   
   <url>
     <loc>https://chucs.github.io/categories/Codeforces/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chucs.github.io/categories/AOJ/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chucs.github.io/categories/UVA/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chucs.github.io/categories/C-tutorials/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chucs.github.io/categories/%E8%B3%87%E5%B7%A5%E6%8E%A8%E8%96%A6%E6%B8%85%E5%96%AE/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chucs.github.io/categories/%E7%A4%BE%E5%9C%98%E7%B6%B2%E7%AB%99%E7%B6%AD%E8%AD%B7%E6%8C%87%E5%8D%97/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chucs.github.io/categories/Assembly-tutorials/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chucs.github.io/categories/Parallel-Programming/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chucs.github.io/categories/Rust-tutorials/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chucs.github.io/categories/Flutter-tutorials/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://chucs.github.io/categories/Swift-tutorials/</loc>
-    <lastmod>2022-01-11</lastmod>
+    <lastmod>2022-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
