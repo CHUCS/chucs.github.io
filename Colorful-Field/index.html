@@ -35,8 +35,8 @@
 <meta property="article:published_time" content="2020-04-14T05:06:18.000Z">
 <meta property="article:modified_time" content="2020-07-18T02:35:47.334Z">
 <meta property="article:author" content="CHUPCCA">
-<meta property="article:tag" content="sortings">
 <meta property="article:tag" content="implementation">
+<meta property="article:tag" content="sortings">
 <meta property="article:tag" content="普通">
 <meta name="twitter:card" content="summary">
 
@@ -290,9 +290,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="Codeforces-79B-Colorful-Field"><a href="#Codeforces-79B-Colorful-Field" class="headerlink" title="Codeforces 79B - Colorful Field"></a>Codeforces 79B - Colorful Field</h1><p><a href="https://codeforces.com/problemset/problem/79/B" target="_blank" rel="noopener">Colorful Field</a></p>
+        <h1 id="Codeforces-79B-Colorful-Field"><a href="#Codeforces-79B-Colorful-Field" class="headerlink" title="Codeforces 79B - Colorful Field"></a>Codeforces 79B - Colorful Field</h1><p><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/79/B">Colorful Field</a></p>
 <h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>給你一塊地及一些浪費的座標位置，其餘的座標從上到下左到右依序種紅蘿蔔、奇異果及葡萄，現在問你某個特定座標是被浪費了還是種了什麼作物？</p>
-<a id="more"></a>
+<span id="more"></span>
 <h4 id="思路"><a href="#思路" class="headerlink" title="思路:"></a>思路:</h4><p>將所有浪費的座標上到下左到右排序，之後輸入每個查詢座標時去找它前面有幾個浪費的座標，若本身就是浪費的點就不用繼續了，直接輸出；否則先記錄下來，將現在的座標轉為上到下左到右順序的順序數後減去記錄下來的數字，可以得到這座標是第幾個沒被浪費的點，對3取餘數就能知道會種什麼東西。</p>
 <h4 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼:"></a>程式碼:</h4><script src="https://gist.github.com/Daviswww/b0afbe68ce22d745f75b50eb1b16cc6b.js"></script>
     </div>
@@ -303,8 +303,8 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/sortings/" rel="tag"># sortings</a>
               <a href="/tags/implementation/" rel="tag"># implementation</a>
+              <a href="/tags/sortings/" rel="tag"># sortings</a>
               <a href="/tags/%E6%99%AE%E9%80%9A/" rel="tag"># 普通</a>
           </div>
         

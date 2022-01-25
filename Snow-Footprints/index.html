@@ -291,9 +291,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="Codeforces-298A-Snow-Footprints"><a href="#Codeforces-298A-Snow-Footprints" class="headerlink" title="Codeforces 298A - Snow Footprints"></a>Codeforces 298A - Snow Footprints</h1><p><a href="https://codeforces.com/problemset/problem/298/A" target="_blank" rel="noopener">Snow Footprints</a></p>
+        <h1 id="Codeforces-298A-Snow-Footprints"><a href="#Codeforces-298A-Snow-Footprints" class="headerlink" title="Codeforces 298A - Snow Footprints"></a>Codeforces 298A - Snow Footprints</h1><p><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/298/A">Snow Footprints</a></p>
 <p>There is a straight snowy road, divided into n blocks. The blocks are numbered from 1 to n from left to right. If one moves from the i-th block to the (i + 1)-th block, he will leave a right footprint on the i-th block. Similarly, if one moves from the i-th block to the (i - 1)-th block, he will leave a left footprint on the i-th block. If there already is a footprint on the i-th block, the new footprint will cover the old one.</p>
-<a id="more"></a>
+<span id="more"></span>
 <p><img src="A.PNG" alt="A"><br>At the beginning, there were no footprints. Then polar bear Alice starts from the s-th block, makes a sequence of moves and ends in the t-th block. It is known that Alice never moves outside of the road.</p>
 <p>You are given the description of Alice’s footprints. Your task is to find a pair of possible values of s, t by looking at the footprints.</p>
 <h4 id="Input"><a href="#Input" class="headerlink" title="Input:"></a>Input:</h4><p>The first line of the input contains integer n (3 ≤ n ≤ 1000).</p>
@@ -301,13 +301,13 @@
 <p>It’s guaranteed that the given string contains at least one character not equal to “.”. Also, the first and the last character will always be “.”. It’s guaranteed that a solution exists.</p>
 <h4 id="Output"><a href="#Output" class="headerlink" title="Output:"></a>Output:</h4><p>Print two space-separated integers — the values of s and t. If there are several possible solutions you can print any of them.</p>
 <h4 id="範例"><a href="#範例" class="headerlink" title="範例:"></a>範例:</h4><p>input:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">9</span><br><span class="line">..RRLL...</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">9</span><br><span class="line">..RRLL...</span><br></pre></td></tr></table></figure>
 <p>output:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3 4</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3 4</span><br></pre></td></tr></table></figure>
 <p>input:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">11</span><br><span class="line">.RRRLLLLL..</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">11</span><br><span class="line">.RRRLLLLL..</span><br></pre></td></tr></table></figure>
 <p>output:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">7 5</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">7 5</span><br></pre></td></tr></table></figure>
 <h4 id="Note"><a href="#Note" class="headerlink" title="Note:"></a>Note:</h4><p>The first test sample is the one in the picture.</p>
 <h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>輸入一串腳印，問你其中一種可能的起點跟終點是多少？</p>
 <h4 id="思路"><a href="#思路" class="headerlink" title="思路:"></a>思路:</h4><p>● 分析一下可以得知實際上只會有三種模式</p>

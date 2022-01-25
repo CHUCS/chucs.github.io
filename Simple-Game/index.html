@@ -291,22 +291,22 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="Codeforces-977A-Simple-Game"><a href="#Codeforces-977A-Simple-Game" class="headerlink" title="Codeforces 977A - Simple Game"></a>Codeforces 977A - Simple Game</h1><p><a href="https://codeforces.com/problemset/problem/977/A" target="_blank" rel="noopener">Simple Game</a></p>
+        <h1 id="Codeforces-977A-Simple-Game"><a href="#Codeforces-977A-Simple-Game" class="headerlink" title="Codeforces 977A - Simple Game"></a>Codeforces 977A - Simple Game</h1><p><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/977/A">Simple Game</a></p>
 <p>One day Misha and Andrew were playing a very simple game. First, each player chooses an integer in the range from 1 to n. Let’s assume that Misha chose number m, and Andrew chose number a.</p>
-<a id="more"></a>
+<span id="more"></span>
 <p>Then, by using a random generator they choose a random integer c in the range between 1 and n (any integer from 1 to n is chosen with the same probability), after which the winner is the player, whose number was closer to c. The boys agreed that if m and a are located on the same distance from c, Misha wins.</p>
 <p>Andrew wants to win very much, so he asks you to help him. You know the number selected by Misha, and number n. You need to determine which value of a Andrew must choose, so that the probability of his victory is the highest possible.</p>
 <p>More formally, you need to find such integer a (1 ≤ a ≤ n), that the probability that  is maximal, where c is the equiprobably chosen integer from 1 to n (inclusive).</p>
 <h4 id="Input"><a href="#Input" class="headerlink" title="Input:"></a>Input:</h4><p>The first line contains two integers n and m (1 ≤ m ≤ n ≤ 10<sup>9</sup>) — the range of numbers in the game, and the number selected by Misha respectively.</p>
 <h4 id="Output"><a href="#Output" class="headerlink" title="Output:"></a>Output:</h4><p>Print a single number — such value a, that probability that Andrew wins is the highest. If there are multiple such values, print the minimum of them.</p>
 <h4 id="範例"><a href="#範例" class="headerlink" title="範例:"></a>範例:</h4><p>input:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3 1</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3 1</span><br></pre></td></tr></table></figure>
 <p>output:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2</span><br></pre></td></tr></table></figure>
 <p>input:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4 3</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4 3</span><br></pre></td></tr></table></figure>
 <p>output:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2</span><br></pre></td></tr></table></figure>
 
 <h4 id="Note"><a href="#Note" class="headerlink" title="Note:"></a>Note:</h4><p>In the first sample test: Andrew wins if c is equal to 2 or 3. The probability that Andrew wins is 2 / 3. If Andrew chooses a = 3, the probability of winning will be 1 / 3. If a = 1, the probability of winning is 0.</p>
 <p>In the second sample test: Andrew wins if c is equal to 1 and 2. The probability that Andrew wins is 1 / 2. For other choices of a the probability of winning is less.</p>

@@ -293,26 +293,26 @@
 
       
         <h1 id="Parallel-Programming-平行程式"><a href="#Parallel-Programming-平行程式" class="headerlink" title="Parallel Programming 平行程式"></a>Parallel Programming 平行程式</h1><p>平行計算是一種類型的計算，許多計算或執行過程是同時進行的。把大問題分為小問題，然後同時解決。以下式建置平行程式環境的流程。</p>
-<a id="more"></a>
-<h2 id="MS-MPI-安裝教學"><a href="#MS-MPI-安裝教學" class="headerlink" title="MS-MPI 安裝教學"></a>MS-MPI 安裝教學</h2><p>首先打開<a href="https://docs.microsoft.com/en-us/message-passing-interface/microsoft-mpi" target="_blank" rel="noopener">MS-MPI</a>然後到下載的地方點擊MS-MPI vxx.x.x，如下圖紫色字體。</p>
-<p><img src="Otdr8uZ.png" alt=""></p>
+<span id="more"></span>
+<h2 id="MS-MPI-安裝教學"><a href="#MS-MPI-安裝教學" class="headerlink" title="MS-MPI 安裝教學"></a>MS-MPI 安裝教學</h2><p>首先打開<a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/message-passing-interface/microsoft-mpi">MS-MPI</a>然後到下載的地方點擊MS-MPI vxx.x.x，如下圖紫色字體。</p>
+<p><img src="Otdr8uZ.png"></p>
 <p>接著將所有檔案打勾然後按下一步就會把檔案下載下來了。</p>
-<p><img src="a8jSD2x.png" alt=""></p>
+<p><img src="a8jSD2x.png"></p>
 <p>下載下來後執行並下移步到底，若要更換路徑請自行記得路徑。<br>接著打開Visual Studio 開啟一個C++專案。</p>
-<p><img src="hfmZ9fk.png" alt=""></p>
+<p><img src="hfmZ9fk.png"></p>
 <p>點擊右邊專案右鍵，屬性。</p>
-<p><img src="eC9A1o6.png" alt=""></p>
+<p><img src="eC9A1o6.png"></p>
 <p>打開後按<code>C/C++</code>-&gt;<code>其他include目錄</code>，將剛剛按裝好的<code>MPI/Include</code>路徑設好。</p>
-<p><img src="1LVNsYp.png" alt=""></p>
-<p><img src="tXWUuIj.png" alt=""></p>
+<p><img src="1LVNsYp.png"></p>
+<p><img src="tXWUuIj.png"></p>
 <p>建置完後就會產出一個<code>.exe</code>的檔案。</p>
-<p><img src="1q8F8cx.png" alt=""></p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;mpi.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> rank, <span class="built_in">size</span>;</span><br><span class="line">	MPI_Init(&amp;argc, &amp;argv);</span><br><span class="line"></span><br><span class="line">	MPI_Comm_rank(MPI_COMM_WORLD, &amp;rank);</span><br><span class="line">	MPI_Comm_size(MPI_COMM_WORLD, &amp;<span class="built_in">size</span>);</span><br><span class="line"></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"Hello, World.  I am %d of %d\n"</span>, rank, <span class="built_in">size</span>);</span><br><span class="line"></span><br><span class="line">	MPI_Finalize();</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="1q8F8cx.png"></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;mpi.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> rank, size;</span><br><span class="line">	MPI_Init(&amp;argc, &amp;argv);</span><br><span class="line"></span><br><span class="line">	MPI_Comm_rank(MPI_COMM_WORLD, &amp;rank);</span><br><span class="line">	MPI_Comm_size(MPI_COMM_WORLD, &amp;size);</span><br><span class="line"></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;Hello, World.  I am %d of %d\n&quot;</span>, rank, size);</span><br><span class="line"></span><br><span class="line">	MPI_Finalize();</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><img src="HKDJrkG.png" alt=""></p>
+<p><img src="HKDJrkG.png"></p>
 <p>將終端機打開<code>source\repos\MpiTest\Debug</code>執行面下指令(這個路徑是你的專案路徑，因此可能會有所不同)，你就會看到下圖結果。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mpiexec -n 4 MpiTest.exe</span><br></pre></td></tr></table></figure>
-<p>若無此指令請確認環境變數是否有設定完成。<br><img src="aXnvwD9.png" alt=""></p>
+<p>若無此指令請確認環境變數是否有設定完成。<br><img src="aXnvwD9.png"></p>
 
     </div>
 

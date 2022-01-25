@@ -291,9 +291,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="Codeforces-707B-Bakery"><a href="#Codeforces-707B-Bakery" class="headerlink" title="Codeforces 707B - Bakery"></a>Codeforces 707B - Bakery</h1><p><a href="https://codeforces.com/problemset/problem/707/B" target="_blank" rel="noopener">Bakery</a></p>
+        <h1 id="Codeforces-707B-Bakery"><a href="#Codeforces-707B-Bakery" class="headerlink" title="Codeforces 707B - Bakery"></a>Codeforces 707B - Bakery</h1><p><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/707/B">Bakery</a></p>
 <p>Masha wants to open her own bakery and bake muffins in one of the n cities numbered from 1 to n. There are m bidirectional roads, each of whose connects some pair of cities.</p>
-<a id="more"></a>
+<span id="more"></span>
 <p>To bake muffins in her bakery, Masha needs to establish flour supply from some storage. There are only k storages, located in different cities numbered a<sub>1</sub>, a<sub>2</sub>, …, a<sub>k</sub>.</p>
 <p>Unforunately the law of the country Masha lives in prohibits opening bakery in any of the cities which has storage located in it. She can open it only in one of another n - k cities, and, of course, flour delivery should be paid — for every kilometer of path between storage and bakery Masha should pay 1 ruble.</p>
 <p>Formally, Masha will pay x roubles, if she will open the bakery in some city b (a<sub>i</sub> ≠ b for every 1 ≤ i ≤ k) and choose a storage in some city s (s = aj for some 1 ≤ j ≤ k) and b and s are connected by some path of roads of summary length x (if there are more than one path, Masha is able to choose which of them should be used).</p>
@@ -304,21 +304,21 @@
 <h4 id="Output"><a href="#Output" class="headerlink" title="Output:"></a>Output:</h4><p>Print the minimum possible amount of rubles Masha should pay for flour delivery in the only line.</p>
 <p>If the bakery can not be opened (while satisfying conditions) in any of the n cities, print  - 1 in the only line.</p>
 <h4 id="範例"><a href="#範例" class="headerlink" title="範例:"></a>範例:</h4><p>input:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">5 4 2</span><br><span class="line">1 2 5</span><br><span class="line">1 2 3</span><br><span class="line">2 3 4</span><br><span class="line">1 4 10</span><br><span class="line">1 5</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">5 4 2</span><br><span class="line">1 2 5</span><br><span class="line">1 2 3</span><br><span class="line">2 3 4</span><br><span class="line">1 4 10</span><br><span class="line">1 5</span><br></pre></td></tr></table></figure>
 <p>output:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3</span><br></pre></td></tr></table></figure>
 <p>input:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">3 1 1</span><br><span class="line">1 2 3</span><br><span class="line">3</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">3 1 1</span><br><span class="line">1 2 3</span><br><span class="line">3</span><br></pre></td></tr></table></figure>
 <p>output:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-1</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-1</span><br></pre></td></tr></table></figure>
 <p>input:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">2 5</span><br><span class="line">5 4 3 2 1</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">2 5</span><br><span class="line">5 4 3 2 1</span><br></pre></td></tr></table></figure>
 <p>output:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1</span><br></pre></td></tr></table></figure>
 <p>input:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">3 9</span><br><span class="line">42 42 42 42 42 42 42 42 42</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">3 9</span><br><span class="line">42 42 42 42 42 42 42 42 42</span><br></pre></td></tr></table></figure>
 <p>output:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3</span><br></pre></td></tr></table></figure>
 <h4 id="Note"><a href="#Note" class="headerlink" title="Note:"></a>Note:</h4><p><img src="A.PNG" alt="A"></p>
 <h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>輸入N個人跟M包食物，再輸入這M包食物的種類。現在規定每個人指定一種食物，每天只能吃一樣種類的食物，沒有每個人都要指定一樣或不一樣的種類，問你這些食物最多能吃幾天？</p>
 <h4 id="思路"><a href="#思路" class="headerlink" title="思路:"></a>思路:</h4><p>用二分搜尋法搜尋天數d，判斷食物夠不夠吃d天。先統計食物的出現次數，出現次數除以天數就等於能給幾個人吃d天，加總所有食物能供給的人數，若是大於等於N就表示這些食物可以吃d天。</p>

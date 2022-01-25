@@ -290,9 +290,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="Codeforces-313B-Ilya-and-Queries"><a href="#Codeforces-313B-Ilya-and-Queries" class="headerlink" title="Codeforces 313B - Ilya and Queries"></a>Codeforces 313B - Ilya and Queries</h1><p><a href="https://codeforces.com/problemset/problem/313/B" target="_blank" rel="noopener">題目網址</a></p>
+        <h1 id="Codeforces-313B-Ilya-and-Queries"><a href="#Codeforces-313B-Ilya-and-Queries" class="headerlink" title="Codeforces 313B - Ilya and Queries"></a>Codeforces 313B - Ilya and Queries</h1><p><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/313/B">題目網址</a></p>
 <h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>給你一個字串s，由字元”.”和”#”組成，共有m個查詢，每個查詢為一組數字(l,r)，代表字串中的位置從左邊l到右邊r，查出此區段間有多少符合s[i] = s[i+1]。<br>(依題意，長度為n的字串，其字元對應位置為1~n)。</p>
-<a id="more"></a>
+<span id="more"></span>
 <h4 id="思路"><a href="#思路" class="headerlink" title="思路:"></a>思路:</h4><p>對每個字元s[i]紀錄從第一個字元s[1]到s[i]符合條件的數量，區間l ~ r的答案就會是1 ~ r的答案減掉1~l的答案。 </p>
 <h4 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼:"></a>程式碼:</h4><script src="https://gist.github.com/zxzxcc112/d2ee5f0909948e0231308c62bbcd921e.js"></script>
     </div>

@@ -687,7 +687,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2021-12-31 22:21:36" itemprop="dateModified" datetime="2021-12-31T22:21:36+08:00">2021-12-31</time>
+                <time title="修改時間：2022-01-11 13:38:29" itemprop="dateModified" datetime="2022-01-11T13:38:29+08:00">2022-01-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -911,7 +911,7 @@
 
       
           <h1 id="Rust-輸入"><a href="#Rust-輸入" class="headerlink" title="Rust 輸入"></a>Rust 輸入</h1><h3 id="單一輸入"><a href="#單一輸入" class="headerlink" title="單一輸入"></a>單一輸入</h3><p>利用rust的標準輸入法輸入一行字串，<code>std::io::stdin()</code></p>
-<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">main</span></span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">mut</span> s = <span class="built_in">String</span>::new();</span><br><span class="line">    std::io::stdin().read_line(&amp;<span class="keyword">mut</span> s).expect(<span class="string">"err read"</span>);</span><br><span class="line">        <span class="built_in">println!</span>(<span class="string">"&#123;&#125;"</span>, s);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">main</span></span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">mut</span> s = <span class="built_in">String</span>::new();</span><br><span class="line">    std::io::stdin().read_line(&amp;<span class="keyword">mut</span> s).expect(<span class="string">&quot;err read&quot;</span>);</span><br><span class="line">        <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;&quot;</span>, s);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/rust-011-input/#more" rel="contents">

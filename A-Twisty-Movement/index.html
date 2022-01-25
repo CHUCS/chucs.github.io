@@ -288,9 +288,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="CodeForces-933A-A-Twisty-Movement"><a href="#CodeForces-933A-A-Twisty-Movement" class="headerlink" title="CodeForces 933A - A Twisty Movement"></a>CodeForces 933A - A Twisty Movement</h1><p><a href="https://codeforces.com/problemset/problem/933/A" target="_blank" rel="noopener">A Twisty Movement</a></p>
+        <h1 id="CodeForces-933A-A-Twisty-Movement"><a href="#CodeForces-933A-A-Twisty-Movement" class="headerlink" title="CodeForces 933A - A Twisty Movement"></a>CodeForces 933A - A Twisty Movement</h1><p><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/933/A">A Twisty Movement</a></p>
 <h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>輸入一串由1和2組成的數列，可以左右翻轉任意的範圍一次，問最長的非遞減子序列是多長？</p>
-<a id="more"></a>
+<span id="more"></span>
 <h4 id="思路"><a href="#思路" class="headerlink" title="思路:"></a>思路:</h4><p>觀察後得知，題目是在求將數列分成4段之後(每一段的長度可以是0)，第1段1的數量+第2段2的數量+第3段1的數量+第4段2的數量的最大值是多少。因此創個陣列邊輸入邊維持最大值，[1]紀錄只有第1段時的最大值、[2]紀錄只有第1段及第2段時的最大值、[3]跟[4]同理，因次跑完後輸出[4]就是答案。</p>
 <h4 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼:"></a>程式碼:</h4><script src="https://gist.github.com/89snnfk561/7ed0e505140cd7796ab9db94fe515dec.js"></script>
 

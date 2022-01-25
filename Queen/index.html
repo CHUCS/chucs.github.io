@@ -290,9 +290,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="Codeforces-1143C-Queen"><a href="#Codeforces-1143C-Queen" class="headerlink" title="Codeforces 1143C - Queen"></a>Codeforces 1143C - Queen</h1><p><a href="https://codeforces.com/problemset/problem/1143/C" target="_blank" rel="noopener">題目網址</a></p>
+        <h1 id="Codeforces-1143C-Queen"><a href="#Codeforces-1143C-Queen" class="headerlink" title="Codeforces 1143C - Queen"></a>Codeforces 1143C - Queen</h1><p><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1143/C">題目網址</a></p>
 <h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>給你一棵有根樹，有1~n個頂點，沒有循環圖出現，有一個特殊的點叫做根，根的父級p<sub>i</sub>為-1。<br>有些點會尊敬長輩，有些不會，c<sub>i</sub> = 1表示不尊敬任何長輩，c<sub>i</sub> = 0表示尊敬所有長輩。<br>你必須一步步刪除一個非根的點，這的點被刪除的條件為不尊敬父母跟不被所有這個點的小孩尊敬，若一次動作中有多個點可以刪除，從「編號最小」的開始刪除，當這個點被刪除後，他的所有小孩會連接到他的父母。<br>當沒有點可以刪除後，照順序印出你刪除的點。</p>
-<a id="more"></a>
+<span id="more"></span>
 <h4 id="思路"><a href="#思路" class="headerlink" title="思路:"></a>思路:</h4><p>思考如果本身是尊敬長輩的，那自己跟父母就不會被刪除，被刪除的點改變連接狀態，但不會影響結果，所以會被刪掉的點找出來後從編號小的點開始輸出。</p>
 <h4 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼:"></a>程式碼:</h4><script src="https://gist.github.com/zxzxcc112/4f39d918e9e2586f63f31405ee11f1a1.js"></script>
     </div>

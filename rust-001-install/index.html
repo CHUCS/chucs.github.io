@@ -289,15 +289,15 @@
         <h1 id="RUST-介紹與安裝"><a href="#RUST-介紹與安裝" class="headerlink" title="RUST 介紹與安裝"></a>RUST 介紹與安裝</h1><h2 id="優點"><a href="#優點" class="headerlink" title="優點"></a>優點</h2><p>安全：Rust 擁有豐富類型系統和所有權模型，保證了內存安全性和線程安全性。</p>
 <p>並發：Rust 可讓程序在編譯時並發執行，也就是多個事件在同一時間間隔執行，並且將安全與並發完美統一。</p>
 <p>高效：Rust 快且節省內存。</p>
-<a id="more"></a>
-<h2 id="安裝-RUST"><a href="#安裝-RUST" class="headerlink" title="安裝 RUST"></a>安裝 RUST</h2><p>到<a href="https://www.rust-lang.org/" target="_blank" rel="noopener">RUST</a>的官網按下<code>get started</code>然後你會看到下載畫面，選擇你的作業系統下載對應的下載檔案，通常他會先替你選好。</p>
-<p><img src="E2SfgQY.png" alt=""></p>
+<span id="more"></span>
+<h2 id="安裝-RUST"><a href="#安裝-RUST" class="headerlink" title="安裝 RUST"></a>安裝 RUST</h2><p>到<a target="_blank" rel="noopener" href="https://www.rust-lang.org/">RUST</a>的官網按下<code>get started</code>然後你會看到下載畫面，選擇你的作業系統下載對應的下載檔案，通常他會先替你選好。</p>
+<p><img src="E2SfgQY.png"></p>
 <p>打開你下載好的<code>rustup-init</code>檔案，打開後你會看到他所幫你安裝的路徑等資訊，接著在終端機內輸入1使用預設的安裝。</p>
-<p><img src="MOrVY0n.png" alt=""></p>
+<p><img src="MOrVY0n.png"></p>
 <p>安裝完後可以在終端機輸入<code>rustc --version</code>和<code>cargo --version</code>查看你所安裝版本。</p>
-<p>接下來下載<code>Visual Studio Code</code>，打開後點擊左邊第四個選項來新增RUST套件，新增完後重新載入<code>Visual Studio Code</code>，然後右下角會跳出安裝RUST提醒就直接<code>install</code>。<br><img src="Dt3OZKz.png" alt=""></p>
+<p>接下來下載<code>Visual Studio Code</code>，打開後點擊左邊第四個選項來新增RUST套件，新增完後重新載入<code>Visual Studio Code</code>，然後右下角會跳出安裝RUST提醒就直接<code>install</code>。<br><img src="Dt3OZKz.png"></p>
 <p>新建一個<code>hello.rs</code>然後打開檔案將以下程式碼寫入。</p>
-<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">main</span></span>() &#123;</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">"Hello, world!"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">main</span></span>() &#123;</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;Hello, world!&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>完成後打開終端機到檔案下的目錄執行下面的指令。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ rustc hello.rs</span><br><span class="line">$ ./hello</span><br></pre></td></tr></table></figure>

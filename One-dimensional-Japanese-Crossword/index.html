@@ -292,33 +292,33 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="Codeforces-721A-One-dimensional-Japanese-Crossword"><a href="#Codeforces-721A-One-dimensional-Japanese-Crossword" class="headerlink" title="Codeforces 721A - One-dimensional Japanese Crossword"></a>Codeforces 721A - One-dimensional Japanese Crossword</h1><p><a href="https://codeforces.com/problemset/problem/721/A" target="_blank" rel="noopener">One-dimensional Japanese Crossword</a></p>
-<p>Recently Adaltik discovered japanese crosswords. Japanese crossword is a picture, represented as a table sized a × b squares, and each square is colored white or black. There are integers to the left of the rows and to the top of the columns, encrypting the corresponding row or column. The number of integers represents how many groups of black squares there are in corresponding row or column, and the integers themselves represents the number of consecutive black squares in corresponding group (you can find more detailed explanation in Wikipedia <a href="https://en.wikipedia.org/wiki/Japanese_crossword" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Japanese_crossword</a>).</p>
-<a id="more"></a>
+        <h1 id="Codeforces-721A-One-dimensional-Japanese-Crossword"><a href="#Codeforces-721A-One-dimensional-Japanese-Crossword" class="headerlink" title="Codeforces 721A - One-dimensional Japanese Crossword"></a>Codeforces 721A - One-dimensional Japanese Crossword</h1><p><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/721/A">One-dimensional Japanese Crossword</a></p>
+<p>Recently Adaltik discovered japanese crosswords. Japanese crossword is a picture, represented as a table sized a × b squares, and each square is colored white or black. There are integers to the left of the rows and to the top of the columns, encrypting the corresponding row or column. The number of integers represents how many groups of black squares there are in corresponding row or column, and the integers themselves represents the number of consecutive black squares in corresponding group (you can find more detailed explanation in Wikipedia <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Japanese_crossword">https://en.wikipedia.org/wiki/Japanese_crossword</a>).</p>
+<span id="more"></span>
 <p>Adaltik decided that the general case of japanese crossword is too complicated and drew a row consisting of n squares (e.g. japanese crossword sized 1 × n), which he wants to encrypt in the same way as in japanese crossword.<br><img src="A.PNG" alt="A"><br>Help Adaltik find the numbers encrypting the row he drew.</p>
 <h4 id="Input"><a href="#Input" class="headerlink" title="Input:"></a>Input:</h4><p>The first line of the input contains a single integer n (1 ≤ n ≤ 100) — the length of the row. The second line of the input contains a single string consisting of n characters ‘B’ or ‘W’, (‘B’ corresponds to black square, ‘W’ — to white square in the row that Adaltik drew).</p>
 <h4 id="Output"><a href="#Output" class="headerlink" title="Output:"></a>Output:</h4><p>The first line should contain a single integer k — the number of integers encrypting the row, e.g. the number of groups of black squares in the row.</p>
 <p>The second line should contain k integers, encrypting the row, e.g. corresponding to sizes of groups of consecutive black squares in the order from left to right.</p>
 <h4 id="範例"><a href="#範例" class="headerlink" title="範例:"></a>範例:</h4><p>input:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">BBW</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">BBW</span><br></pre></td></tr></table></figure>
 <p>output:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1</span><br><span class="line">2 </span><br></pre></td></tr></table></figure>
 <p>input:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">5</span><br><span class="line">BWBWB</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">5</span><br><span class="line">BWBWB</span><br></pre></td></tr></table></figure>
 <p>output:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">1 1 1</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">1 1 1 </span><br></pre></td></tr></table></figure>
 <p>input:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">4</span><br><span class="line">WWWW</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">4</span><br><span class="line">WWWW</span><br></pre></td></tr></table></figure>
 <p>output:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0</span><br></pre></td></tr></table></figure>
 <p>input:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">4</span><br><span class="line">BBBB</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">4</span><br><span class="line">BBBB</span><br></pre></td></tr></table></figure>
 <p>output:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1</span><br><span class="line">4</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1</span><br><span class="line">4 </span><br></pre></td></tr></table></figure>
 <p>input:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">13</span><br><span class="line">WBBBBWWBWBBBW</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">13</span><br><span class="line">WBBBBWWBWBBBW</span><br></pre></td></tr></table></figure>
 <p>output:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">4 1 3</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">4 1 3 </span><br></pre></td></tr></table></figure>
 
 <h4 id="Note"><a href="#Note" class="headerlink" title="Note:"></a>Note:</h4><p>The last sample case correspond to the picture in the statement.</p>
 <h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>這題簡單來說呢就是找出有多少個連續’B’的區間，第一行輸出總共這條字串有幾組連續’B’的區間，第二行則輸出每組區間’B’得數量。</p>

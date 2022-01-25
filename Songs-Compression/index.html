@@ -291,9 +291,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="Codeforces-1015C-Songs-Compression"><a href="#Codeforces-1015C-Songs-Compression" class="headerlink" title="Codeforces 1015C - Songs Compression"></a>Codeforces 1015C - Songs Compression</h1><p><a href="https://codeforces.com/problemset/problem/1015/C" target="_blank" rel="noopener">Songs Compression</a></p>
+        <h1 id="Codeforces-1015C-Songs-Compression"><a href="#Codeforces-1015C-Songs-Compression" class="headerlink" title="Codeforces 1015C - Songs Compression"></a>Codeforces 1015C - Songs Compression</h1><p><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1015/C">Songs Compression</a></p>
 <p>Ivan has n songs on his phone. The size of the i-th song is a<sub>i</sub> bytes. Ivan also has a flash drive which can hold at most m bytes in total. Initially, his flash drive is empty.</p>
-<a id="more"></a>
+<span id="more"></span>
 <p>Ivan wants to copy all n songs to the flash drive. He can compress the songs. If he compresses the i-th song, the size of the i-th song reduces from a<sub>i</sub> to b<sub>i</sub> bytes (b<sub>i</sub> &lt; a<sub>i</sub>).</p>
 <p>Ivan can compress any subset of the songs (possibly empty) and copy all the songs to his flash drive if the sum of their sizes is at most m. He can compress any subset of the songs (not necessarily contiguous).</p>
 <p>Ivan wants to find the minimum number of songs he needs to compress in such a way that all his songs fit on the drive (i.e. the sum of their sizes is less than or equal to m).</p>
@@ -302,13 +302,13 @@
 <p>The next n lines contain two integers each: the i-th line contains two integers ai and bi (1≤a<sub>i</sub>,b<sub>i</sub>≤10<sup>9</sup>, a<sub>i</sub>&gt;b<sub>i</sub>) — the initial size of the i-th song and the size of the i-th song after compression.</p>
 <h4 id="Output"><a href="#Output" class="headerlink" title="Output:"></a>Output:</h4><p>If it is impossible to compress a subset of the songs in such a way that all songs fit on the flash drive, print “-1”. Otherwise print the minimum number of the songs to compress.</p>
 <h4 id="範例"><a href="#範例" class="headerlink" title="範例:"></a>範例:</h4><p>input:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">4 21</span><br><span class="line">10 8</span><br><span class="line">7 4</span><br><span class="line">3 1</span><br><span class="line">5 4</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">4 21</span><br><span class="line">10 8</span><br><span class="line">7 4</span><br><span class="line">3 1</span><br><span class="line">5 4</span><br></pre></td></tr></table></figure>
 <p>output:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2</span><br></pre></td></tr></table></figure>
 <p>input:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">4 16</span><br><span class="line">10 8</span><br><span class="line">7 4</span><br><span class="line">3 1</span><br><span class="line">5 4</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">4 16</span><br><span class="line">10 8</span><br><span class="line">7 4</span><br><span class="line">3 1</span><br><span class="line">5 4</span><br></pre></td></tr></table></figure>
 <p>output:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-1</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-1</span><br></pre></td></tr></table></figure>
 
 <h4 id="Note"><a href="#Note" class="headerlink" title="Note:"></a>Note:</h4><p>In the first example Ivan can compress the first and the third songs so after these moves the sum of sizes will be equal to 8+7+1+5=21≤21. Also Ivan can compress the first and the second songs, then the sum of sizes will be equal 8+4+3+5=20≤21. Note that compressing any single song is not sufficient to copy all the songs on the flash drive (for example, after compressing the second song the sum of sizes will be equal to 10+4+3+5=22&gt;21).</p>
 <p>In the second example even if Ivan compresses all the songs the sum of sizes will be equal 8+4+1+4=17&gt;16<br>.</p>

@@ -285,13 +285,13 @@
 
       
         <h1 id="Rust-函式"><a href="#Rust-函式" class="headerlink" title="Rust 函式"></a>Rust 函式</h1><p>我們可以在src下創建一個新的檔案<code>print.rs</code>，編寫一下程式。</p>
-<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">pub</span> <span class="function"><span class="keyword">fn</span> <span class="title">run</span></span>()&#123;</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">"Hello print.rs run!!"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">pub</span> <span class="function"><span class="keyword">fn</span> <span class="title">run</span></span>()&#123;</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;Hello print.rs run!!&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
 <p>然後我們回到主程式來引用我們寫得函式。</p>
-<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">mod</span> print;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">main</span></span>() &#123;</span><br><span class="line">    print::run();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">mod</span> print;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">main</span></span>() &#123;</span><br><span class="line">    print::run();</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <p>接著執行就可以看到我們的結果了。</p>
-<p><img src="iMTn529.png" alt=""></p>
+<p><img src="iMTn529.png"></p>
 
     </div>
 

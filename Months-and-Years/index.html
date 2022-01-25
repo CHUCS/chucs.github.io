@@ -289,9 +289,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="Codeforces-899B-Months-and-Years"><a href="#Codeforces-899B-Months-and-Years" class="headerlink" title="Codeforces 899B - Months and Years"></a>Codeforces 899B - Months and Years</h1><p><a href="https://codeforces.com/problemset/problem/899/B" target="_blank" rel="noopener">Months and Years</a></p>
+        <h1 id="Codeforces-899B-Months-and-Years"><a href="#Codeforces-899B-Months-and-Years" class="headerlink" title="Codeforces 899B - Months and Years"></a>Codeforces 899B - Months and Years</h1><p><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/899/B">Months and Years</a></p>
 <p>Everybody in Russia uses Gregorian calendar. In this calendar there are 31 days in January, 28 or 29 days in February (depending on whether the year is leap or not), 31 days in March, 30 days in April, 31 days in May, 30 in June, 31 in July, 31 in August, 30 in September, 31 in October, 30 in November, 31 in December.</p>
-<a id="more"></a>
+<span id="more"></span>
 <p>A year is leap in one of two cases: either its number is divisible by 4, but not divisible by 100, or is divisible by 400. For example, the following years are leap: 2000, 2004, but years 1900 and 2018 are not leap.</p>
 <p>In this problem you are given n (1 ≤ n ≤ 24) integers a<sub>1</sub>, a<sub>2</sub>, …, a<sub>n</sub>, and you have to check if these integers could be durations in days of n consecutive months, according to Gregorian calendar. Note that these months could belong to several consecutive years. In other words, check if there is a month in some year, such that its duration is a<sub>1</sub> days, duration of the next month is a<sub>2</sub> days, and so on.</p>
 <h4 id="Input"><a href="#Input" class="headerlink" title="Input:"></a>Input:</h4><p>The first line contains single integer n (1 ≤ n ≤ 24) — the number of integers.</p>
@@ -299,25 +299,25 @@
 <h4 id="Output"><a href="#Output" class="headerlink" title="Output:"></a>Output:</h4><p>If there are several consecutive months that fit the sequence, print “YES” (without quotes). Otherwise, print “NO” (without quotes).</p>
 <p>You can print each letter in arbitrary case (small or large).</p>
 <h4 id="範例"><a href="#範例" class="headerlink" title="範例:"></a>範例:</h4><p>input:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">4</span><br><span class="line">31 31 30 31</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">4</span><br><span class="line">31 31 30 31</span><br></pre></td></tr></table></figure>
 <p>output:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Yes</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Yes</span><br></pre></td></tr></table></figure>
 <p>input:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">2</span><br><span class="line">30 30</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">2</span><br><span class="line">30 30</span><br></pre></td></tr></table></figure>
 <p>output:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">No</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">No</span><br></pre></td></tr></table></figure>
 <p>input:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">5</span><br><span class="line">29 31 30 31 30</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">5</span><br><span class="line">29 31 30 31 30</span><br></pre></td></tr></table></figure>
 <p>output:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Yes</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Yes</span><br></pre></td></tr></table></figure>
 <p>input:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">31 28 30</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">31 28 30</span><br></pre></td></tr></table></figure>
 <p>output:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">No</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">No</span><br></pre></td></tr></table></figure>
 <p>input:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">31 31 28</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">31 31 28</span><br></pre></td></tr></table></figure>
 <p>output:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Yes</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Yes</span><br></pre></td></tr></table></figure>
 <h4 id="Note"><a href="#Note" class="headerlink" title="Note:"></a>Note:</h4><p>In the first example the integers can denote months July, August, September and October.</p>
 <p>In the second example the answer is no, because there are no two consecutive months each having 30 days.</p>
 <p>In the third example the months are: February (leap year) — March — April – May — June.</p>

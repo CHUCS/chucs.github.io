@@ -288,9 +288,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="穩定排序"><a href="#穩定排序" class="headerlink" title="穩定排序"></a>穩定排序</h1><p><a href="https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_2_C" target="_blank" rel="noopener">題目網址</a></p>
+        <h1 id="穩定排序"><a href="#穩定排序" class="headerlink" title="穩定排序"></a>穩定排序</h1><p><a target="_blank" rel="noopener" href="https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_2_C">題目網址</a></p>
 <h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>讓我們安排一副紙牌。總共有36張卡，四個狀態（S，H，C，D）和9個值（1、2，… 9）。<br>請將他們由小到大排序，並檢查排序結果是否有按照出現順序排序。例如：輸入 “D1 S2 H2”，排序結果為”D1 H2 S2”，而在輸入時S2比H2前面因此輸出”Not stable”，若排序結果為”D1 S2 H2”，那麼輸出”Stable”。</p>
-<a id="more"></a>
+<span id="more"></span>
 <h4 id="思路"><a href="#思路" class="headerlink" title="思路:"></a>思路:</h4><p>先宣告一個結構儲存三個狀態分別為，狀態、數字和輸入順序，利用此結構進行選擇排序與泡沫排序，排序完後檢查陣列，如果數字一樣而且前面順序大於後面那就代表不穩定。</p>
 <h4 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼:"></a>程式碼:</h4><script src="https://gist.github.com/Daviswww/78500fcd44526355e664551e4333f5aa.js"></script>
     </div>

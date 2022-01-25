@@ -290,9 +290,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="Codeforces-913B-Christmas-Spruce"><a href="#Codeforces-913B-Christmas-Spruce" class="headerlink" title="Codeforces 913B - Christmas Spruce"></a>Codeforces 913B - Christmas Spruce</h1><p><a href="https://codeforces.com/problemset/problem/913/B" target="_blank" rel="noopener">題目網址</a></p>
+        <h1 id="Codeforces-913B-Christmas-Spruce"><a href="#Codeforces-913B-Christmas-Spruce" class="headerlink" title="Codeforces 913B - Christmas Spruce"></a>Codeforces 913B - Christmas Spruce</h1><p><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/913/B">題目網址</a></p>
 <h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>有個有根樹，若點u有個連接到點v，那我們稱點u為小孩，點v為父母，另外若一個點有父母但沒有小孩，我們稱之為「葉子」。<br>我們稱一種有根樹叫spruce，這種樹的所有非葉子的點都具有至少三個葉子，給你一個有根樹，從第二個點開始輸入它連接的父母，請問這是spruce嗎?</p>
-<a id="more"></a>
+<span id="more"></span>
 <p>(點1一定是樹根)</p>
 <h4 id="思路"><a href="#思路" class="headerlink" title="思路:"></a>思路:</h4><p>先計算每個點被多少點(孩子)連接，再看每個點是不是葉子，將不是葉子的點的父母連接數-1，被連接數 = 0的就是葉子，但如果因為-1的關係變成0必須判斷為否，可以提早判斷變成判斷是否小於3，最後確認每個非葉子的點是不是至少有三個葉子。</p>
 <h4 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼:"></a>程式碼:</h4><script src="https://gist.github.com/zxzxcc112/bb663ba790cb88e745dc1c8c1a0647ff.js"></script>

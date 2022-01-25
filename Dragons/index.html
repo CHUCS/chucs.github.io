@@ -290,21 +290,21 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="Codeforces-230A-Dragons"><a href="#Codeforces-230A-Dragons" class="headerlink" title="Codeforces 230A - Dragons"></a>Codeforces 230A - Dragons</h1><p><a href="https://codeforces.com/problemset/problem/230/A" target="_blank" rel="noopener">Dragons</a></p>
+        <h1 id="Codeforces-230A-Dragons"><a href="#Codeforces-230A-Dragons" class="headerlink" title="Codeforces 230A - Dragons"></a>Codeforces 230A - Dragons</h1><p><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/230/A">Dragons</a></p>
 <p>Kirito is stuck on a level of the MMORPG he is playing now. To move on in the game, he’s got to defeat all n dragons that live on this level. Kirito and the dragons have strength, which is represented by an integer. In the duel between two opponents the duel’s outcome is determined by their strength. Initially, Kirito’s strength equals s.</p>
-<a id="more"></a>
+<span id="more"></span>
 <p>If Kirito starts duelling with the i-th (1 ≤ i ≤ n) dragon and Kirito’s strength is not greater than the dragon’s strength x<sub>i</sub>, then Kirito loses the duel and dies. But if Kirito’s strength is greater than the dragon’s strength, then he defeats the dragon and gets a bonus strength increase by y<sub>i</sub>.</p>
 <p>Kirito can fight the dragons in any order. Determine whether he can move on to the next level of the game, that is, defeat all dragons without a single loss.</p>
 <h4 id="Input"><a href="#Input" class="headerlink" title="Input:"></a>Input:</h4><p>The first line contains two space-separated integers s and n (1 ≤ s ≤ 10<sup>4</sup>, 1 ≤ n ≤ 10<sup>3</sup>). Then n lines follow: the i-th line contains space-separated integers xi and yi (1 ≤ x<sub>i</sub> ≤ 10<sup>4</sup>, 0 ≤ y<sub>i</sub> ≤ 10<sup>4</sup>) — the i-th dragon’s strength and the bonus for defeating it.</p>
 <h4 id="Output"><a href="#Output" class="headerlink" title="Output:"></a>Output:</h4><p>On a single line print “YES” (without the quotes), if Kirito can move on to the next level and print “NO” (without the quotes), if he can’t.</p>
 <h4 id="範例"><a href="#範例" class="headerlink" title="範例:"></a>範例:</h4><p>input:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">2 2</span><br><span class="line">1 99</span><br><span class="line">100 0</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">2 2</span><br><span class="line">1 99</span><br><span class="line">100 0</span><br></pre></td></tr></table></figure>
 <p>output:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">YES</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">YES</span><br></pre></td></tr></table></figure>
 <p>input:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">10 1</span><br><span class="line">100 100</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">10 1</span><br><span class="line">100 100</span><br></pre></td></tr></table></figure>
 <p>output:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">NO</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">NO</span><br></pre></td></tr></table></figure>
 <h4 id="Note"><a href="#Note" class="headerlink" title="Note:"></a>Note:</h4><p>In the first sample Kirito’s strength initially equals 2. As the first dragon’s strength is less than 2, Kirito can fight it and defeat it. After that he gets the bonus and his strength increases to 2 + 99 = 101. Now he can defeat the second dragon and move on to the next level.</p>
 <p>In the second sample Kirito’s strength is too small to defeat the only dragon and win.</p>
 <h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>給你一開始的力量跟每頭龍的力量和打倒後增加的力量，當你的力量大於龍的力量時可以打倒他並增加力量，問你能不能打倒所有龍？</p>

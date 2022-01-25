@@ -291,9 +291,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="Codeforces-218C-Ice-Skating"><a href="#Codeforces-218C-Ice-Skating" class="headerlink" title="Codeforces 218C - Ice Skating"></a>Codeforces 218C - Ice Skating</h1><p><a href="https://codeforces.com/problemset/problem/218/C" target="_blank" rel="noopener">題目網址</a></p>
+        <h1 id="Codeforces-218C-Ice-Skating"><a href="#Codeforces-218C-Ice-Skating" class="headerlink" title="Codeforces 218C - Ice Skating"></a>Codeforces 218C - Ice Skating</h1><p><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/218/C">題目網址</a></p>
 <h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>Bajtek在學習溜冰，溜冰場裡有n個雪堆在不同的位置，Bajtek只會往東西南北四個方向移動，並且停不下來因此必須要依靠雪堆停下來，為了確保Bajtek能停下來，也就是說，每個雪堆的四個方向至少要有另一個雪堆，他想要多堆幾個雪堆，請幫忙找出Bajtek「最少」還需要堆多少雪堆?</p>
-<a id="more"></a>
+<span id="more"></span>
 <h4 id="思路"><a href="#思路" class="headerlink" title="思路:"></a>思路:</h4><p>用平面來看，一個雪堆往四個方向延伸尋找有沒有其他雪堆，如此可以將數個雪堆連在一起形成符合條件的集合，而平面中可以形成多個集合，代表每個集合中的任一雪堆不會與另一個集合中的任何雪堆有交集，讓任兩個集合有交集就需要多一個雪堆放在能讓兩集合相通的位置，所以答案是(集合數量-1)。</p>
 <h4 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼:"></a>程式碼:</h4><script src="https://gist.github.com/zxzxcc112/e6dc78157461da5abb256bf66544c028.js"></script>
     </div>

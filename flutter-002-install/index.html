@@ -37,7 +37,7 @@
 <meta property="og:image" content="https://chucs.github.io/flutter-002-install/vPUuq1N.jpg">
 <meta property="og:image" content="https://chucs.github.io/flutter-002-install/1rHwDHW.jpg">
 <meta property="article:published_time" content="2021-01-18T06:37:26.000Z">
-<meta property="article:modified_time" content="2021-12-31T14:21:36.639Z">
+<meta property="article:modified_time" content="2022-01-11T05:38:29.697Z">
 <meta property="article:author" content="CHUPCCA">
 <meta property="article:tag" content="flutter">
 <meta name="twitter:card" content="summary">
@@ -249,7 +249,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2021-12-31 22:21:36" itemprop="dateModified" datetime="2021-12-31T22:21:36+08:00">2021-12-31</time>
+                <time title="修改時間：2022-01-11 13:38:29" itemprop="dateModified" datetime="2022-01-11T13:38:29+08:00">2022-01-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -300,12 +300,9 @@
 
 <ol start="2">
 <li><p>將文件打開到所需位置</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ~/development</span><br><span class="line">$ unzip ~/Downloads/flutter_macos_1.22.5-stable.zip</span><br></pre></td></tr></table></figure>
-</li>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ~/development</span><br><span class="line">$ unzip ~/Downloads/flutter_macos_1.22.5-stable.zip</span><br></pre></td></tr></table></figure></li>
 <li><p>將Flutter工具添加到您的路徑：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">export</span> PATH=<span class="string">&quot;<span class="variable">$PATH</span>:`pwd`/flutter/bin&quot;</span></span><br></pre></td></tr></table></figure>
-
-</li>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">export</span> PATH=<span class="string">&quot;<span class="variable">$PATH</span>:`pwd`/flutter/bin&quot;</span></span><br></pre></td></tr></table></figure></li>
 </ol>
 <p>如果路徑加入後會消失的話可以參考一下步驟：</p>
 <ol>
@@ -327,19 +324,16 @@
 <li>檢查是否成功設置<blockquote>
 <p>將設置的終端機關閉後重新開器一個新的終端機來檢查路徑是否設置成功。</p>
 </blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">which</span> flutter</span><br></pre></td></tr></table></figure>
-
-</li>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">which</span> flutter</span><br></pre></td></tr></table></figure></li>
 </ol>
 <hr>
-<h3 id="設置-VSCdoe"><a href="#設置-VSCdoe" class="headerlink" title="設置 VSCdoe"></a>設置 VSCdoe</h3><p>安裝VSCode的<code>Dart</code>套件包。<br><img src="Ok6J2f9.jpg" alt=""><br>安裝VSCode的<code>Flutter</code>套件包。<br><img src="QL4qXq8.jpg" alt=""></p>
+<h3 id="設置-VSCdoe"><a href="#設置-VSCdoe" class="headerlink" title="設置 VSCdoe"></a>設置 VSCdoe</h3><p>安裝VSCode的<code>Dart</code>套件包。<br><img src="Ok6J2f9.jpg"><br>安裝VSCode的<code>Flutter</code>套件包。<br><img src="QL4qXq8.jpg"></p>
 <hr>
 <h3 id="設置-XCode"><a href="#設置-XCode" class="headerlink" title="設置 XCode"></a>設置 XCode</h3><ol>
 <li><p>安裝Xcode的最新穩定版本（使用Web下載或Mac App Store）。</p>
 </li>
 <li><p>通過從命令行運行以下命令，將Xcode命令行工具配置為使用新安裝的Xcode版本：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer</span><br><span class="line">$ sudo xcodebuild -runFirstLaunch</span><br></pre></td></tr></table></figure>
-</li>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer</span><br><span class="line">$ sudo xcodebuild -runFirstLaunch</span><br></pre></td></tr></table></figure></li>
 <li><p>通過一次打開Xcode並<code>sudo xcodebuild -license</code>從命令行確認或運行來確保Xcode許可協議已簽署 。<br>:::info<br>使用Xcode，您將能夠在iOS設備或模擬器上運行Flutter應用。<br>:::</p>
 </li>
 </ol>
@@ -347,8 +341,7 @@
 <h3 id="設置-模擬器"><a href="#設置-模擬器" class="headerlink" title="設置 模擬器"></a>設置 模擬器</h3><p>要準備在iOS模擬器上運行和測試您的Flutter應用，請執行以下步驟：</p>
 <ol>
 <li><p>在終端機中輸入以下命令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ open -a Simulator</span><br></pre></td></tr></table></figure>
-</li>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ open -a Simulator</span><br></pre></td></tr></table></figure></li>
 <li><p>點擊模擬器右鍵，選擇Device-&gt;IOS-&gt;選擇一個模擬器安裝。（建議iPhone 5s以上）</p>
 </li>
 <li><p>安裝完後就開著</p>
@@ -366,11 +359,11 @@
 <p>執行APP如下面命令，，成功後的畫面如下:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ flutter run</span><br></pre></td></tr></table></figure>
 
-<p><img src="vPUuq1N.jpg" alt=""></p>
+<p><img src="vPUuq1N.jpg"></p>
 <hr>
 <h3 id="Run-flutter-doctor"><a href="#Run-flutter-doctor" class="headerlink" title="Run flutter doctor"></a>Run flutter doctor</h3><p>運行以下命令以查看是否需要安裝任何依賴項才能完成設置，由於我沒有裝Android所以顯示未安裝成功。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ flutter doctor</span><br></pre></td></tr></table></figure>
-<p><img src="1rHwDHW.jpg" alt=""></p>
+<p><img src="1rHwDHW.jpg"></p>
 <hr>
 <p><a target="_blank" rel="noopener" href="https://flutter.dev/docs/get-started/install/macos">flutter source</a></p>
 

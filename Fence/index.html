@@ -290,9 +290,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="Codeforces-363B-Fence"><a href="#Codeforces-363B-Fence" class="headerlink" title="Codeforces 363B - Fence"></a>Codeforces 363B - Fence</h1><p><a href="https://codeforces.com/problemset/problem/363/B" target="_blank" rel="noopener">題目網址</a></p>
+        <h1 id="Codeforces-363B-Fence"><a href="#Codeforces-363B-Fence" class="headerlink" title="Codeforces 363B - Fence"></a>Codeforces 363B - Fence</h1><p><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/363/B">題目網址</a></p>
 <h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>Polycarpus家門前有個圍欄，由n個寬度相同的木板組成，第i個木板高度為h，Polycarpus買了一台寬度為k的鋼琴，他希望他希望拆掉連續k個木板使鋼琴能搬到家裡，而越高的木板拆除越費力，所以他希望找出最省力位置移除木板，也就是說找出某個木板的位置，向右k-1個木板高度相加會是「最小」的。<br>(圍欄是一個面，而不是環繞的; 木板的位置是1~n)</p>
-<a id="more"></a>
+<span id="more"></span>
 <h4 id="思路"><a href="#思路" class="headerlink" title="思路:"></a>思路:</h4><p>從第一個位置開始將k個木板的高度加總，紀錄高度與位置，每下一個位置，減去上個位置的木板加上下個木板，比較高度，較低的一方紀錄高度與位置，重複到n-k-1的位置，印出被記錄的位置就是答案。</p>
 <h4 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼:"></a>程式碼:</h4><script src="https://gist.github.com/zxzxcc112/45797becf15b6e30f58e326843714188.js"></script>
     </div>

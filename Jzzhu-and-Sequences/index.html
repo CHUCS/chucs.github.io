@@ -292,20 +292,20 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="Codeforces-450B-Jzzhu-and-Sequences"><a href="#Codeforces-450B-Jzzhu-and-Sequences" class="headerlink" title="Codeforces 450B - Jzzhu and Sequences"></a>Codeforces 450B - Jzzhu and Sequences</h1><p><a href="https://codeforces.com/problemset/problem/450/B" target="_blank" rel="noopener">Jzzhu and Sequences</a></p>
+        <h1 id="Codeforces-450B-Jzzhu-and-Sequences"><a href="#Codeforces-450B-Jzzhu-and-Sequences" class="headerlink" title="Codeforces 450B - Jzzhu and Sequences"></a>Codeforces 450B - Jzzhu and Sequences</h1><p><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/450/B">Jzzhu and Sequences</a></p>
 <p>Jzzhu has invented a kind of sequences, they meet the following property:</p>
-<a id="more"></a>
+<span id="more"></span>
 <p><img src="A.PNG" alt="A"><br>You are given x and y, please calculate f<sub>n</sub> modulo 1000000007 (10<sup>9</sup> + 7).</p>
 <h4 id="Input"><a href="#Input" class="headerlink" title="Input:"></a>Input:</h4><p>The first line contains two integers x and y (|x|, |y| ≤ 10<sup>9</sup>). The second line contains a single integer n (1 ≤ n ≤ 2·10<sup>9</sup>).</p>
 <h4 id="Output"><a href="#Output" class="headerlink" title="Output:"></a>Output:</h4><p>Output a single integer representing f<sub>n</sub> modulo 1000000007 (10<sup>9</sup> + 7).</p>
 <h4 id="範例"><a href="#範例" class="headerlink" title="範例:"></a>範例:</h4><p>input:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">2 3</span><br><span class="line">3</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">2 3</span><br><span class="line">3</span><br></pre></td></tr></table></figure>
 <p>output:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1</span><br></pre></td></tr></table></figure>
 <p>input:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">0 -1</span><br><span class="line">2</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">0 -1</span><br><span class="line">2</span><br></pre></td></tr></table></figure>
 <p>output:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1000000006</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1000000006</span><br></pre></td></tr></table></figure>
 <h4 id="Note"><a href="#Note" class="headerlink" title="Note:"></a>Note:</h4><p>In the first sample, f<sub>2</sub> = f<sub>1</sub> + f<sub>3</sub>, 3 = 2 + f<sub>3</sub>, f<sub>3</sub> = 1.</p>
 <p>In the second sample, f<sub>2</sub> =  - 1;  - 1 modulo (10<sup>9</sup> + 7) equals (10<sup>9</sup> + 6).</p>
 <h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>輸入X跟Y作為一個數列的前兩項，並給你數列的規則，問你第N項對100000007取餘數後的值是多少？</p>

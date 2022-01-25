@@ -286,18 +286,18 @@
       
         <h1 id="Rust-格式化輸出"><a href="#Rust-格式化輸出" class="headerlink" title="Rust 格式化輸出"></a>Rust 格式化輸出</h1><p>格式化輸出可以讓你方便的排版你想要的輸出方式，以下我們介紹幾中常見的格式化輸出。  </p>
 <p>利用大括弧來標示變數所在的地方，由左而右依序輸出。</p>
-<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">println!</span>(<span class="string">"Num: &#123;&#125;, &#123;&#125;"</span>, <span class="number">1</span>, <span class="number">2</span>);</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">println!</span>(<span class="string">&quot;Num: &#123;&#125;, &#123;&#125;&quot;</span>, <span class="number">1</span>, <span class="number">2</span>);</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
 <p>在大括弧內設下index，以照後面資料的順序索取你需要的資料。</p>
-<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">println!</span>(<span class="string">"&#123;0&#125; is &#123;0&#125; and &#123;1&#125; haha &#123;2&#125;."</span>, <span class="string">"Bob"</span>, <span class="string">"Alice"</span>, <span class="string">"John"</span>);</span><br></pre></td></tr></table></figure>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">println!</span>(<span class="string">&quot;&#123;0&#125; is &#123;0&#125; and &#123;1&#125; haha &#123;2&#125;.&quot;</span>, <span class="string">&quot;Bob&quot;</span>, <span class="string">&quot;Alice&quot;</span>, <span class="string">&quot;John&quot;</span>);</span><br></pre></td></tr></table></figure>
 
 <p>在大括弧內設下變數，在後面以變數給予值。</p>
-<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">println!</span>(<span class="string">"&#123;a&#125; is &#123;b&#125; and &#123;c&#125; haha &#123;a&#125;."</span>, b = <span class="string">"Bob"</span>, a = <span class="string">"Alice"</span>, c = <span class="string">"John"</span>);</span><br></pre></td></tr></table></figure>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">println!</span>(<span class="string">&quot;&#123;a&#125; is &#123;b&#125; and &#123;c&#125; haha &#123;a&#125;.&quot;</span>, b = <span class="string">&quot;Bob&quot;</span>, a = <span class="string">&quot;Alice&quot;</span>, c = <span class="string">&quot;John&quot;</span>);</span><br></pre></td></tr></table></figure>
 
 <p>依照型態命名，輸出則會以我們所設的型態輸出。</p>
-<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">println!</span>(<span class="string">"Binary: &#123;:b&#125;, Hex: &#123;:x&#125;, Octal: &#123;:o&#125;."</span>, <span class="number">10</span>, <span class="number">10</span>, <span class="number">10</span>);</span><br></pre></td></tr></table></figure>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">println!</span>(<span class="string">&quot;Binary: &#123;:b&#125;, Hex: &#123;:x&#125;, Octal: &#123;:o&#125;.&quot;</span>, <span class="number">10</span>, <span class="number">10</span>, <span class="number">10</span>);</span><br></pre></td></tr></table></figure>
 
-<p>輸出結果<br><img src="HgVZM4p.png" alt=""></p>
+<p>輸出結果<br><img src="HgVZM4p.png"></p>
 
     </div>
 

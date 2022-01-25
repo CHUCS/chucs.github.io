@@ -288,10 +288,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="選擇排序"><a href="#選擇排序" class="headerlink" title="選擇排序"></a>選擇排序</h1><p><a href="https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_2_B" target="_blank" rel="noopener">題目網址</a></p>
+        <h1 id="選擇排序"><a href="#選擇排序" class="headerlink" title="選擇排序"></a>選擇排序</h1><p><a target="_blank" rel="noopener" href="https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_2_B">題目網址</a></p>
 <h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>利用選擇排序排序，當i不等於mini時才交換，請把結果與交換次數輸出。</p>
-<a id="more"></a>
-<h4 id="思路"><a href="#思路" class="headerlink" title="思路:"></a>思路:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">SelectionSort(A)</span><br><span class="line">    for i &#x3D; 0 to A.length-1</span><br><span class="line">        mini &#x3D; i</span><br><span class="line">        for j &#x3D; i to A.length-1</span><br><span class="line">            if A[j] &lt; A[mini]</span><br><span class="line">                mini &#x3D; j</span><br><span class="line">        swap A[i] and A[mini]</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+<h4 id="思路"><a href="#思路" class="headerlink" title="思路:"></a>思路:</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">SelectionSort(A)</span><br><span class="line">    for i = 0 to A.length-1</span><br><span class="line">        mini = i</span><br><span class="line">        for j = i to A.length-1</span><br><span class="line">            if A[j] &lt; A[mini]</span><br><span class="line">                mini = j</span><br><span class="line">        swap A[i] and A[mini]</span><br></pre></td></tr></table></figure>
 <p>先將一個數字的位置記住後逐一比較，如果比他大就將mini取代新的index，全部比較完後在進行交換。</p>
 <h4 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼:"></a>程式碼:</h4><script src="https://gist.github.com/Daviswww/687c3ee75d3561997469a9830b92b038.js"></script>
     </div>

@@ -295,17 +295,17 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="Codeforces-230B-T-primes"><a href="#Codeforces-230B-T-primes" class="headerlink" title="Codeforces 230B - T-primes"></a>Codeforces 230B - T-primes</h1><p><a href="https://codeforces.com/problemset/problem/230/B" target="_blank" rel="noopener">T-primes</a></p>
+        <h1 id="Codeforces-230B-T-primes"><a href="#Codeforces-230B-T-primes" class="headerlink" title="Codeforces 230B - T-primes"></a>Codeforces 230B - T-primes</h1><p><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/230/B">T-primes</a></p>
 <p>We know that prime numbers are positive integers that have exactly two distinct positive divisors. Similarly, we’ll call a positive integer t Т-prime, if t has exactly three distinct positive divisors.</p>
-<a id="more"></a>
+<span id="more"></span>
 <p>You are given an array of n positive integers. For each of them determine whether it is Т-prime or not.</p>
 <h4 id="Input"><a href="#Input" class="headerlink" title="Input:"></a>Input:</h4><p>The first line contains a single positive integer, n (1 ≤ n ≤ 10<sup>5</sup>), showing how many numbers are in the array. The next line contains n space-separated integers x<sub>i</sub> (1 ≤ x<sub>i</sub> ≤ 10<sup>12</sup>).</p>
 <p>Please, do not use the %lld specifier to read or write 64-bit integers in С++. It is advised to use the cin, cout streams or the %I64d specifier.</p>
 <h4 id="Output"><a href="#Output" class="headerlink" title="Output:"></a>Output:</h4><p>Print n lines: the i-th line should contain “YES” (without the quotes), if number xi is Т-prime, and “NO” (without the quotes), if it isn’t.</p>
 <h4 id="範例"><a href="#範例" class="headerlink" title="範例:"></a>範例:</h4><p>input:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">4 5 6</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">4 5 6</span><br></pre></td></tr></table></figure>
 <p>output:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">YES</span><br><span class="line">NO</span><br><span class="line">NO</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">YES</span><br><span class="line">NO</span><br><span class="line">NO</span><br></pre></td></tr></table></figure>
 
 <h4 id="Note"><a href="#Note" class="headerlink" title="Note:"></a>Note:</h4><p>The given test has three numbers. The first number 4 has exactly three divisors — 1, 2 and 4, thus the answer for this number is “YES”. The second number 5 has two divisors (1 and 5), and the third number 6 has four divisors (1, 2, 3, 6), hence the answer for them is “NO”.</p>
 <h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>題目定義一個數只有三個不同的因數，叫做T-Prime。現在給你N個數，問你他們各自是不是T-Prime。</p>

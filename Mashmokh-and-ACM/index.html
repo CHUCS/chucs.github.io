@@ -299,9 +299,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="CodeForces-414B-Mashmokh-and-ACM"><a href="#CodeForces-414B-Mashmokh-and-ACM" class="headerlink" title="CodeForces 414B - Mashmokh and ACM"></a>CodeForces 414B - Mashmokh and ACM</h1><p><a href="http://codeforces.com/problemset/problem/414/B" target="_blank" rel="noopener">Mashmokh and ACM</a></p>
+        <h1 id="CodeForces-414B-Mashmokh-and-ACM"><a href="#CodeForces-414B-Mashmokh-and-ACM" class="headerlink" title="CodeForces 414B - Mashmokh and ACM"></a>CodeForces 414B - Mashmokh and ACM</h1><p><a target="_blank" rel="noopener" href="http://codeforces.com/problemset/problem/414/B">Mashmokh and ACM</a></p>
 <h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>輸入N、K，指定數列長度K，其中所有元素都在1~N之間，且每一個元素都可以整除下一個元素，問有幾種數列滿足條件？</p>
-<a id="more"></a>
+<span id="more"></span>
 <h4 id="思路"><a href="#思路" class="headerlink" title="思路:"></a>思路:</h4><p>當數列長度為x，結尾為y時，要增長數列的方法就是在數列尾端增加一個是y的倍數的元素，因此這個數列可以衍伸出y、2y、3y…ty，ty &lt;= N，共t個數列。以這個想法下去建置一個陣列，紀錄當前長度結尾為x(x=1~N)的數列有幾個，逐次增加長度，跑完後就是答案。<br><img src="A.PNG" alt="A"><br><img src="B.PNG" alt="B"><br><img src="C.PNG" alt="C"><br><img src="D.PNG" alt="D"><br><img src="E.PNG" alt="E"><br><img src="F.PNG" alt="F"><br><img src="G.PNG" alt="G"></p>
 <h4 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼:"></a>程式碼:</h4><script src="https://gist.github.com/Daviswww/4c631d92b0f0aec4e4e887ca67ded26a.js"></script>
     </div>

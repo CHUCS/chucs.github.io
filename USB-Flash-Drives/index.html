@@ -291,9 +291,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="Codeforces-609A-USB-Flash-Drives"><a href="#Codeforces-609A-USB-Flash-Drives" class="headerlink" title="Codeforces 609A - USB Flash Drives"></a>Codeforces 609A - USB Flash Drives</h1><p><a href="https://codeforces.com/problemset/problem/609/A" target="_blank" rel="noopener">USB Flash Drives</a></p>
+        <h1 id="Codeforces-609A-USB-Flash-Drives"><a href="#Codeforces-609A-USB-Flash-Drives" class="headerlink" title="Codeforces 609A - USB Flash Drives"></a>Codeforces 609A - USB Flash Drives</h1><p><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/609/A">USB Flash Drives</a></p>
 <p>Sean is trying to save a large file to a USB flash drive. He has n USB flash drives with capacities equal to a<sub>1</sub>, a<sub>2</sub>, …, a<sub>n</sub> megabytes. The file size is equal to m megabytes.</p>
-<a id="more"></a>
+<span id="more"></span>
 <p>Find the minimum number of USB flash drives needed to write Sean’s file, if he can split the file between drives.</p>
 <h4 id="Input"><a href="#Input" class="headerlink" title="Input:"></a>Input:</h4><p>The first line contains positive integer n (1 ≤ n ≤ 100) — the number of USB flash drives.</p>
 <p>The second line contains positive integer m (1 ≤ m ≤ 10<sup>5</sup>) — the size of Sean’s file.</p>
@@ -301,17 +301,17 @@
 <p>It is guaranteed that the answer exists, i. e. the sum of all a<sub>i</sub> is not less than m.</p>
 <h4 id="Output"><a href="#Output" class="headerlink" title="Output:"></a>Output:</h4><p>Print the minimum number of USB flash drives to write Sean’s file, if he can split the file between drives.</p>
 <h4 id="範例"><a href="#範例" class="headerlink" title="範例:"></a>範例:</h4><p>input:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">5</span><br><span class="line">2</span><br><span class="line">1</span><br><span class="line">3</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">5</span><br><span class="line">2</span><br><span class="line">1</span><br><span class="line">3</span><br></pre></td></tr></table></figure>
 <p>output:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2</span><br></pre></td></tr></table></figure>
 <p>input:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">6</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">2</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">6</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">2</span><br></pre></td></tr></table></figure>
 <p>output:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3</span><br></pre></td></tr></table></figure>
 <p>input:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">2</span><br><span class="line">5</span><br><span class="line">5</span><br><span class="line">10</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">2</span><br><span class="line">5</span><br><span class="line">5</span><br><span class="line">10</span><br></pre></td></tr></table></figure>
 <p>output:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1</span><br></pre></td></tr></table></figure>
 
 <h4 id="Note"><a href="#Note" class="headerlink" title="Note:"></a>Note:</h4><p>In the first example Sean needs only two USB flash drives — the first and the third.</p>
 <p>In the second example Sean needs all three USB flash drives.</p>

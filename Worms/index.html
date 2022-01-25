@@ -292,9 +292,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="Codeforces-474B-Worms"><a href="#Codeforces-474B-Worms" class="headerlink" title="Codeforces 474B - Worms"></a>Codeforces 474B - Worms</h1><p><a href="https://codeforces.com/problemset/problem/474/B" target="_blank" rel="noopener">Worms</a></p>
+        <h1 id="Codeforces-474B-Worms"><a href="#Codeforces-474B-Worms" class="headerlink" title="Codeforces 474B - Worms"></a>Codeforces 474B - Worms</h1><p><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/474/B">Worms</a></p>
 <p>It is lunch time for Mole. His friend, Marmot, prepared him a nice game for lunch.</p>
-<a id="more"></a>
+<span id="more"></span>
 <p>Marmot brought Mole n ordered piles of worms such that i-th pile contains ai worms. He labeled all these worms with consecutive integers: worms in first pile are labeled with numbers 1 to a<sub>1</sub>, worms in second pile are labeled with numbers a<sub>1</sub> + 1 to a<sub>1</sub> + a<sub>2</sub> and so on. See the example for a better understanding.</p>
 <p>Mole can’t eat all the worms (Marmot brought a lot) and, as we all know, Mole is blind, so Marmot tells him the labels of the best juicy worms. Marmot will only give Mole a worm if Mole says correctly in which pile this worm is contained.</p>
 <p>Poor Mole asks for your help. For all juicy worms said by Marmot, tell Mole the correct answers.</p>
@@ -304,9 +304,9 @@
 <p>The fourth line contains m integers q<sub>1</sub>, q<sub>2</sub>, …, qm (1 ≤ q<sub>i</sub> ≤ a<sub>1</sub> + a<sub>2</sub> + … + a<sub>n</sub>), the labels of the juicy worms.</p>
 <h4 id="Output"><a href="#Output" class="headerlink" title="Output:"></a>Output:</h4><p>Print m lines to the standard output. The i-th line should contain an integer, representing the number of the pile where the worm labeled with the number q<sub>i</sub> is.</p>
 <h4 id="範例"><a href="#範例" class="headerlink" title="範例:"></a>範例:</h4><p>input:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">5</span><br><span class="line">2 7 3 4 9</span><br><span class="line">3</span><br><span class="line">1 25 11</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">5</span><br><span class="line">2 7 3 4 9</span><br><span class="line">3</span><br><span class="line">1 25 11</span><br></pre></td></tr></table></figure>
 <p>output:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1</span><br><span class="line">5</span><br><span class="line">3</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1</span><br><span class="line">5</span><br><span class="line">3</span><br></pre></td></tr></table></figure>
 <h4 id="Note"><a href="#Note" class="headerlink" title="Note:"></a>Note:</h4><p>For the sample input:</p>
 <p>● The worms with labels from [1, 2] are in the first pile.<br>● The worms with labels from [3, 9] are in the second pile.<br>● The worms with labels from [10, 12] are in the third pile.<br>● The worms with labels from [13, 16] are in the fourth pile.<br>● The worms with labels from [17, 25] are in the fifth pile.</p>
 <h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>有隻鼴鼠正準備吃午餐，有另一隻鼴鼠幫他將N隻蟲，照編號頭尾相連的排成了一列，座標從第一隻蟲的最左邊為1開始延續，然後跟他講M次他該吃座標多少的蟲。現在問你他每一次吃的蟲是編號幾號的蟲？</p>

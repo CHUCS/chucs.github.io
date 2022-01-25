@@ -547,7 +547,7 @@
 
       
           <h1 id="Rust-變量"><a href="#Rust-變量" class="headerlink" title="Rust 變量"></a>Rust 變量</h1><p>在變量中我們可以給予一些固定的值在變數中，而這些值不允許被任意更改。</p>
-<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> name = <span class="string">"Bob"</span>;</span><br><span class="line"><span class="built_in">println!</span>(<span class="string">"My name is &#123;&#125;."</span>, name);</span><br></pre></td></tr></table></figure>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> name = <span class="string">&quot;Bob&quot;</span>;</span><br><span class="line"><span class="built_in">println!</span>(<span class="string">&quot;My name is &#123;&#125;.&quot;</span>, name);</span><br></pre></td></tr></table></figure>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/rust-005-variable/#more" rel="contents">
@@ -638,7 +638,7 @@
       
           <h1 id="Rust-格式化輸出"><a href="#Rust-格式化輸出" class="headerlink" title="Rust 格式化輸出"></a>Rust 格式化輸出</h1><p>格式化輸出可以讓你方便的排版你想要的輸出方式，以下我們介紹幾中常見的格式化輸出。  </p>
 <p>利用大括弧來標示變數所在的地方，由左而右依序輸出。</p>
-<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">println!</span>(<span class="string">"Num: &#123;&#125;, &#123;&#125;"</span>, <span class="number">1</span>, <span class="number">2</span>);</span><br></pre></td></tr></table></figure>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">println!</span>(<span class="string">&quot;Num: &#123;&#125;, &#123;&#125;&quot;</span>, <span class="number">1</span>, <span class="number">2</span>);</span><br></pre></td></tr></table></figure>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/rust-004-format/#more" rel="contents">
@@ -728,7 +728,7 @@
 
       
           <h1 id="Rust-函式"><a href="#Rust-函式" class="headerlink" title="Rust 函式"></a>Rust 函式</h1><p>我們可以在src下創建一個新的檔案<code>print.rs</code>，編寫一下程式。</p>
-<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">pub</span> <span class="function"><span class="keyword">fn</span> <span class="title">run</span></span>()&#123;</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">"Hello print.rs run!!"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">pub</span> <span class="function"><span class="keyword">fn</span> <span class="title">run</span></span>()&#123;</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;Hello print.rs run!!&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/rust-003-function/#more" rel="contents">
@@ -1093,7 +1093,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="Codeforces-1426D-Non-zero-Segments"><a href="#Codeforces-1426D-Non-zero-Segments" class="headerlink" title="Codeforces 1426D - Non-zero Segments"></a>Codeforces 1426D - Non-zero Segments</h1><p><a href="https://codeforces.com/problemset/problem/1426/D" target="_blank" rel="noopener">題目網址</a></p>
+          <h1 id="Codeforces-1426D-Non-zero-Segments"><a href="#Codeforces-1426D-Non-zero-Segments" class="headerlink" title="Codeforces 1426D - Non-zero Segments"></a>Codeforces 1426D - Non-zero Segments</h1><p><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1426/D">題目網址</a></p>
 <h4 id="題意"><a href="#題意" class="headerlink" title="題意:"></a>題意:</h4><p>Kolya有一陣列a，裡面數字有正有負，因為Kolya不喜歡0所以不包含0，Kolya也不喜歡子陣列中的總合為0(子陣列為一個連續的範圍)。<br>你要幫Kolya調整陣列使得任意子陣列總和不為0，你可以在陣列中的任一位置插入任意數字，就算數字超過可顯示範圍也行，請找出「最少」需要插入的數字的次數。</p>
           <!--noindex-->
             <div class="post-button">

@@ -288,22 +288,22 @@
       
         <h1 id="Rust-第一個專案"><a href="#Rust-第一個專案" class="headerlink" title="Rust 第一個專案"></a>Rust 第一個專案</h1><p>安裝完RUST後我們可以開始寫我們第一個RUST得程式了，首先我們先下<code>cargo init</code>這將會替我們創建一些基本的檔案。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cargo init</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<p><img src="uMvHeRj.png" alt=""></p>
+<span id="more"></span>
+<p><img src="uMvHeRj.png"></p>
 <p>目錄應該是長下面這樣，<code>Cargo.toml</code>裡面寫的是一些設定檔案，版本訊息等等，<code>main.rs</code>則是我們主要寫程式的地方。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">|-- Cargo.toml</span><br><span class="line">&#96;-- src</span><br><span class="line">    &#96;-- main.rs</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">|-- Cargo.toml</span><br><span class="line">`-- src</span><br><span class="line">    `-- main.rs</span><br></pre></td></tr></table></figure>
 
 <p>然後打開<code>main.rs</code>編寫我們第一個RUST程式。</p>
-<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">main</span></span>() &#123;</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">"Hello, world!"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">main</span></span>() &#123;</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;Hello, world!&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>接著執行程式</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cargo run</span><br></pre></td></tr></table></figure>
 
-<p><img src="J4JlXIU.png" alt=""></p>
+<p><img src="J4JlXIU.png"></p>
 <p>執行完後你會看到你剛剛寫的<code>Hello, world!</code>印在終端機上面。</p>
 <p>如果你不想要執行程式的話可以輸入<code>build</code>就好。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cargo build</span><br></pre></td></tr></table></figure>
-<p><img src="vudWD4D.png" alt=""></p>
+<p><img src="vudWD4D.png"></p>
 
     </div>
 

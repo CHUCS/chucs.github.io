@@ -290,9 +290,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="Codeforces-990B-Micro-World"><a href="#Codeforces-990B-Micro-World" class="headerlink" title="Codeforces 990B - Micro-World"></a>Codeforces 990B - Micro-World</h1><p><a href="https://codeforces.com/problemset/problem/990/B" target="_blank" rel="noopener">Micro-World</a></p>
+        <h1 id="Codeforces-990B-Micro-World"><a href="#Codeforces-990B-Micro-World" class="headerlink" title="Codeforces 990B - Micro-World"></a>Codeforces 990B - Micro-World</h1><p><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/990/B">Micro-World</a></p>
 <p>You have a Petri dish with bacteria and you are preparing to dive into the harsh micro-world. But, unfortunately, you don’t have any microscope nearby, so you can’t watch them.</p>
-<a id="more"></a>
+<span id="more"></span>
 <p>You know that you have n bacteria in the Petri dish and size of the i-th bacteria is a<sub>i</sub>. Also you know intergalactic positive integer constant K.</p>
 <p>The i-th bacteria can swallow the j-th bacteria if and only if a<sub>i</sub>&gt;a<sub>j</sub> and a<sub>i</sub>≤a<sub>j</sub>+K. The j-th bacteria disappear, but the i-th bacteria doesn’t change its size. The bacteria can perform multiple swallows. On each swallow operation any bacteria i can swallow any bacteria j if a<sub>i</sub>a<sub>j</sub> and a<sub>i</sub>≤a<sub>j</sub>+K. The swallow operations go one after another.</p>
 <p>For example, the sequence of bacteria sizes a=[101,53,42,102,101,55,54] and K=1. The one of possible sequences of swallows is: [101,53,42,102,(101),55,54] → [101,(53),42,102,55,54] → [(101),42,102,55,54] → [42,102,55,(54)] → [42,102,55]. In total there are 3 bacteria remained in the Petri dish.</p>
@@ -301,17 +301,17 @@
 <p>The second line contains n space separated integers a<sub>1</sub>,a<sub>2</sub>,…,a<sub>n</sub> (1≤a<sub>i</sub>≤10<sup>6</sup>) — sizes of bacteria you have.</p>
 <h4 id="Output"><a href="#Output" class="headerlink" title="Output:"></a>Output:</h4><p>Print the only integer — minimal possible number of bacteria can remain.</p>
 <h4 id="範例"><a href="#範例" class="headerlink" title="範例:"></a>範例:</h4><p>input:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">7 1</span><br><span class="line">101 53 42 102 101 55 54</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">7 1</span><br><span class="line">101 53 42 102 101 55 54</span><br></pre></td></tr></table></figure>
 <p>output:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3</span><br></pre></td></tr></table></figure>
 <p>input:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">6 5</span><br><span class="line">20 15 10 15 20 25</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">6 5</span><br><span class="line">20 15 10 15 20 25</span><br></pre></td></tr></table></figure>
 <p>output:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1</span><br></pre></td></tr></table></figure>
 <p>input:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">7 1000000</span><br><span class="line">1 1 1 1 1 1 1</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">7 1000000</span><br><span class="line">1 1 1 1 1 1 1</span><br></pre></td></tr></table></figure>
 <p>output:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">7</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">7</span><br></pre></td></tr></table></figure>
 <h4 id="Note"><a href="#Note" class="headerlink" title="Note:"></a>Note:</h4><p>The first example is clarified in the problem statement.</p>
 <p>In the second example an optimal possible sequence of swallows is: [20,15,10,15,(20),25] → [20,15,10,(15),25] → [20,15,(10),25] → [20,(15),25] → [(20),25] → [25].</p>
 <p>In the third example no bacteria can swallow any other bacteria.</p>

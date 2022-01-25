@@ -290,9 +290,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="Codeforces-653A-Bear-and-Three-Balls"><a href="#Codeforces-653A-Bear-and-Three-Balls" class="headerlink" title="Codeforces 653A - Bear and Three Balls"></a>Codeforces 653A - Bear and Three Balls</h1><p><a href="https://codeforces.com/problemset/problem/653/A" target="_blank" rel="noopener">Bear and Three Balls</a></p>
+        <h1 id="Codeforces-653A-Bear-and-Three-Balls"><a href="#Codeforces-653A-Bear-and-Three-Balls" class="headerlink" title="Codeforces 653A - Bear and Three Balls"></a>Codeforces 653A - Bear and Three Balls</h1><p><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/653/A">Bear and Three Balls</a></p>
 <p>Limak is a little polar bear. He has n balls, the i-th ball has size t<sub>i</sub>.</p>
-<a id="more"></a>
+<span id="more"></span>
 <p>Limak wants to give one ball to each of his three friends. Giving gifts isn’t easy — there are two rules Limak must obey to make friends happy:</p>
 <p>● No two friends can get balls of the same size.<br>● No two friends can get balls of sizes that differ by more than 2.<br>For example, Limak can choose balls with sizes 4, 5 and 3, or balls with sizes 90, 91 and 92. But he can’t choose balls with sizes 5, 5 and 6 (two friends would get balls of the same size), and he can’t choose balls with sizes 30, 31 and 33 (because sizes 30 and 33 differ by more than 2).</p>
 <p>Your task is to check whether Limak can choose three balls that satisfy conditions above.</p>
@@ -300,17 +300,17 @@
 <p>The second line contains n integers t<sub>1</sub>, t<sub>2</sub>, …, t<sub>n</sub> (1 ≤ t<sub>i</sub> ≤ 1000) where ti denotes the size of the i-th ball.</p>
 <h4 id="Output"><a href="#Output" class="headerlink" title="Output:"></a>Output:</h4><p>Print “YES” (without quotes) if Limak can choose three balls of distinct sizes, such that any two of them differ by no more than 2. Otherwise, print “NO” (without quotes).</p>
 <h4 id="範例"><a href="#範例" class="headerlink" title="範例:"></a>範例:</h4><p>input:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">4</span><br><span class="line">18 55 16 17</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">4</span><br><span class="line">18 55 16 17</span><br></pre></td></tr></table></figure>
 <p>output:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">YES</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">YES</span><br></pre></td></tr></table></figure>
 <p>input:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">6</span><br><span class="line">40 41 43 44 44 44</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">6</span><br><span class="line">40 41 43 44 44 44</span><br></pre></td></tr></table></figure>
 <p>output:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">NO</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">NO</span><br></pre></td></tr></table></figure>
 <p>input:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">8</span><br><span class="line">5 972 3 4 1 4 970 971</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">8</span><br><span class="line">5 972 3 4 1 4 970 971</span><br></pre></td></tr></table></figure>
 <p>output:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">YES</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">YES</span><br></pre></td></tr></table></figure>
 <h4 id="Note"><a href="#Note" class="headerlink" title="Note:"></a>Note:</h4><p>In the first sample, there are 4 balls and Limak is able to choose three of them to satisfy the rules. He must must choose balls with sizes 18, 16 and 17.</p>
 <p>In the second sample, there is no way to give gifts to three friends without breaking the rules.</p>
 <p>In the third sample, there is even more than one way to choose balls:</p>
