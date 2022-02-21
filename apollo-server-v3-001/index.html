@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.0.0">
+<script data-ad-client="ca-pub-8906140811059676" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="3grsEVPDeg5_ktwC4lbJ6p3Ts2vmlUyUSQwPtFp0jQs">
+  <meta name="msvalidate.01" content="DCF11F2014E9D53E3226C978BCE45EEC">
+  <meta name="yandex-verification" content="4227a483ac83a3da">
+  <meta name="baidu-site-verification" content="acBHhdI7H6">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"chucs.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.json"};
+  </script>
+
+  <meta name="description" content="前言Apollo Server一個易於使用、高度可擴展的開源框架，用於將服務和數據源連接到圖形。 優點：  成熟的社群 Query 執行狀況和紀錄 效能追蹤  GraphQLGraphQL 是一種 API 的查詢語言。且在的 API 中的數據提供了完整且易於理解的描述，使開發者能夠準確詢問他們需要什麼。 優點：  資料只拿剛好且彈性十足 透過資料之間的關係連接 ，大幅減少來回 request 的次">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Apollo Server V3 - GraphQL + Node.js (part 1)">
+<meta property="og:url" content="https://chucs.github.io/apollo-server-v3-001/index.html">
+<meta property="og:site_name" content="CHUPCCA">
+<meta property="og:description" content="前言Apollo Server一個易於使用、高度可擴展的開源框架，用於將服務和數據源連接到圖形。 優點：  成熟的社群 Query 執行狀況和紀錄 效能追蹤  GraphQLGraphQL 是一種 API 的查詢語言。且在的 API 中的數據提供了完整且易於理解的描述，使開發者能夠準確詢問他們需要什麼。 優點：  資料只拿剛好且彈性十足 透過資料之間的關係連接 ，大幅減少來回 request 的次">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2022-02-21T11:36:40.000Z">
+<meta property="article:modified_time" content="2022-02-21T11:53:17.581Z">
+<meta property="article:author" content="CHUPCCA">
+<meta property="article:tag" content="GraphQL">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://chucs.github.io/apollo-server-v3-001/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-TW'
+  };
+</script>
+
+  <title>Apollo Server V3 - GraphQL + Node.js (part 1) | CHUPCCA</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134507655-1"></script>
+    <script>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-134507655-1');
+      }
+    </script>
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?be512bd008c5b387799d9e82e9ef25e1";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="CHUPCCA" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">CHUPCCA</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">解題報告</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜尋..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://chucs.github.io/apollo-server-v3-001/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/header.jpg">
+      <meta itemprop="name" content="CHUPCCA">
+      <meta itemprop="description" content="解題報告">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CHUPCCA">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Apollo Server V3 - GraphQL + Node.js (part 1)
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+              
+
+              <time title="創建時間：2022-02-21 19:36:40 / 修改時間：19:53:17" itemprop="dateCreated datePublished" datetime="2022-02-21T19:36:40+08:00">2022-02-21</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Apollo-Server-GraphQL/" itemprop="url" rel="index"><span itemprop="name">Apollo Server - GraphQL</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="閱讀次數" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">閱讀次數：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/apollo-server-v3-001/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="apollo-server-v3-001/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+    
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="Apollo-Server"><a href="#Apollo-Server" class="headerlink" title="Apollo Server"></a>Apollo Server</h3><p>一個易於使用、高度可擴展的開源框架，用於將服務和數據源連接到圖形。</p>
+<p>優點：</p>
+<ul>
+<li>成熟的社群</li>
+<li>Query 執行狀況和紀錄</li>
+<li>效能追蹤</li>
+</ul>
+<h3 id="GraphQL"><a href="#GraphQL" class="headerlink" title="GraphQL"></a>GraphQL</h3><p><a target="_blank" rel="noopener" href="https://graphql.org/learn/">GraphQL</a> 是一種 API 的查詢語言。且在的 API 中的數據提供了完整且易於理解的描述，使開發者能夠準確詢問他們需要什麼。</p>
+<p>優點：</p>
+<ul>
+<li>資料只拿剛好且彈性十足</li>
+<li>透過資料之間的關係連接 ，大幅減少來回 request 的次數</li>
+<li>前後端溝通成本減少</li>
+<li>前端不再被架構設計綁住，加速開發</li>
+</ul>
+<span id="more"></span>
+
+
+<h2 id="準備"><a href="#準備" class="headerlink" title="準備"></a>準備</h2><p>在開始之前請確保已經安裝<a target="_blank" rel="noopener" href="https://nodejs.org/en/download/">Node.js</a>。</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/Daviswww/graphQL-backend-adventure/tree/part1">下載完整程式碼</a></p>
+<h2 id="Yarn"><a href="#Yarn" class="headerlink" title="Yarn"></a>Yarn</h2><p>Yarn 是一個套件管理工具，提供的功能面向來說，和大家常用的 npm 是差不多的，而 Yarn 擁有更快速度、更安全、更可靠的環境。</p>
+<ul>
+<li><p>速度<br>NPM 將一次安裝一個套件。它每次都只能下載一個套件。這意味著，如果安裝包含五個包的清單，NPM 將執行很多次安裝過程。</p>
+</li>
+<li><p>安全<br>  過去 NPM 非常脆弱，無法提供安全的安裝過程。這允許其他套件動態包含其他套件，從而導致可能的安全系統漏洞。</p>
+<p>  Yarn 在幕後進行檢查，確保你沒有下載腳本或可能與專案依賴項衝突的內容。安全性是Yarn的核心功能之一。</p>
+</li>
+</ul>
+<h3 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h3><p><a target="_blank" rel="noopener" href="https://classic.yarnpkg.com/lang/en/docs/install/">https://classic.yarnpkg.com/lang/en/docs/install/</a></p>
+<p>在終端機或命令提示字元中執行以下指令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install --global yarn</span><br></pre></td></tr></table></figure>
+
+<p>檢查是否有安裝成功：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ yarn --version</span><br></pre></td></tr></table></figure>
+
+<h3 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a>常用指令</h3><ul>
+<li>安裝<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn install</span><br></pre></td></tr></table></figure></li>
+<li>新增套件<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add [package]</span><br></pre></td></tr></table></figure></li>
+<li>移除套件<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn remove [package]</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="Apollo-Server-Implement"><a href="#Apollo-Server-Implement" class="headerlink" title="Apollo Server Implement"></a>Apollo Server Implement</h2><h3 id="下載"><a href="#下載" class="headerlink" title="下載"></a>下載</h3><p>專案下載：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/Daviswww/graphQL-backend-adventure/tree/part1</span><br></pre></td></tr></table></figure>
+
+<p>用終端機進去資料夾中輸入下面的指令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ yarn install</span><br></pre></td></tr></table></figure>
+
+<h3 id="資料夾架構"><a href="#資料夾架構" class="headerlink" title="資料夾架構"></a>資料夾架構</h3><p>以下是資料夾結構，往後會按照這個架構來完成我們的伺服器。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── README.md</span><br><span class="line">├── app.js</span><br><span class="line">├── config</span><br><span class="line">│   └── environment</span><br><span class="line">│       └── index.js</span><br><span class="line">├── graphql</span><br><span class="line">│   ├── index.js</span><br><span class="line">│   ├── resolvers</span><br><span class="line">│   │   ├── index.js</span><br><span class="line">│   │   └── version</span><br><span class="line">│   │       ├── index.js</span><br><span class="line">│   │       └── queries.js</span><br><span class="line">│   ├── typedefs</span><br><span class="line">│   │   └── index.graphql</span><br><span class="line">│   └── utils</span><br><span class="line">│       ├── pubsub.js</span><br><span class="line">│       ├── schema.js</span><br><span class="line">│       └── subscription.js</span><br><span class="line">├── index.js</span><br><span class="line">├── package.json</span><br><span class="line">└── yarn.lock</span><br></pre></td></tr></table></figure>
+
+<h3 id="環境變數"><a href="#環境變數" class="headerlink" title="環境變數"></a>環境變數</h3><h4 id="1-設定環境變數"><a href="#1-設定環境變數" class="headerlink" title="1. 設定環境變數"></a>1. 設定環境變數</h4><p>創建一個<code>.env</code>檔案設定環境變數，我們可以在這個檔案內設置一些專案的秘密變數，像是<code>SECRET_KEY</code>, <code>DATABASE</code>等等這類的變數，再往後使用<code>git</code>的時候可以把這個檔案忽略掉，就可以避免這些<code>KEY</code>外流。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Apollo Server</span><br><span class="line">VERSION=1.0.0</span><br><span class="line">NODE_ENV=development</span><br><span class="line">PORT=3000</span><br><span class="line">SECRET=sxdWEF123hcf323jFWgvF763WEykhbljdrW1EFutyiuo87yuiWFWEhj</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-讀取環境變數"><a href="#2-讀取環境變數" class="headerlink" title="2. 讀取環境變數"></a>2. 讀取環境變數</h4><p>設定完環境變數後我們將可透過<code>dotenv</code>這個套件讀取設定好得值，接著再透過<code>config/environment/index.js</code>讀取這些變數，提供專案使用。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> dotenv <span class="keyword">from</span> <span class="string">&#x27;dotenv&#x27;</span></span><br><span class="line"></span><br><span class="line">dotenv.config()</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> port = process.env.PORT</span><br><span class="line"><span class="keyword">const</span> secret = process.env.SECRET</span><br><span class="line"><span class="keyword">const</span> version = process.env.VERSION</span><br><span class="line"></span><br><span class="line"><span class="comment">// Different situations</span></span><br><span class="line"><span class="keyword">const</span> env = &#123;</span><br><span class="line">  <span class="attr">development</span>: process.env.NODE_ENV === <span class="string">&#x27;development&#x27;</span>,</span><br><span class="line">  <span class="attr">test</span>: process.env.NODE_ENV === <span class="string">&#x27;test&#x27;</span>,</span><br><span class="line">  <span class="attr">staging</span>: process.env.NODE_ENV === <span class="string">&#x27;staging&#x27;</span>,</span><br><span class="line">  <span class="attr">production</span>: process.env.NODE_ENV === <span class="string">&#x27;production&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Database</span></span><br><span class="line"><span class="keyword">const</span> db = &#123;</span><br><span class="line">  <span class="attr">host</span>: process.env.DB_HOST,</span><br><span class="line">  <span class="attr">user</span>: process.env.DB_USER,</span><br><span class="line">  <span class="attr">password</span>: process.env.DB_PASS,</span><br><span class="line">  <span class="attr">name</span>: process.env.DB_NAME,</span><br><span class="line">  <span class="attr">port</span>: process.env.DB_PORT</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> &#123; port, env, secret, db, version &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="Apollo-Server-1"><a href="#Apollo-Server-1" class="headerlink" title="Apollo Server"></a>Apollo Server</h3><p>首先先從根目錄的<code>/index.js</code>開始，在這邊我們使用的是<code>apollo-server-express</code>來建構我們的 Apollo Server。</p>
+<h4 id="1-設置伺服器"><a href="#1-設置伺服器" class="headerlink" title="1. 設置伺服器"></a>1. 設置伺服器</h4><p><code>/app.js</code> 將為我們應用程式創建一個擁有有效的HTTP伺服器。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> express <span class="keyword">from</span> <span class="string">&#x27;express&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; createServer &#125; <span class="keyword">from</span> <span class="string">&#x27;http&#x27;</span></span><br><span class="line">	</span><br><span class="line"><span class="keyword">const</span> app = express()</span><br><span class="line"><span class="keyword">const</span> httpServer = createServer(app)</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> &#123; httpServer, app &#125;</span><br></pre></td></tr></table></figure>
+<h4 id="2-設置架構內容"><a href="#2-設置架構內容" class="headerlink" title="2. 設置架構內容"></a>2. 設置架構內容</h4><p><code>graphql/index.js</code> 在這邊我們將設置我們伺服器的內容，像是GrahpQL 中的 <a target="_blank" rel="noopener" href="https://graphql.org/learn/schema/">schema</a>、伺服器的密鑰、開發環境等等…。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; ApolloServer &#125; <span class="keyword">from</span> <span class="string">&#x27;apollo-server-express&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; env, secret &#125; <span class="keyword">from</span> <span class="string">&#x27;../config/environment&#x27;</span></span><br><span class="line"><span class="keyword">import</span> schema <span class="keyword">from</span> <span class="string">&#x27;./utils/schema&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> apolloServer = <span class="keyword">new</span> ApolloServer(&#123;</span><br><span class="line">  schema,</span><br><span class="line">  <span class="attr">secret</span>: secret,</span><br><span class="line">  <span class="attr">playground</span>: env.development,</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> apolloServer</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="Schema"><a href="#Schema" class="headerlink" title="Schema"></a>Schema</h3><p>我們可以從<a href="(https://www.apollographql.com/docs/apollo-server/getting-started/#step-3-define-your-graphql-schema)">Apollo的官方文件</a>中看見 Schema 分為兩個部分：</p>
+<ul>
+<li>Typedefs: 數據的型態</li>
+<li>Resolvers: 計算和返回數據的方式</li>
+</ul>
+<h4 id="1-Type-System"><a href="#1-Type-System" class="headerlink" title="1. Type System"></a>1. Type System</h4><p>Typedefs 就是 Graphql 查詢 API 的一種表達方式，在這之中有三種操作的名稱分別為：</p>
+<ul>
+<li>Query: 取得資料</li>
+<li>Mutation: 修改資料</li>
+<li>Subscription: 訂閱資料</li>
+</ul>
+<p>針對不同的操作我們可以將物件分類在這三個類別內。</p>
+<p>你可以在<code>graphql/typedefs/index.graphql</code>這個檔案中定義 GraphQL 的物件型態，像是下面我就定義了<code>version: String!</code>，驚嘆號則是代表這個物件不能是空的，如果是空的則會報錯。</p>
+<p>GraphQL 的型態分成五個：</p>
+<ul>
+<li>Int：有符號 32 位整數。</li>
+<li>Float：有符號雙精度浮點值。</li>
+<li>String：UTF‐8 字元序列。</li>
+<li>Boolean：true 或 false</li>
+<li>ID：ID 標量類型表示唯一標識符，通常用於重新引用對象或作為緩存的鍵。</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"># Custom Scalars</span><br><span class="line">scalar Date</span><br><span class="line"></span><br><span class="line">type Query &#123;</span><br><span class="line">  # Version</span><br><span class="line">  version: String!</span><br><span class="line">  </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">type Mutation &#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">type Subscription &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+<h4 id="2-Resolvers"><a href="#2-Resolvers" class="headerlink" title="2. Resolvers"></a>2. Resolvers</h4><p>Resolvers 則是處理邏輯然後回傳與Typedefs個是相同的資料。<br>可以從<code>graphql/resolvers/version/queries.js</code>，設定回傳內容。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; version &#125; <span class="keyword">from</span> <span class="string">&#x27;../../../config/environment&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> versionQueries = &#123;</span><br><span class="line">  <span class="attr">version</span>: <span class="keyword">async</span> () =&gt; &#123;</span><br><span class="line">    <span class="keyword">return</span> version</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> versionQueries</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>再透過<code>graphql/resolvers/index.js</code>將我們回傳的資料放入<code>Query</code>然後展開。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; versionQueries &#125; <span class="keyword">from</span> <span class="string">&#x27;./version&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> resolvers = &#123;</span><br><span class="line">  <span class="attr">Query</span>: &#123;</span><br><span class="line">    ...versionQueries,</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> resolvers</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-合併成-Schema"><a href="#3-合併成-Schema" class="headerlink" title="3. 合併成 Schema"></a>3. 合併成 Schema</h4><p>完成Resolvers和Typedefs之後，可以透過<code>graphql/utils/schema.js</code>將我們所設置的內容合併成Schema。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; join &#125; <span class="keyword">from</span> <span class="string">&#x27;path&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; readdirSync, readFileSync &#125; <span class="keyword">from</span> <span class="string">&#x27;fs&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; makeExecutableSchema &#125; <span class="keyword">from</span> <span class="string">&#x27;@graphql-tools/schema&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; gql &#125; <span class="keyword">from</span> <span class="string">&#x27;apollo-server-core&#x27;</span></span><br><span class="line"><span class="keyword">import</span> resolvers <span class="keyword">from</span> <span class="string">&#x27;../resolvers&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> gqlFiles = readdirSync(join(__dirname, <span class="string">&#x27;../typedefs&#x27;</span>))</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> typeDefsString = <span class="string">&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line">gqlFiles.forEach(<span class="function">(<span class="params">file</span>) =&gt;</span> &#123;</span><br><span class="line">  typeDefsString += readFileSync(join(__dirname, <span class="string">&#x27;../typedefs&#x27;</span>, file), &#123;</span><br><span class="line">    <span class="attr">encoding</span>: <span class="string">&#x27;utf8&#x27;</span></span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> typeDefs = gql(typeDefsString)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> schema = makeExecutableSchema(&#123;</span><br><span class="line">  typeDefs,</span><br><span class="line">  resolvers</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> schema</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="初始化應用程式"><a href="#初始化應用程式" class="headerlink" title="初始化應用程式"></a>初始化應用程式</h3><p>最後再到<code>/index.js</code>啟動我們的伺服器，並初始化所有內容。</p>
+<p>執行下面指令將可以看到你所設置的API：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ yarn dev</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; httpServer, app &#125; <span class="keyword">from</span> <span class="string">&#x27;./app&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; port &#125; <span class="keyword">from</span> <span class="string">&#x27;./config/environment&#x27;</span></span><br><span class="line"><span class="keyword">import</span> graphqlServer <span class="keyword">from</span> <span class="string">&#x27;./graphql&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> main = <span class="keyword">async</span> () =&gt; &#123;</span><br><span class="line">  <span class="keyword">try</span> &#123;    </span><br><span class="line">    <span class="comment">// Apollo Server</span></span><br><span class="line">    <span class="keyword">await</span> graphqlServer.start()</span><br><span class="line">    graphqlServer.applyMiddleware(&#123; app, <span class="attr">path</span>: <span class="string">&#x27;/graphql&#x27;</span> &#125;)</span><br><span class="line"></span><br><span class="line">    httpServer.listen(port, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">`Server is now running on http://localhost:<span class="subst">$&#123;port&#125;</span>/graphql`</span>)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125; <span class="keyword">catch</span> (err) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;Not able to run GraphQL server !&#x27;</span>)</span><br><span class="line">    <span class="built_in">console</span>.log(err)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">main()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/GraphQL/" rel="tag"># GraphQL</a>
+          </div>
+        
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/flutter-030-application-icon/" rel="prev" title="Flutter 030 - App Icon (part14)">
+      <i class="fa fa-chevron-left"></i> Flutter 030 - App Icon (part14)
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Apollo-Server"><span class="nav-number">1.1.</span> <span class="nav-text">Apollo Server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GraphQL"><span class="nav-number">1.2.</span> <span class="nav-text">GraphQL</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%BA%96%E5%82%99"><span class="nav-number">2.</span> <span class="nav-text">準備</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Yarn"><span class="nav-number">3.</span> <span class="nav-text">Yarn</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%9D"><span class="nav-number">3.1.</span> <span class="nav-text">安裝</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4"><span class="nav-number">3.2.</span> <span class="nav-text">常用指令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Apollo-Server-Implement"><span class="nav-number">4.</span> <span class="nav-text">Apollo Server Implement</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8B%E8%BC%89"><span class="nav-number">4.1.</span> <span class="nav-text">下載</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B3%87%E6%96%99%E5%A4%BE%E6%9E%B6%E6%A7%8B"><span class="nav-number">4.2.</span> <span class="nav-text">資料夾架構</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%92%B0%E5%A2%83%E8%AE%8A%E6%95%B8"><span class="nav-number">4.3.</span> <span class="nav-text">環境變數</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E8%A8%AD%E5%AE%9A%E7%92%B0%E5%A2%83%E8%AE%8A%E6%95%B8"><span class="nav-number">4.3.1.</span> <span class="nav-text">1. 設定環境變數</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E8%AE%80%E5%8F%96%E7%92%B0%E5%A2%83%E8%AE%8A%E6%95%B8"><span class="nav-number">4.3.2.</span> <span class="nav-text">2. 讀取環境變數</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Apollo-Server-1"><span class="nav-number">4.4.</span> <span class="nav-text">Apollo Server</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E8%A8%AD%E7%BD%AE%E4%BC%BA%E6%9C%8D%E5%99%A8"><span class="nav-number">4.4.1.</span> <span class="nav-text">1. 設置伺服器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E8%A8%AD%E7%BD%AE%E6%9E%B6%E6%A7%8B%E5%85%A7%E5%AE%B9"><span class="nav-number">4.4.2.</span> <span class="nav-text">2. 設置架構內容</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Schema"><span class="nav-number">4.5.</span> <span class="nav-text">Schema</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-Type-System"><span class="nav-number">4.5.1.</span> <span class="nav-text">1. Type System</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-Resolvers"><span class="nav-number">4.5.2.</span> <span class="nav-text">2. Resolvers</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E5%90%88%E4%BD%B5%E6%88%90-Schema"><span class="nav-number">4.5.3.</span> <span class="nav-text">3. 合併成 Schema</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F"><span class="nav-number">4.6.</span> <span class="nav-text">初始化應用程式</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="CHUPCCA"
+      src="/images/header.jpg">
+  <p class="site-author-name" itemprop="name">CHUPCCA</p>
+  <div class="site-description" itemprop="description">解題報告</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">368</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">53</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/CHUCS" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;CHUCS" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://github.com/Daviswww" title="https:&#x2F;&#x2F;github.com&#x2F;Daviswww" rel="noopener" target="_blank">Daviswww</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://chucs.github.io/site/" title="https:&#x2F;&#x2F;chucs.github.io&#x2F;site&#x2F;">About</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://chucs.github.io/game/" title="https:&#x2F;&#x2F;chucs.github.io&#x2F;game&#x2F;">Games</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CHUPCCA</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="訪客總數">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="總瀏覽次數">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var canonicalURL, curProtocol;
+      //Get the <link> tag
+      var x=document.getElementsByTagName("link");
+		//Find the last canonical URL
+		if(x.length > 0){
+			for (i=0;i<x.length;i++){
+				if(x[i].rel.toLowerCase() == 'canonical' && x[i].href){
+					canonicalURL=x[i].href;
+				}
+			}
+		}
+    //Get protocol
+	    if (!canonicalURL){
+	    	curProtocol = window.location.protocol.split(':')[0];
+	    }
+	    else{
+	    	curProtocol = canonicalURL.split(':')[0];
+	    }
+      //Get current URL if the canonical URL does not exist
+	    if (!canonicalURL) canonicalURL = window.location.href;
+	    //Assign script content. Replace current URL with the canonical URL
+      !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=canonicalURL,t=document.referrer;if(!e.test(r)){var n=(String(curProtocol).toLowerCase() === 'https')?"https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif":"//api.share.baidu.com/s.gif";t?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var i=new Image;i.src=n}}(window);})();
+  </script>
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<script>
+  function loadCount() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://https-chucs-github-io.disqus.com/count.js';
+    s.id = 'dsq-count-scr';
+    (d.head || d.body).appendChild(s);
+  }
+  // defer loading until the whole page loading is completed
+  window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  var disqus_config = function() {
+    this.page.url = "https://chucs.github.io/apollo-server-v3-001/";
+    this.page.identifier = "apollo-server-v3-001/";
+    this.page.title = "Apollo Server V3 - GraphQL + Node.js (part 1)";
+    };
+  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: disqus_config
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://https-chucs-github-io.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  });
+</script>
+
+</body>
+</html>
